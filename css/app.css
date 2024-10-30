@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    padding: 50px; /* top, right, bottom, left */
+    padding: 25px 50px; /* top & bottom, left & right */
+    background: #444;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  header {
+    height: 500px;
+    width: 100%;
+    border: 3px solid #000;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: url('../assets/images/tjrud1202_httpss.mj.run3QY_ihq2zXo_cosmic_--v_6_de3c5980-840a-41a4-8850-0c2bf0a0f6b3.png');
+    background-size: cover;
+    background-position-y: -250px;
+    /* HEX values #000(black), #fff(white), #f00(blue), #0f0(green), #00f(blue) */
+  }
+  #about {
+    width: 100%;
+    padding: 100px 50px;
+    background: #222;
+    border: 3px solid #000;
+  }
+  #careerGoals {
+    width: 100%;
+    padding: 100px 50px;
+    background: #aaa;
+    border: 3px solid #000;
+    color: #333;
+  }
+  #samples {
+    width: 100%;
+    padding: 100px 50px;
+    background: #222;
+    border: 3px solid #000;
+    text-align: center;
+  }
+    .thumbnail {
+      margin: 0 13px;
+      border-radius: 16px;
+      border: 3px solid #999;
+      width: 20%;
+    }
+  #contact {
+    width: 100%;
+    padding: 100px 50px;
+    background: #aaa;
+    border: 3px solid #000;
+    color: #333;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  footer {
+    text-align: right;
+    font-size: .9em;
+    padding-right: 50px;
+    padding-top: 10px;
+  }
