@@ -77,21 +77,30 @@ section {
   #fff - white
 */
 #careerGoals {
-  background: #222;
-  color: #E7CE9D;
+  color: #2E3E46;
+  background: #E7CE9D;
   font-size: 1.2em;
   padding-left: 100px;
 }
 #workSamples {
-  background: #E7CE9D;
-  color: #2E3E46;
+  color: #E7CE9D;
+  background: #2E3E46;
   text-align: center;
 }
   .thumbnail {
     width: 25%;
-    border: 3px solid #777;
-    border-radius: 10px;
     box-shadow: 2x 3px 5px #222;
+  }
+
+  #skills{
+      color: #2E3E46;
+      background: #E7CE9D;
+      font-size:1.2em;
+      text-align: center;
+  }
+  .skillsimage{
+    width: 10%;
+    box-shadow: 2x 3px 5px;
   }
 #contact {
   background: #2E3E46;
