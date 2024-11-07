@@ -15,14 +15,20 @@ body {
 }
 
 
-nav,a{
+nav{
+  font-weight: 700;
+  text-align: center;
+  background: #2E3E46;
+  color: #E7CE9D;
+  position: sticky;
+}
+
+a{
   background: #2E3E46;
   color: #E7CE9D;
   font-size: 0.9em;
   text-decoration: none;
-  margin: 50px;
-  text-align: center;
-  
+  margin: 60px;
 }
 
 a:hover{
