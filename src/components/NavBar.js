@@ -62,7 +62,6 @@ export const NavBar = () => {
               Projects
             </Nav.Link>
           </Nav>
-
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/irina-safronova-688130243/"><img src={navIcon1} alt="social-1" /></a>
