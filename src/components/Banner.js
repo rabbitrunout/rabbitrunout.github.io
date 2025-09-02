@@ -16,7 +16,7 @@ export const Banner = () => {
   const period = 2000;
 
   const tick = useCallback(() => {
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+    const toRotate = ["Web Developer","MobileDeveloper", "Web Designer", "UI/UX Designer"];
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
