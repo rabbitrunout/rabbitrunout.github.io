@@ -5,11 +5,12 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: write   # право пушить в gh-pages
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,7 +40,3 @@ jobs:
           branch: gh-pages
           folder: build
           clean: true
-
-
-
-
