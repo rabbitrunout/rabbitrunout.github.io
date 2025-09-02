@@ -66,7 +66,8 @@ export const NavBar = () => {
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/irina-safronova-688130243/"><img src={navIcon1} alt="social-1" /></a>
               <a href="https://github.com/rabbitrunout"><img src={navIcon2} alt="social-2" /></a>
-              <a href="#"><img src={navIcon3} alt="social-3" /></a>   
+              <a href="javascript:void(0)"><img src={navIcon3} alt="social-3" /></a>
+  
             </div>
             <HashLink smooth to="#connect">
               <button className="vvd"><span>Let’s Connect</span></button>
