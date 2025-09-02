@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # важно для корректного деплоя
 
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -24,8 +26,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v6
+        uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
-          branch: gh-pages
-          folder: build
+          branch: gh-pages   # ветка, в которую будут пушиться файлы
+          folder: build      # папка, где лежит готовый build React
           clean: true
