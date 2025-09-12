@@ -287,6 +287,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner img {
   animation: updown 3s linear infinite;
 }
+.banner a {
+  text-decoration: none;
+}
+
+button.vvd {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;   /* убираем подчеркивание */
+  border-radius: 50px;     /* скруглённые края */
+  transition: all 0.3s ease-in-out;
+}
+button.vvd * {
+  text-decoration: none !important;  /* убираем подчеркивание для кнопки и всех вложенных элементов */
+  color: inherit;                     /* чтобы цвет текста не менялся */
+}
+
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -303,34 +328,71 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-/* Skills Progress Bars */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 40px;
-  justify-items: center;
-  margin-top: 40px;
+/************ Skills Progress Bars Centered ************/
+/* Контейнер секции навыков */
+.skill {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  /* min-height: 100vh; */  /* убираем полную высоту экрана */
+  background-color: #121212;
+  flex-direction: column;
+  padding: 60px 20px;       /* задаём нормальные отступы сверху и снизу */
+  margin-top: 0;             /* убираем лишние отступы сверху */
 }
 
+/* Блок с заголовком и описанием */
+.skill-bx {
+  text-align: center;
+  margin-bottom: 50px; /* расстояние до кругов */
+}
+
+/* Сетка кругов */
+.skills-grid {
+  display: flex;
+  justify-content: center;   /* центрируем всю строку */
+  align-items: center;       /* по вертикали */
+  gap: 70px;                 /* расстояние между кругами */
+  flex-wrap: wrap;           /* перенос на следующую строку на маленьких экранах */
+}
+
+/* Контейнер каждого круга */
 .circle-skill {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
 }
 
+/* SVG круг */
 .progress-ring {
+  width: 180px;
+  height: 180px;
   transform: rotate(-90deg);
 }
 
 .progress-ring__bg {
+  r: 80;       /* радиус круга */
+  cx: 90;      /* центр по X = width / 2 */
+  cy: 90;      /* центр по Y */
+  stroke-width: 15;
+  fill: transparent;
+  stroke: #333;
   opacity: 0.2;
 }
 
 .progress-ring__circle {
-  transform: rotate(0deg);
-  transform-origin: 50% 50%;
+  r: 80;
+  cx: 90;
+  cy: 90;
+  stroke-width: 10;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-dasharray: 2 * 3.1416 * 80; /* 2πr */
+  stroke-dashoffset: 2 * 3.1416 * 80;
+  transition: stroke-dashoffset 1.5s ease-out;
 }
 
+/* Текст в центре круга */
 .circle-text {
   position: absolute;
   top: 50%;
@@ -340,13 +402,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .circle-text h3 {
-  font-size: 20px;
+  font-size: 24px; /* увеличили размер */
   margin: 0;
   color: #fff;
 }
 
 .circle-text p {
-  font-size: 14px;
+  font-size: 16px;
   color: #b8b8b8;
   margin: 0;
 }

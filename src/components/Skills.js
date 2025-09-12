@@ -7,7 +7,7 @@ const skills = [
   { name: "CSS", level: 85 },
   { name: "JavaScript", level: 80 },
   { name: "React", level: 75 },
-  { name: "Figma", level: 70 },
+  // { name: "Figma", level: 70 },
 ];
 
 const CircleSkill = ({ name, level }) => {
@@ -26,23 +26,24 @@ const CircleSkill = ({ name, level }) => {
           cy="60"
         />
         <motion.circle
-          className="progress-ring__circle"
-          stroke="url(#grad)"
-          strokeWidth="10"
-          fill="transparent"
-          r="50"
-          cx="60"
-          cy="60"
-          strokeLinecap="round"
-          strokeDasharray={2 * Math.PI * 50}
-          strokeDashoffset={2 * Math.PI * 50}
-          animate={
-            inView
-              ? { strokeDashoffset: (1 - level / 100) * 2 * Math.PI * 50 }
-              : {}
-          }
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
+  className="progress-ring__circle"
+  stroke="url(#grad)"
+  strokeWidth="10"
+  fill="transparent"
+  r={80}       // радиус
+  cx={90}      // центр по X = width/2
+  cy={90}      // центр по Y = height/2
+  strokeLinecap="round"
+  strokeDasharray={2 * Math.PI * 80}       // 502.65
+  strokeDashoffset={2 * Math.PI * 80}      // полностью скрыт
+  animate={
+    inView
+      ? { strokeDashoffset: (1 - level / 100) * 2 * Math.PI * 80 }
+      : {}
+  }
+  transition={{ duration: 1.5, ease: "easeOut" }}
+/>
+
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#AA367C" />
