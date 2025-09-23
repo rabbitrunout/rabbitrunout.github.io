@@ -264,20 +264,22 @@ button.vvd:hover svg {
 }
 
 /************ Skills Section ************/
+/* Контейнер секции */
 .skill {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px 20px;
+  padding: 80px 20px;
   background: transparent;
   position: relative;
   z-index: 1;
 }
 
+/* Заголовок */
 .skill-bx {
   text-align: center;
-  max-width: 1100px;
+  margin-bottom: 50px;
 }
 
 .skill-bx h2 {
@@ -285,58 +287,64 @@ button.vvd:hover svg {
   font-weight: 700;
   color: var(--text-light);
   text-shadow: 0 0 12px var(--main-red), 0 0 24px rgba(229, 57, 53, 0.6);
-  margin-bottom: 20px;
 }
 
 .skill-bx p {
   font-size: 18px;
   color: var(--text-muted);
-  margin-bottom: 50px;
+  margin-top: 10px;
   letter-spacing: 0.5px;
 }
 
+/* Сетка иконок */
 .icons-grid.full-width {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* авто-подстройка */
   justify-items: center;
-  align-items: start;
-  gap: 40px 20px;
+  align-items: center;
+  gap: 40px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px; /* ограничим ширину */
   margin: 0 auto;
 }
 
+/* Каждый блок с иконкой */
 .icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icon-box svg {
-  width: 48px;
-  height: 48px;
+  font-size: 48px;
   color: var(--text-light);
-  transition: color 0.3s, transform 0.3s;
-}
-
-.icon-box:hover {
-  transform: translateY(-6px);
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icon-box:hover svg {
+  transform: scale(1.2);
   color: var(--main-red);
-  /* можно добавить glow */
-  /* text-shadow не влияет на svg, можно использовать filter: drop-shadow */
-  filter: drop-shadow(0 0 8px var(--main-red));
 }
 
 .icon-box p {
-  color: var(--text-muted);
   font-size: 14px;
-  margin-top: 8px;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
 }
 
-
-
-
+/* 📱 Адаптив */
+@media (max-width: 768px) {
+  .icons-grid.full-width {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 25px;
+  }
+  .icon-box svg {
+    font-size: 38px;
+  }
+  .icon-box p {
+    font-size: 12px;
+  }
+}
