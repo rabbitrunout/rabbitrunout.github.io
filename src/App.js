@@ -20,10 +20,7 @@ function App() {
       <Projects />
       <Skills />
       
-      <section id="home" style={{ height: "100vh" }}>Home</section>
-      <section id="skills" style={{ height: "100vh" }}>Skills</section>
-      <section id="projects" style={{ height: "100vh" }}>Projects</section>
-      <section id="connect" style={{ height: "100vh" }}>Contact</section>
+      
      
     </Router>
   );
