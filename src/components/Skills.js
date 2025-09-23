@@ -7,47 +7,67 @@ const skills = [
   { name: "CSS", level: 85 },
   { name: "JavaScript", level: 80 },
   { name: "React", level: 75 },
-  // { name: "Figma", level: 70 },
 ];
+
+// Анимация контейнера (для волны)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // задержка между элементами
+    },
+  },
+};
+
+// Анимация кружка
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 const CircleSkill = ({ name, level }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <div ref={ref} className="circle-skill">
-      <svg className="progress-ring" width="120" height="120">
+    <motion.div
+      ref={ref}
+      className="circle-skill"
+      variants={itemVariants}
+    >
+      <svg className="progress-ring" width="180" height="180">
         <circle
           className="progress-ring__bg"
           stroke="#333"
           strokeWidth="10"
           fill="transparent"
-          r="50"
-          cx="60"
-          cy="60"
+          r="80"
+          cx="90"
+          cy="90"
         />
         <motion.circle
-  className="progress-ring__circle"
-  stroke="url(#grad)"
-  strokeWidth="10"
-  fill="transparent"
-  r={80}       // радиус
-  cx={90}      // центр по X = width/2
-  cy={90}      // центр по Y = height/2
-  strokeLinecap="round"
-  strokeDasharray={2 * Math.PI * 80}       // 502.65
-  strokeDashoffset={2 * Math.PI * 80}      // полностью скрыт
-  animate={
-    inView
-      ? { strokeDashoffset: (1 - level / 100) * 2 * Math.PI * 80 }
-      : {}
-  }
-  transition={{ duration: 1.5, ease: "easeOut" }}
-/>
+          className="progress-ring__circle"
+          stroke="url(#grad)"
+          strokeWidth="10"
+          fill="transparent"
+          r="80"
+          cx="90"
+          cy="90"
+          strokeLinecap="round"
+          strokeDasharray={2 * Math.PI * 80}
+          strokeDashoffset={2 * Math.PI * 80}
+          animate={
+            inView
+              ? { strokeDashoffset: (1 - level / 100) * 2 * Math.PI * 80 }
+              : {}
+          }
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
 
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#AA367C" />
-            <stop offset="100%" stopColor="#4A2FBD" />
+            <stop offset="0%" stopColor="var(--main-red)" />
+            <stop offset="100%" stopColor="var(--accent-green)" />
           </linearGradient>
         </defs>
       </svg>
@@ -55,7 +75,7 @@ const CircleSkill = ({ name, level }) => {
         <h3>{level}%</h3>
         <p>{name}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -65,11 +85,17 @@ export const Skills = () => {
       <div className="skill-bx">
         <h2>My Skills</h2>
         <p>Here are some of my main skills with experience level</p>
-        <div className="skills-grid">
+        <motion.div
+          className="skills-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {skills.map((skill, index) => (
             <CircleSkill key={index} {...skill} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

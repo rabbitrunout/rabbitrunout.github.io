@@ -7,8 +7,13 @@ import { Skills } from './components/Skills';
 
 function App() {
   return (
+    
     <Router>
-      
+       {/* 🎬 Видео фон глобально */}
+      <video autoPlay muted loop playsInline className="bg-video">
+        <source src="/video/stars.mp4" type="video/mp4" />
+      </video>
+      <div className="overlay"></div>
       <NavBar />
       <Banner />
       <Skills />

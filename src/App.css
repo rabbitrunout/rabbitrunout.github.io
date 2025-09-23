@@ -1,23 +1,34 @@
 :root {
-  --main-red: #e53935;      /* красный — акцент */
-  --accent-green: #43a047;  /* глаза */
-  --dark-bg: #121212;       /* общий фон */
-  --text-light: #ffffff;    /* белый текст */
-  --text-muted: #b8b8b8;    /* серый вторичный текст */
-  --hair-brown: #5d4037;    /* коричневый акцент */
+  --main-red: #e53935;      /* акцент */
+  --accent-green: #43a047;  /* второстепенный */
+  --dark-bg: #121212;       /* фон */
+  --text-light: #ffffff;    /* основной текст */
+  --text-muted: #b8b8b8;    /* вторичный текст */
+  --hair-brown: #5d4037;    /* для курсора */
 }
 
-/* === Base === */
+/* === Базовые стили === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
 body {
-  /* background-color: var(--dark-bg) !important;
+  font-family: 'Centra', sans-serif !important;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--dark-bg) !important;
   color: var(--text-light) !important;
-  font-family: "Centra", sans-serif !important; */
-  background: radial-gradient(circle at right, #e53935 0%, #121212 70%);
-
 }
 
-
-/* Custom Fonts */
+/* === Подключение шрифтов === */
 @font-face {
   font-family: Centra;
   src: url('./assets/img/CentraNo2-Bold.ttf');
@@ -32,42 +43,6 @@ body {
   font-family: Centra;
   src: url('./assets/img/CentraNo2-Book.ttf');
   font-weight: 400;
-}
-
-/* Default CSS */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-}
-
-body{
-  font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: #121212 !important;
-  color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-}
-
-:root {
-  --main-red: #e53935;
-  --accent-green: #43a047;
-  --dark-bg: #121212;
-  --text-light: #ffffff;
-  --hair-brown: #5d4037;
 }
 
 /************ Navbar ************/
@@ -148,69 +123,37 @@ button.vvd {
   border: 2px solid var(--main-red);
   color: var(--main-red);
   font-weight: 700;
-  font-size: 16px;
-  padding: 10px 24px;
-  border-radius: 50px;
+  font-size: 20px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
+  border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
-
 button.vvd:hover {
   background: var(--main-red);
   color: var(--text-light);
 }
-.App {
-  text-align: center;
+button.vvd svg {
+  transition: 0.3s ease-in-out;
+}
+button.vvd:hover svg {
+  transform: translateX(8px);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-/************ Banner Css ************/
+/************ Banner ************/
 .banner {
   position: relative;
   margin-top: 0;
   padding: 260px 0 100px 0;
   overflow: hidden;
-  color: #fff;
+  color: var(--text-light);
 }
 
 .bg-video {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   min-width: 100%;
@@ -220,11 +163,11 @@ button.vvd:hover {
   transform: translate(-50%, -50%);
   z-index: -1;
   object-fit: cover;
-  opacity: 6.2; /* можно регулировать */
+  opacity: 6.5; /* ✅ исправлено */
 }
 
-.banner .overlay {
-  position: absolute;
+.overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -232,15 +175,12 @@ button.vvd:hover {
   background: rgba(18, 18, 18, 0.6);
   z-index: -1;
 }
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 14px;
-  background: linear-gradient(
-    90deg,
-    rgba(229, 57, 53, 0.6),
-    rgba(93, 64, 55, 0.6)
-  );
+  background: linear-gradient(90deg, rgba(229, 57, 53, 0.6), rgba(93, 64, 55, 0.6));
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 18px;
   margin-bottom: 16px;
@@ -253,7 +193,6 @@ button.vvd:hover {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 20px;
-  color: var(--text-light);
 }
 .banner h1 .txt-rotate .wrap {
   color: var(--main-red);
@@ -269,88 +208,59 @@ button.vvd:hover {
 .banner img {
   max-width: 360px;
   border-radius: 50%;
-  border: none;              /* убрали красную рамку */
-  box-shadow: none;          /* убрали свечение */
+  border: none;   /* убрали рамку */
+  box-shadow: none; /* убрали свечение */
 }
 .banner a {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-
-/************ Buttons ************/
-button.vvd {
-  background: transparent;
-  border: 2px solid var(--main-red);
-  color: var(--main-red);
-  font-weight: 700;
-  font-size: 20px;
-  padding: 12px 28px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  
-  
-}
-
-button.vvd:hover {
-  background: var(--main-red);
-  color: var(--text-light);
-}
-
-button.vvd svg {
-  transition: 0.3s ease-in-out;
-}
-button.vvd:hover svg {
-  transform: translateX(8px);
-}
-
-/************ Typing cursor ************/
-.txt-rotate > .wrap {
-  border-right: 0.08em solid var(--hair-brown);
-}
-
-
-
-/************ Skills Progress Bars Centered ************/
-/* Контейнер секции навыков */
+/************ Skills ************/
 .skill {
   display: flex;
-  justify-content: center;  
-  align-items: center;      
-  /* min-height: 100vh; */  /* убираем полную высоту экрана */
-  background-color: #121212;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: 60px 20px;       /* задаём нормальные отступы сверху и снизу */
-  margin-top: 0;             /* убираем лишние отступы сверху */
+  padding: 80px 20px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
-/* Блок с заголовком и описанием */
 .skill-bx {
   text-align: center;
-  margin-bottom: 50px; /* расстояние до кругов */
+  margin-bottom: 50px;
 }
 
-/* Сетка кругов */
+.skill-bx h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-shadow: 0 0 12px var(--main-red), 0 0 24px rgba(229, 57, 53, 0.6);
+}
+
+.skill-bx p {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
 .skills-grid {
   display: flex;
-  justify-content: center;   /* центрируем всю строку */
-  align-items: center;       /* по вертикали */
-  gap: 70px;                 /* расстояние между кругами */
-  flex-wrap: wrap;           /* перенос на следующую строку на маленьких экранах */
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
 }
 
-/* Контейнер каждого круга */
 .circle-skill {
   position: relative;
   width: 180px;
   height: 180px;
 }
 
-/* SVG круг */
 .progress-ring {
   width: 180px;
   height: 180px;
@@ -358,28 +268,19 @@ button.vvd:hover svg {
 }
 
 .progress-ring__bg {
-  r: 80;       /* радиус круга */
-  cx: 90;      /* центр по X = width / 2 */
-  cy: 90;      /* центр по Y */
-  stroke-width: 15;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 12;
   fill: transparent;
-  stroke: #333;
-  opacity: 0.2;
 }
 
 .progress-ring__circle {
-  r: 80;
-  cx: 90;
-  cy: 90;
-  stroke-width: 10;
+  stroke-width: 12;
   fill: transparent;
   stroke-linecap: round;
-  stroke-dasharray: 2 * 3.1416 * 80; /* 2πr */
-  stroke-dashoffset: 2 * 3.1416 * 80;
+  filter: drop-shadow(0 0 8px var(--main-red));
   transition: stroke-dashoffset 1.5s ease-out;
 }
 
-/* Текст в центре круга */
 .circle-text {
   position: absolute;
   top: 50%;
@@ -387,34 +288,33 @@ button.vvd:hover svg {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .circle-text h3 {
-  font-size: 24px; /* увеличили размер */
+  font-size: 28px;
   margin: 0;
-  color: #fff;
+  color: var(--text-light);
+  text-shadow: 0 0 10px var(--main-red), 0 0 20px var(--main-red);
 }
-
 .circle-text p {
   font-size: 16px;
-  color: #b8b8b8;
   margin: 0;
+  color: var(--text-muted);
+  letter-spacing: 1px;
 }
 
-
-
-/************ Projects Css ************/
+/************ Projects ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background: transparent; /* тоже прозрачный фон */
+  z-index: 1;
 }
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
 }
 .project p {
-  color: #B8B8B8;
+  color: var(--text-muted);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -422,22 +322,22 @@ button.vvd:hover svg {
   text-align: center;
   width: 56%;
 }
+
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 33.333%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
-  width: 100%;
+  color: var(--text-light);
   font-size: 17px;
   letter-spacing: 0.8px;
   font-weight: 500;
@@ -447,34 +347,23 @@ button.vvd:hover svg {
   z-index: 0;
 }
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid #fff;
 }
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
-}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
@@ -510,21 +399,9 @@ button.vvd:hover svg {
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
 }
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
-  letter-spacing: 0.8px;
 }
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-
