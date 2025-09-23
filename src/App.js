@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className="overlay"></div>
       <NavBar />
       <Banner />
+      <Projects />
       <Skills />
       
       <section id="home" style={{ height: "100vh" }}>Home</section>
