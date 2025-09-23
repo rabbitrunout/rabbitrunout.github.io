@@ -220,7 +220,7 @@ button.vvd:hover {
   transform: translate(-50%, -50%);
   z-index: -1;
   object-fit: cover;
-  opacity: 0.9; /* можно регулировать */
+  opacity: 6.2; /* можно регулировать */
 }
 
 .banner .overlay {
