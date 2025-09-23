@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/mainPhoto.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -16,7 +16,12 @@ export const Banner = () => {
   const period = 2000;
 
   const tick = useCallback(() => {
-    const toRotate = ["Web Developer","MobileDeveloper", "Web Designer", "UI/UX Designer"];
+    const toRotate = [
+      "Web Developer",
+      "Mobile Developer",
+      "Web Designer",
+      "UI/UX Designer",
+    ];
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -49,6 +54,15 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+      {/* 🎬 Видео фон */}
+      <video autoPlay muted loop playsInline className="bg-video">
+        <source src="/video/main.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* 🔲 Затемняющий оверлей */}
+      <div className="overlay"></div>
+
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -61,14 +75,15 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Irina `}{" "}
+                    {`Hi! I'm Irina `}
                     <span className="txt-rotate">
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Mobile Web Developer crafting responsive, user-friendly websites and apps. 🚀  
-                    Ready to contribute to real projects and grow as a developer.
+                    Mobile Web Developer crafting responsive, user-friendly
+                    websites and apps 🚀 Ready to contribute to real projects
+                    and grow as a developer.
                   </p>
                   <HashLink to="#connect">
                     <button className="vvd">
