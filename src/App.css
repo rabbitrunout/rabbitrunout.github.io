@@ -221,47 +221,289 @@ button.vvd:hover svg {
 /************ Projects ************/
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
 .project-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   overflow: hidden;
-  text-align: center;
-  padding-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
-.project-card:hover { transform: translateY(-8px); }
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
 
 .project-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  object-position: top;
+  display: block;
 }
+
 .project-info {
   padding: 20px;
+  text-align: left;
 }
-.project-info h3 { color: var(--text-light); }
-.project-info p { color: var(--text-muted); margin: 12px 0; }
-.project-info span { font-size: 14px; color: var(--main-red); display: block; margin-bottom: 10px; }
 
-.buttons a {
-  margin: 0 6px;
-  padding: 8px 16px;
-  border: 1px solid var(--main-red);
-  border-radius: 30px;
+.project-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.project-info p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5em;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; только 3 строки */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-info span {
+  display: block;
   font-size: 14px;
+  color: var(--main-red);
+  margin-bottom: 16px;
+}
+
+/************ Modal ************/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.modal-content {
+  background: rgba(18, 18, 18, 0.95);
+  border-radius: 12px;
+  max-width: 1100px;
+  width: 100%;
+  height: 600px; /* ✅ фиксированная высота для единообразия */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: var(--main-red);
+}
+
+/* тело модалки */
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 30px;
+  height: 100%;
+}
+
+/* левая колонка (слайдер) */
+.modal-left {
+  flex: 1;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 100%;
+  height: 320px; /* фиксируем одинаковую высоту для фото и видео */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000; /* фон, чтобы не было пустоты */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(229, 57, 53, 0.5);
+}
+
+.modal-img,
+.modal-video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* сохраняет пропорции, вписывает красиво */
+  border-radius: 12px;
+}
+
+/* кнопки слайдера */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: var(--main-red);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+.slider-btn.next {
+  right: 10px;
+}
+
+/* превью */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 70px;
+  height: 50px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: border 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb.active {
+  border-color: var(--main-red);
+  box-shadow: 0 0 10px var(--main-red);
+  transform: scale(1.05);
+}
+
+/* правая колонка (описание) */
+.modal-right {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.modal-right h3 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: var(--main-red);
+}
+
+.modal-desc {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+
+.modal-tech {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.modal-buttons a {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--main-red);
+  color: var(--text-light);
   text-decoration: none;
+  font-weight: 600;
   transition: 0.3s;
 }
-.buttons a:hover {
-  background: var(--main-red);
-  color: white;
+
+.modal-buttons a:hover {
+  background: #b71c1c;
 }
+
+/* === адаптив === */
+@media (max-width: 768px) {
+  .modal-content {
+    height: auto;
+    max-height: 90vh;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .modal-left {
+    max-width: 100%;
+  }
+
+  .slider {
+    height: 250px; /* ниже на мобильном */
+  }
+
+  .modal-right {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+
 
 /************ Skills Section ************/
 /* Контейнер секции */
