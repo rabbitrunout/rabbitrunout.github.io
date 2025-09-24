@@ -472,6 +472,18 @@ button.vvd:hover svg {
   background: #b71c1c;
 }
 
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100000; /* добавь */
+}
+
 /* === адаптив === */
 @media (max-width: 768px) {
   .modal-content {
@@ -498,6 +510,69 @@ button.vvd:hover svg {
     margin-top: 20px;
   }
 }
+
+.project-category {
+  margin-bottom: 60px;
+}
+
+.category-title {
+  font-size: 28px;
+  color: var(--main-red);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--main-red);
+  border-radius: 10px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px; /* 🔥 меньше */
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.project-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
 
 
 
@@ -543,9 +618,9 @@ button.vvd:hover svg {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-items: center;
   align-items: flex-start;
-  gap: 30px;              /* меньшее расстояние */
+  gap: 5px;              /* меньшее расстояние */
   width: 100%;
-  max-width: 900px;       /* ✅ было 1200px, сделаем компактнее */
+  max-width: 1200px;       /* ✅ было 1200px, сделаем компактнее */
   margin: 0 auto;         /* центрируем */
 }
 
@@ -606,8 +681,7 @@ button.vvd:hover svg {
 
 
 
-
-
+/* CONTACT SECTION */
 .contact {
   padding: 80px 20px;
   text-align: center;
