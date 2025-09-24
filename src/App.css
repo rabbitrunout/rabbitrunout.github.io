@@ -537,59 +537,75 @@ button.vvd:hover svg {
   margin-top: 10px;
   letter-spacing: 0.5px;
 }
-
 /* Сетка иконок */
 .icons-grid.full-width {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* авто-подстройка */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-items: center;
-  align-items: center;
-  gap: 40px;
+  align-items: flex-start;
+  gap: 30px;              /* меньшее расстояние */
   width: 100%;
-  max-width: 1200px; /* ограничим ширину */
-  margin: 0 auto;
+  max-width: 900px;       /* ✅ было 1200px, сделаем компактнее */
+  margin: 0 auto;         /* центрируем */
 }
 
-/* Каждый блок с иконкой */
+/* Каждый блок */
 .icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  height: 120px;          /* фиксируем высоту для ровного текста */
+  text-align: center;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Иконки */
 .icon-box svg {
-  font-size: 48px;
+  font-size: 42px;        /* чуть меньше */
   color: var(--text-light);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icon-box:hover svg {
-  transform: scale(1.2);
+  transform: scale(1.15);
   color: var(--main-red);
 }
 
+/* Подписи */
 .icon-box p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-muted);
   margin: 0;
-  text-align: center;
+  line-height: 1.2;
+  max-width: 100px;       /* ограничим ширину текста */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* 📱 Адаптив */
 @media (max-width: 768px) {
   .icons-grid.full-width {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 25px;
+    gap: 20px;
+    max-width: 100%;      /* на мобилке пусть тянется */
+  }
+  .icon-box {
+    height: 100px;
   }
   .icon-box svg {
-    font-size: 38px;
+    font-size: 34px;
   }
   .icon-box p {
     font-size: 12px;
+    max-width: 80px;
   }
 }
+
+
+
 
 
 .contact {
