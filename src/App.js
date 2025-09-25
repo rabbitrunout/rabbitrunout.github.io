@@ -15,9 +15,10 @@ function App() {
     
     <Router>
        {/* 🎬 Видео фон глобально */}
-      <video autoPlay muted loop playsInline className="bg-video">
-        <source src="/video/stars.mp4" type="video/mp4" />
-      </video>
+     <video autoPlay muted loop playsInline className="bg-video">
+  <source src={process.env.PUBLIC_URL + "/video/main.mp4"} type="video/mp4" />
+</video>
+
 
       
       <div className="overlay"></div>
