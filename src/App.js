@@ -7,27 +7,23 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 
-
-
+// ✅ импорт видео как модуля
+import mainVideo from "./assets/video/main.mp4";
 
 function App() {
   return (
-    
     <Router>
-       {/* 🎬 Видео фон глобально */}
-     <video autoPlay muted loop playsInline className="bg-video">
-  <source src={process.env.PUBLIC_URL + "/video/main.mp4"} type="video/mp4" />
-</video>
+      {/* 🎬 Видео фон глобально */}
+      <video autoPlay muted loop playsInline className="bg-video">
+        <source src={mainVideo} type="video/mp4" />
+      </video>
 
-
-      
       <div className="overlay"></div>
       <NavBar />
       <Banner />
       <Projects />
       <Skills />
       <Contact />
-      
     </Router>
   );
 }
