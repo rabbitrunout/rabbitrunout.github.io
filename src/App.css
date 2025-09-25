@@ -45,6 +45,9 @@ body {
   font-weight: 400;
 }
 
+
+
+
 /************ Navbar ************/
 nav.navbar {
   padding: 18px 0;
@@ -219,63 +222,70 @@ button.vvd:hover svg {
 
 
 /************ Projects ************/
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+.project-category {
+  margin-bottom: 60px;
 }
 
+.category-title {
+  font-size: 24px;
+  color: var(--main-red);
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* Сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Карточка */
 .project-card {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .project-img {
   width: 100%;
-  height: 220px;
+  height: 180px; /* меньше высота */
   object-fit: cover;
   object-position: top;
   display: block;
 }
 
 .project-info {
-  padding: 20px;
+  padding: 15px;
   text-align: left;
 }
 
 .project-info h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 6px;
   color: var(--text-light);
 }
 
 .project-info p {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text-muted);
-  margin-bottom: 12px;
-  line-height: 1.5em;
-  display: -webkit-box;
-  /* -webkit-line-clamp: 3; только 3 строки */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  margin-bottom: 8px;
+  line-height: 1.4em;
 }
 
 .project-info span {
-  display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--main-red);
-  margin-bottom: 16px;
 }
 
 /************ Modal ************/
@@ -296,14 +306,14 @@ button.vvd:hover svg {
 .modal-content {
   background: rgba(18, 18, 18, 0.95);
   border-radius: 12px;
-  max-width: 1100px;
-  width: 100%;
-  height: 600px; /* ✅ фиксированная высота для единообразия */
-  color: #fff;
+  max-width: 1000px;
+  width: 95%;
+  height: 600px; /* фиксированная высота */
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
 
 .modal-close {
@@ -316,62 +326,59 @@ button.vvd:hover svg {
   border: none;
   cursor: pointer;
   transition: color 0.3s;
+  z-index: 10000;
 }
 
 .modal-close:hover {
   color: var(--main-red);
 }
 
-/* тело модалки */
 .modal-body {
   display: flex;
-  flex-direction: row;
-  gap: 24px;
+  gap: 20px;
   padding: 30px;
   height: 100%;
 }
 
-/* левая колонка (слайдер) */
 .modal-left {
   flex: 1;
   max-width: 55%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .slider {
   width: 100%;
-  height: 320px; /* фиксируем одинаковую высоту для фото и видео */
+  height: 320px;
+  background: #000;
   border-radius: 12px;
   overflow: hidden;
-  background: #000; /* фон, чтобы не было пустоты */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(229, 57, 53, 0.5);
 }
 
 .modal-img,
 .modal-video {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;  /* сохраняет пропорции, вписывает красиво */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 12px;
 }
 
-/* кнопки слайдера */
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   border: none;
-  font-size: 28px;
+  font-size: 26px;
   color: #fff;
   cursor: pointer;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 50%;
   transition: background 0.3s;
 }
@@ -380,86 +387,43 @@ button.vvd:hover svg {
   background: var(--main-red);
 }
 
-.slider-btn.prev {
-  left: 10px;
-}
-.slider-btn.next {
-  right: 10px;
-}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
 
-/* превью */
-.thumbnails {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 15px;
-  flex-wrap: wrap;
-}
-
-.thumb {
-  width: 70px;
-  height: 50px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: border 0.3s, transform 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #222;
-}
-
-.thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.thumb.active {
-  border-color: var(--main-red);
-  box-shadow: 0 0 10px var(--main-red);
-  transform: scale(1.05);
-}
-
-/* правая колонка (описание) */
 .modal-right {
   flex: 1;
   max-width: 45%;
-  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 
 .modal-right h3 {
-  font-size: 26px;
-  margin-bottom: 16px;
+  font-size: 22px;
+  margin-bottom: 12px;
   color: var(--main-red);
 }
 
 .modal-desc {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--text-light);
-  margin-bottom: 20px;
-  line-height: 1.6em;
+  margin-bottom: 16px;
+  line-height: 1.5em;
 }
 
 .modal-tech {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .modal-buttons {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   margin-top: auto;
 }
 
 .modal-buttons a {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 6px;
   background: var(--main-red);
   color: var(--text-light);
@@ -472,19 +436,7 @@ button.vvd:hover svg {
   background: #b71c1c;
 }
 
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 28px;
-  color: var(--text-light);
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 100000; /* добавь */
-}
-
-/* === адаптив === */
+/* 📱 Мобильная адаптация */
 @media (max-width: 768px) {
   .modal-content {
     height: auto;
@@ -501,76 +453,41 @@ button.vvd:hover svg {
   }
 
   .slider {
-    height: 250px; /* ниже на мобильном */
+    height: 240px;
   }
 
   .modal-right {
     max-width: 100%;
-    height: auto;
     margin-top: 20px;
   }
 }
-
-.project-category {
-  margin-bottom: 60px;
-}
-
-.category-title {
-  font-size: 28px;
-  color: var(--main-red);
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.carousel {
+.project-filters {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0 40px;
 }
 
-.carousel::-webkit-scrollbar {
-  height: 8px;
-}
-.carousel::-webkit-scrollbar-thumb {
-  background: var(--main-red);
-  border-radius: 10px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-img {
-  width: 100%;
-  height: 200px; /* 🔥 меньше */
-  object-fit: cover;
-  object-position: top;
-}
-
-.project-info {
-  padding: 15px;
-}
-
-.project-info h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.project-info p {
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--main-red);
+  background: transparent;
+  color: var(--text-light);
   font-size: 14px;
-  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: var(--main-red);
+  color: #fff;
+}
+
+.filter-btn.active {
+  background: var(--main-red);
+  color: #fff;
+  font-weight: 600;
 }
 
 
@@ -618,7 +535,7 @@ button.vvd:hover svg {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-items: center;
   align-items: flex-start;
-  gap: 5px;              /* меньшее расстояние */
+  gap: 2px;              /* меньшее расстояние */
   width: 100%;
   max-width: 1200px;       /* ✅ было 1200px, сделаем компактнее */
   margin: 0 auto;         /* центрируем */
@@ -630,14 +547,15 @@ button.vvd:hover svg {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 120px;          /* фиксируем высоту для ровного текста */
-  text-align: center;
-  transition: transform 0.3s ease, color 0.3s ease;
+  min-height: 120px;   /* вместо фиксированной высоты */
+  padding: 10px;
+  gap: 8px; 
 }
+
 
 /* Иконки */
 .icon-box svg {
-  font-size: 42px;        /* чуть меньше */
+  font-size: 36px;        /* чуть меньше */
   color: var(--text-light);
   margin-bottom: 10px;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -653,12 +571,19 @@ button.vvd:hover svg {
   font-size: 13px;
   color: var(--text-muted);
   margin: 0;
-  line-height: 1.2;
-  max-width: 100px;       /* ограничим ширину текста */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.3;
+  max-width: 100px;
+  text-align: center;
+  word-wrap: break-word;  /* перенос слов */
+  color: rgba(255,255,255,0.8);
+   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+.icon-box:hover p {
+  color: var(--main-red);
+  text-shadow: 0 0 6px rgba(229, 57, 53, 0.6);
+}
+
+
 
 /* 📱 Адаптив */
 @media (max-width: 768px) {
@@ -668,14 +593,13 @@ button.vvd:hover svg {
     max-width: 100%;      /* на мобилке пусть тянется */
   }
   .icon-box {
-    height: 100px;
+     min-height: 100px;
   }
   .icon-box svg {
     font-size: 34px;
   }
   .icon-box p {
-    font-size: 12px;
-    max-width: 80px;
+    max-width: 120px; /* больше пространства */
   }
 }
 
@@ -753,3 +677,7 @@ button.vvd:hover svg {
   background: var(--accent-green);
   color: var(--text-light);
 }
+
+
+
+

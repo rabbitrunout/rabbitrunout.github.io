@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
-// ✅ примеры картинок и видео
 import mainGlowi from "../assets/projects/glowi/main-glowi.png";
 import glowiVideo from "../assets/projects/glowi/GlowiVideo.mp4";
 
@@ -61,6 +60,7 @@ const projectsByCategory = {
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -87,7 +87,7 @@ export const Projects = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3, // ✅ показываем по 3 проекта
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
@@ -95,46 +95,66 @@ export const Projects = () => {
     ],
   };
 
+  // 🔥 список категорий для кнопок
+  const categories = ["All", ...Object.keys(projectsByCategory)];
+
   return (
     <section className="project" id="projects">
       <div className="container">
         <h2>My Projects</h2>
         <p>Here are some of the applications I’ve built and contributed to.</p>
 
-        {Object.entries(projectsByCategory).map(([category, projects]) => (
-          <div key={category} className="project-category">
-            <h3 className="category-title">{category}</h3>
-            <Slider {...sliderSettings}>
-              {projects.map((proj, i) => (
-                <motion.div
-                  key={i}
-                  className="project-card"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  viewport={{ once: true }}
-                  onClick={() => openModal(proj)}
-                >
-                  <img src={proj.img} alt={proj.title} className="project-img" />
-                  <div className="project-info">
-                    <h3>{proj.title}</h3>
-                    <p className="short-desc">{proj.shortDesc}</p>
-                    <span>{proj.tech}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </Slider>
-          </div>
-        ))}
+        {/* 🔥 Фильтры */}
+        <div className="project-filters">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`filter-btn ${
+                activeCategory === cat ? "active" : ""
+              }`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* 🔥 Вывод категорий */}
+        {Object.entries(projectsByCategory).map(([category, projects]) => {
+          if (activeCategory !== "All" && activeCategory !== category) return null;
+
+          return (
+            <div key={category} className="project-category">
+              <h3 className="category-title">{category}</h3>
+              <Slider {...sliderSettings}>
+                {projects.map((proj, i) => (
+                  <motion.div
+                    key={i}
+                    className="project-card"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.2 }}
+                    viewport={{ once: true }}
+                    onClick={() => openModal(proj)}
+                  >
+                    <img src={proj.img} alt={proj.title} className="project-img" />
+                    <div className="project-info">
+                      <h3>{proj.title}</h3>
+                      <p className="short-desc">{proj.shortDesc}</p>
+                      <span>{proj.tech}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </Slider>
+            </div>
+          );
+        })}
       </div>
 
       {/* Modal */}
       {selectedProject && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>
               ×
             </button>
@@ -151,7 +171,7 @@ export const Projects = () => {
                   <video
                     src={selectedProject.media[selectedMediaIndex].src}
                     controls
-                    controlsList="nodownload" // 🚫 запрещаем скачивание
+                    controlsList="nodownload"
                     className="modal-video"
                   />
                 )}
@@ -176,11 +196,7 @@ export const Projects = () => {
                 </p>
                 <div className="modal-buttons">
                   {selectedProject.github && (
-                    <a
-                      href={selectedProject.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
+                    <a href={selectedProject.github} target="_blank" rel="noreferrer">
                       GitHub
                     </a>
                   )}

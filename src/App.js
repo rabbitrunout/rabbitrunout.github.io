@@ -7,6 +7,9 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 
+
+
+
 function App() {
   return (
     
@@ -15,6 +18,8 @@ function App() {
       <video autoPlay muted loop playsInline className="bg-video">
         <source src="/video/stars.mp4" type="video/mp4" />
       </video>
+
+      
       <div className="overlay"></div>
       <NavBar />
       <Banner />
