@@ -220,8 +220,6 @@ button.vvd:hover svg {
 }
 
 
-
-/************ Projects ************/
 .projects {
   padding: 4rem 2rem;
   background: #0a0a0f;
@@ -232,7 +230,7 @@ button.vvd:hover svg {
 .projects h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff4b4b; /* 🔥 красный акцент вместо голубого */
+  color: #ff4b4b; /* красный акцент */
 }
 
 .project-filters {
@@ -252,7 +250,7 @@ button.vvd:hover svg {
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: #ff4b4b; /* 🔥 красный акцент */
+  background: #ff4b4b;
   color: #000;
 }
 
@@ -262,7 +260,7 @@ button.vvd:hover svg {
 
 .category-title {
   font-size: 1.8rem;
-  color: #ff4b4b; /* 🔥 красный */
+  color: #ff4b4b;
   margin: 20px 0;
   text-align: left;
 }
@@ -281,14 +279,18 @@ button.vvd:hover svg {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 15px #ff4b4b; /* 🔥 красное свечение */
+  box-shadow: 0 0 15px #ff4b4b;
 }
 
 .project-img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px;          /* одинаковая высота */
+  object-fit: cover;      /* обрезаем */
+  object-position: top;   /* 🔥 всегда показываем верх */
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
 
 .project-info {
   flex: 1;
@@ -313,12 +315,12 @@ button.vvd:hover svg {
 
 .project-info span {
   font-size: 0.85rem;
-  color: #ff4b4b; /* 🔥 красный для технологий */
+  color: #ff4b4b;
 }
 
-/* slick arrows */
+/* slick arrows + spacing */
 .slick-slide {
-  padding: 0 12px; /* 🔥 расстояние между карточками */
+  padding: 0 12px; /* расстояние между карточками */
   box-sizing: border-box;
 }
 .slick-prev, .slick-next {
@@ -326,7 +328,7 @@ button.vvd:hover svg {
 }
 .slick-prev:before, .slick-next:before {
   font-size: 28px;
-  color: #ff4b4b; /* 🔥 красные стрелки */
+  color: #ff4b4b;
 }
 
 /* slick dots */
@@ -335,8 +337,10 @@ button.vvd:hover svg {
   color: #666;
 }
 .slick-dots li.slick-active button:before {
-  color: #ff4b4b; /* 🔥 активная точка красная */
+  color: #ff4b4b;
 }
+
+
 
 
 
@@ -388,6 +392,14 @@ button.vvd:hover svg {
 .modal-video {
   width: 100%;
   border-radius: 8px;
+}
+.modal-img {
+  max-width: 100%;
+  max-height: 70vh;       /* ограничиваем по высоте экрана */
+  object-fit: contain;    /* показываем целиком */
+  object-position: center; /* 🔥 центрируем */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 75, 75, 0.4);
 }
 
 .slider-btn {
