@@ -96,6 +96,15 @@ export const Projects = () => {
                       <h3>{proj.title}</h3>
                       <p className="short-desc">{proj.shortDesc}</p>
                       <span>{proj.tech}</span>
+                       {/* 🔥 Кнопка появляется только если текст длиннее */}
+  {proj.shortDesc.length > 80 && (   // можно регулировать число символов
+    <button
+      className="read-more-btn"
+      onClick={() => openModal(proj)}
+    >
+      …Read more
+    </button>
+  )}
                     </div>
                   </motion.div>
                 ))}
