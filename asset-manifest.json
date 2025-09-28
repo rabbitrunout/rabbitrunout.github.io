@@ -1,24 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a3afb7b.css",
-    "main.js": "/static/js/main.3ae630f2.js",
-    "static/js/453.12235491.chunk.js": "/static/js/453.12235491.chunk.js",
+    "main.css": "/static/css/main.aa8ec283.css",
+    "main.js": "/static/js/main.909bb64c.js",
+    "static/js/453.2715dd58.chunk.js": "/static/js/453.2715dd58.chunk.js",
+    "static/media/bakeryVideo.mp4": "/static/media/bakeryVideo.efee373155eb67b0a4d0.mp4",
     "static/media/GlowiVideo.mp4": "/static/media/GlowiVideo.9e5b54d17bc2635658ca.mp4",
+    "static/media/SurfVideo.mp4": "/static/media/SurfVideo.4667b80310b9e5520bcc.mp4",
     "static/media/main.mp4": "/static/media/main.6de8761cfaad48fdb79a.mp4",
+    "static/media/bakeryMain.png": "/static/media/bakeryMain.fe49a0fbb798943c2b16.png",
+    "static/media/skateVideo.mp4": "/static/media/skateVideo.d234f0a1067f27f8ea3f.mp4",
+    "static/media/skateMain.png": "/static/media/skateMain.c88cd6b5c376311b7d6c.png",
+    "static/media/skate_1.png": "/static/media/skate_1.fbe6d14ad73349f70eaf.png",
     "static/media/main-glowi.png": "/static/media/main-glowi.121e139274c426248a7f.png",
+    "static/media/1-1.png": "/static/media/1-1.37ceaf57e24caa6f1b01.png",
     "static/media/mainPhoto.png": "/static/media/mainPhoto.a0aeecb89ae5d714951b.png",
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "static/media/nav-icon1.svg": "/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.4a3afb7b.css.map": "/static/css/main.4a3afb7b.css.map",
-    "main.3ae630f2.js.map": "/static/js/main.3ae630f2.js.map",
-    "453.12235491.chunk.js.map": "/static/js/453.12235491.chunk.js.map"
+    "main.aa8ec283.css.map": "/static/css/main.aa8ec283.css.map",
+    "main.909bb64c.js.map": "/static/js/main.909bb64c.js.map",
+    "453.2715dd58.chunk.js.map": "/static/js/453.2715dd58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a3afb7b.css",
-    "static/js/main.3ae630f2.js"
+    "static/css/main.aa8ec283.css",
+    "static/js/main.909bb64c.js"
   ]
 }
