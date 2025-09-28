@@ -145,12 +145,19 @@ export const Projects = () => {
                 <h3>{selectedProject.title}</h3>
                 <p className="modal-desc">{selectedProject.fullDesc}</p>
                 <p className="modal-tech"><strong>Tech:</strong> {selectedProject.tech}</p>
-                <div className="modal-buttons">
-                  {selectedProject.github && (
+               <div className="modal-buttons">
+                    {selectedProject.github && (
                     <a href={selectedProject.github} target="_blank" rel="noreferrer">
-                      GitHub
+                    GitHub
                     </a>
-                  )}
+                )}
+
+                {/* 🔥 Добавляем кнопку Demo/Link */}
+                {selectedProject.link && (
+                    <a href={selectedProject.link} target="_blank" rel="noreferrer">
+                    View Project
+                    </a>
+                )}
                 </div>
               </div>
             </div>

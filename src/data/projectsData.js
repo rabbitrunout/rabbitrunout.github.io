@@ -20,6 +20,7 @@ export const projectsByCategory = {
       fullDesc: 
             "The main goal of the project was to combine family tradition with a clean, modern user experience for online orders. Storytelling and simple navigation help create trust and highlight the bakery’s artisanal identity.\n\nThe mockup features:\n\n- A hero section with brand story and visuals of bread\n- Navigation (Home, About, Menu, History, Contact)\n- Storytelling blocks with images of baking process\n- Product grid with clear categories\n- CTA buttons for quick ordering",    
       tech: "Adobe XD",
+      link: "https://xd.adobe.com/view/30072f89-14e7-47b9-9f61-1143514d85e3-6554/screen/98448917-c270-4393-8afa-ab779ef5dab0/",  // 🔥 ссылка на проект
       media: [
         { type: "image", src: "/projects/UI/UX_Design/bakeryMain.png" },
         { type: "video", src: "/projects/UI/UX_Design/bakeryVideo.mp4" },
