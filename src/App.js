@@ -6,6 +6,7 @@ import { Banner } from "./components/Banner";
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
+import { Certificates } from './components/Certificates';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -26,6 +27,7 @@ function App() {
       <Banner />
       <Projects />
       <Skills />
+      <Certificates />
       <Contact />
     </Router>
   );

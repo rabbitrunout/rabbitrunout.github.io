@@ -219,10 +219,9 @@ button.vvd:hover svg {
   color: inherit !important;
 }
 
-
+/* PROJECTS */
 .projects {
   padding: 4rem 2rem;
-  background: #0a0a0f;
   color: #fff;
   text-align: center;
 }
@@ -230,7 +229,7 @@ button.vvd:hover svg {
 .projects h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff4b4b; /* красный акцент */
+  color: #ff4b4b;
 }
 
 .project-filters {
@@ -254,8 +253,11 @@ button.vvd:hover svg {
   color: #000;
 }
 
-.project-category {
-  margin-bottom: 60px;
+.projects-container {
+  background: rgba(255, 255, 255, 0.03); /* 🔥 общий фон */
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .category-title {
@@ -275,7 +277,7 @@ button.vvd:hover svg {
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 340px;   /* фиксируем высоту */
+  min-height: 340px;
   max-height: 360px;
 }
 
@@ -286,9 +288,9 @@ button.vvd:hover svg {
 
 .project-img {
   width: 100%;
-  height: 200px;          /* одинаковая высота */
-  object-fit: cover;      /* обрезаем */
-  object-position: top;   /* 🔥 показываем верх */
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
   display: block;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -299,7 +301,7 @@ button.vvd:hover svg {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* текст сверху */
+  justify-content: flex-start;
 }
 
 .project-info h3 {
@@ -312,10 +314,7 @@ button.vvd:hover svg {
   font-size: 0.9rem;
   color: #ccc;
   margin-bottom: 0.5rem;
-
-  /* 🔥 ограничиваем текст по строкам */
   display: -webkit-box;
-  /* -webkit-line-clamp: 2;   максимум 2 строки */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -324,8 +323,9 @@ button.vvd:hover svg {
 .project-info span {
   font-size: 0.85rem;
   color: #ff4b4b;
-  margin-top: auto; /* прижимаем вниз */
+  margin-top: auto;
 }
+
 
 /* 🔥 Кнопка прижата к низу */
 .read-more-btn {
@@ -810,6 +810,124 @@ button.vvd:hover svg {
     max-width: 120px; /* больше пространства */
   }
 }
+
+
+/* certificates section */
+
+.certificates {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: transparent; /* 🔥 только главный фон */
+  color: #fff;
+}
+
+.certificates h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff4b4b;
+}
+
+.cert-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cert-icon {
+  width: 110px;
+  cursor: pointer;
+  text-align: center;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.cert-icon img {
+  width: 100%;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 0.3rem;
+}
+
+.cert-icon:hover {
+  transform: scale(1.08);
+  /* box-shadow: 0 0 15px #ff4b4b; */
+  border-radius: 8px;
+}
+
+.cert-icon p {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Модалка */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  position: relative;
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(255, 75, 75, 0.5);
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #ff4b4b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+}
+
+/* стрелки */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ff4b4b;
+  cursor: pointer;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
 
 
 

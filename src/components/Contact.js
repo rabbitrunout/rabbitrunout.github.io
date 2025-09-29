@@ -10,7 +10,7 @@ export const Contact = () => {
 
         {/* 🔗 Соцсети */}
         <div className="contact-links">
-          <a href="mailto:irina.safronova.dev@gmail.com" target="_blank" rel="noreferrer">
+          <a href="mailto:irina.safronova0801@gmail.com" target="_blank" rel="noreferrer">
             <Mail size={28} /> Email
           </a>
           <a href="https://www.linkedin.com/in/irina-safronova-688130243/" target="_blank" rel="noreferrer">

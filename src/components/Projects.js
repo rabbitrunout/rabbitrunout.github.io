@@ -39,6 +39,10 @@ export const Projects = () => {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    arrows: true,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
@@ -58,9 +62,7 @@ export const Projects = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`filter-btn ${
-                activeCategory === cat ? "active" : ""
-              }`}
+              className={`filter-btn ${activeCategory === cat ? "active" : ""}`}
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
@@ -68,58 +70,51 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* 🔥 Карусель по категориям */}
-        {Object.entries(projectsByCategory).map(([category, projects]) => {
-          if (activeCategory !== "All" && activeCategory !== category) return null;
+        {/* 🔥 Один общий контейнер */}
+        <div className="projects-container">
+          {Object.entries(projectsByCategory).map(([category, projects]) => {
+            if (activeCategory !== "All" && activeCategory !== category) return null;
 
-          return (
-            <div key={category} className="project-category">
-              <h3 className="category-title">{category}</h3>
-              <Slider {...sliderSettings}>
-                {projects.map((proj, i) => (
-                  <motion.div
-                    key={i}
-                    className="project-card"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: i * 0.2 }}
-                    viewport={{ once: true }}
-                    onClick={() => openModal(proj)}
-                  >
-                    {/* 🔥 Берём первую картинку */}
-                    {proj.media && proj.media.length > 0 && proj.media[0].type === "image" ? (
-                      <img src={proj.media[0].src} alt={proj.title} className="project-img" />
-                    ) : (
-                      <div className="project-img placeholder">No Image</div>
-                    )}
-                    <div className="project-info">
-                      <h3>{proj.title}</h3>
-                      <p className="short-desc">{proj.shortDesc}</p>
-                      <span>{proj.tech}</span>
-                       {/* 🔥 Кнопка появляется только если текст длиннее */}
-  {proj.shortDesc.length > 80 && (   // можно регулировать число символов
-    <button
-      className="read-more-btn"
-      onClick={() => openModal(proj)}
-    >
-      …Read more
-    </button>
-  )}
-                    </div>
-                  </motion.div>
-                ))}
-              </Slider>
-            </div>
-          );
-        })}
+            return (
+              <div key={category}>
+                <h3 className="category-title">{category}</h3>
+                <Slider {...sliderSettings}>
+                  {projects.map((proj, i) => (
+                    <motion.div
+                      key={i}
+                      className="project-card"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: i * 0.2 }}
+                      viewport={{ once: true }}
+                      onClick={() => openModal(proj)}
+                    >
+                      {proj.media && proj.media.length > 0 && proj.media[0].type === "image" ? (
+                        <img src={proj.media[0].src} alt={proj.title} className="project-img" />
+                      ) : (
+                        <div className="project-img placeholder">No Image</div>
+                      )}
+                      <div className="project-info">
+                        <h3>{proj.title}</h3>
+                        <p className="short-desc">{proj.shortDesc}</p>
+                        <span>{proj.tech}</span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </Slider>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      {/* 🔥 Modal */}
+      {/* 🔥 Модалка */}
       {selectedProject && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>
             <div className="modal-body">
+              {/* Левая часть (медиа) */}
               <div className="modal-left">
                 {selectedProject.media[selectedMediaIndex].type === "image" ? (
                   <img
@@ -141,23 +136,23 @@ export const Projects = () => {
                   </>
                 )}
               </div>
+
+              {/* Правая часть (описание) */}
               <div className="modal-right">
                 <h3>{selectedProject.title}</h3>
                 <p className="modal-desc">{selectedProject.fullDesc}</p>
                 <p className="modal-tech"><strong>Tech:</strong> {selectedProject.tech}</p>
-               <div className="modal-buttons">
-                    {selectedProject.github && (
+                <div className="modal-buttons">
+                  {selectedProject.github && (
                     <a href={selectedProject.github} target="_blank" rel="noreferrer">
-                    GitHub
+                      GitHub
                     </a>
-                )}
-
-                {/* 🔥 Добавляем кнопку Demo/Link */}
-                {selectedProject.link && (
+                  )}
+                  {selectedProject.link && (
                     <a href={selectedProject.link} target="_blank" rel="noreferrer">
-                    View Project
+                      View Project
                     </a>
-                )}
+                  )}
                 </div>
               </div>
             </div>
