@@ -64,9 +64,7 @@ export const projectsByCategory = {
   ],
 
 // ////  Landing Pages. /////////
-
   "Landing Pages": [
-
     {
   title: "Nature & Travel Landing Page",
   shortDesc: "Atmospheric landing page for a travel service.",
@@ -77,7 +75,6 @@ export const projectsByCategory = {
           { type: "video", src: "/projects/WebApp/JS/4.mp4" }
   ],
 },
-
 
     {
   title: "Woodland Furniture Landing Page",
@@ -112,6 +109,60 @@ export const projectsByCategory = {
 
   ],
 }
+  ],
+// /////// JS  //////////////////
+  "JavaScript Projects": [
+     {
+  title: "IcyTales Ice Cream Landing Page",
+  shortDesc: "Interactive ice cream shop landing page with JavaScript.",
+  fullDesc:
+    "A vibrant ice cream shop landing page built with HTML, CSS, and JavaScript. The project emphasizes interactivity and a smooth user experience.\n\nKey JavaScript features:\n- Dynamic product gallery with smooth transitions\n- Image sliders and product carousels\n- Interactive product cards with 'Add to Cart' actions\n- FAQ accordion with expand/collapse functionality\n- Contact form with basic validation and interactive states\n- Smooth animations and hover effects for better UX\n\nThis project demonstrates how JavaScript enhances a static landing page, making it dynamic, user-friendly, and visually engaging.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/8.jpeg" },
+    { type: "video", src: "/projects/WebApp/JS/8.mp4" }
+  ]
+},
+
+    {
+  title: "Website Launch Checklist",
+  shortDesc: "Interactive checklist for launching websites.",
+  fullDesc:
+    "This project is an interactive task management tool developed using HTML, CSS, and JavaScript. The main goal of the app is to help users organize and track key steps before launching a website.\n\nKey features:\n- Predefined list of essential website launch tasks (hosting, design, SEO, legal docs)\n- Ability to mark tasks as completed, with instant UI updates\n- Reset functionality to restart the checklist\n- Stylish dark-themed UI with icons and split layout for 'Tasks vs Completed'\n- Responsive design for both desktop and mobile\n\nThis project demonstrates working with arrays, DOM manipulation, event handling, and intuitive UI/UX design.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/5.png" },
+    { type: "video", src: "/projects/WebApp/JS/5.mov" } // если запишешь демо
+  ],
+},
+
+{
+      title: "Weekly Task Planner",
+      shortDesc: "Colorful weekly planner with day-based tasks.",
+      fullDesc:
+        "An interactive weekly planner where users can assign tasks to specific days. Each task appears as a color-coded card, making it visually easy to organize weekly routines.\n\nKey features:\n- Dropdown menu to select a day\n- Add task via input field\n- Tasks displayed as colorful blocks by weekday\n- Color-coding for each day improves usability",
+      tech: "HTML • CSS • JavaScript",
+      media: [
+        { type: "image", src: "/projects/WebApp/JS/7-1.png" },
+        { type: "image", src: "/projects/WebApp/JS/7.png" },
+        { type: "video", src: "/projects/WebApp/JS/7.mov" } 
+      ],
+    },
+
+{
+  title: "Minion Land Interactive Selector",
+  shortDesc: "Interactive Minion-themed project with JS.",
+  fullDesc:
+    "This project was built using JavaScript, HTML, and CSS and represents an interactive selection game themed around Minion Land. The goal of the project is to let users pick their favorite attractions and complete a list.\n\n✨ Key features:\n- A set of six interactive Minion-themed cards (rides, shops, meet & greets, food).\n- Users can click to select activities.\n- A progress counter shows how many items are ready (e.g., '3 of 6 items ready').\n- Once all selections are made, pressing the 'Complete' button displays a thank you message.\n- The design uses bright Minion-style colors, playful typography, and cartoon-like UI elements.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/6.png" },
+    { type: "image", src: "/projects/WebApp/JS/6-1.png" },
+    { type: "video", src: "/projects/WebApp/JS/6.mov" } 
+  ],
+}
+
+
   ],
 
 
@@ -163,57 +214,7 @@ export const projectsByCategory = {
       ],
     },
 
-    {
-  title: "IcyTales Ice Cream Landing Page",
-  shortDesc: "Interactive ice cream shop landing page with JavaScript.",
-  fullDesc:
-    "A vibrant ice cream shop landing page built with HTML, CSS, and JavaScript. The project emphasizes interactivity and a smooth user experience.\n\nKey JavaScript features:\n- Dynamic product gallery with smooth transitions\n- Image sliders and product carousels\n- Interactive product cards with 'Add to Cart' actions\n- FAQ accordion with expand/collapse functionality\n- Contact form with basic validation and interactive states\n- Smooth animations and hover effects for better UX\n\nThis project demonstrates how JavaScript enhances a static landing page, making it dynamic, user-friendly, and visually engaging.",
-  tech: "HTML • CSS • JavaScript",
-  media: [
-    { type: "image", src: "/projects/WebApp/JS/8.jpeg" },
-    { type: "video", src: "/projects/WebApp/JS/8.mp4" }
-  ]
-},
-
-    {
-  title: "Website Launch Checklist",
-  shortDesc: "Interactive checklist for launching websites.",
-  fullDesc:
-    "This project is an interactive task management tool developed using HTML, CSS, and JavaScript. The main goal of the app is to help users organize and track key steps before launching a website.\n\nKey features:\n- Predefined list of essential website launch tasks (hosting, design, SEO, legal docs)\n- Ability to mark tasks as completed, with instant UI updates\n- Reset functionality to restart the checklist\n- Stylish dark-themed UI with icons and split layout for 'Tasks vs Completed'\n- Responsive design for both desktop and mobile\n\nThis project demonstrates working with arrays, DOM manipulation, event handling, and intuitive UI/UX design.",
-  tech: "HTML • CSS • JavaScript",
-  media: [
-    { type: "image", src: "/projects/WebApp/JS/5.png" },
-    { type: "video", src: "/projects/WebApp/JS/5.mov" } // если запишешь демо
-  ],
-},
-
-{
-      title: "Weekly Task Planner",
-      shortDesc: "Colorful weekly planner with day-based tasks.",
-      fullDesc:
-        "An interactive weekly planner where users can assign tasks to specific days. Each task appears as a color-coded card, making it visually easy to organize weekly routines.\n\nKey features:\n- Dropdown menu to select a day\n- Add task via input field\n- Tasks displayed as colorful blocks by weekday\n- Color-coding for each day improves usability",
-      tech: "HTML • CSS • JavaScript",
-      media: [
-        { type: "image", src: "/projects/WebApp/JS/7-1.png" },
-        { type: "image", src: "/projects/WebApp/JS/7.png" },
-        { type: "video", src: "/projects/WebApp/JS/7.mov" } 
-      ],
-    },
-
-{
-  title: "Minion Land Interactive Selector",
-  shortDesc: "Interactive Minion-themed project with JS.",
-  fullDesc:
-    "This project was built using JavaScript, HTML, and CSS and represents an interactive selection game themed around Minion Land. The goal of the project is to let users pick their favorite attractions and complete a list.\n\n✨ Key features:\n- A set of six interactive Minion-themed cards (rides, shops, meet & greets, food).\n- Users can click to select activities.\n- A progress counter shows how many items are ready (e.g., '3 of 6 items ready').\n- Once all selections are made, pressing the 'Complete' button displays a thank you message.\n- The design uses bright Minion-style colors, playful typography, and cartoon-like UI elements.",
-  tech: "HTML • CSS • JavaScript",
-  media: [
-    { type: "image", src: "/projects/WebApp/JS/6.png" },
-    { type: "image", src: "/projects/WebApp/JS/6-1.png" },
-    { type: "video", src: "/projects/WebApp/JS/6.mov" } 
-  ],
-},
-
-
+   
 
    
   ],
