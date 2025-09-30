@@ -159,6 +159,19 @@ export const projectsByCategory = {
       ],
     },
 
+    {
+  title: "Website Launch Checklist",
+  shortDesc: "Interactive checklist for launching websites.",
+  fullDesc:
+    "This project is an interactive task management tool developed using HTML, CSS, and JavaScript. The main goal of the app is to help users organize and track key steps before launching a website.\n\nKey features:\n- Predefined list of essential website launch tasks (hosting, design, SEO, legal docs)\n- Ability to mark tasks as completed, with instant UI updates\n- Reset functionality to restart the checklist\n- Stylish dark-themed UI with icons and split layout for 'Tasks vs Completed'\n- Responsive design for both desktop and mobile\n\nThis project demonstrates working with arrays, DOM manipulation, event handling, and intuitive UI/UX design.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/5.png" },
+    { type: "video", src: "/projects/WebApp/JS/5.mov" } // если запишешь демо
+  ],
+}
+
+
    
   ],
 

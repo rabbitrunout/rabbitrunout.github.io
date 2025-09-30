@@ -136,15 +136,17 @@ export const Projects = () => {
                     src={selectedProject.media[selectedMediaIndex].src}
                     alt="preview"
                     className="project-modal-img"
-                    onClick={() => setZoomed(true)} // 👈 zoom при клике
+                    onClick={() => setZoomed(true)}
                   />
                 ) : (
                   <video
                     src={selectedProject.media[selectedMediaIndex].src}
                     controls
                     preload="metadata"
+                    controlsList="nodownload noplaybackrate"
+                    disablePictureInPicture
                     className="project-modal-video"
-                    onClick={() => setZoomed(true)} // 👈 zoom при клике
+                    onClick={() => setZoomed(true)}
                   />
                 )}
                 {selectedProject.media.length > 1 && (
@@ -215,6 +217,8 @@ export const Projects = () => {
               controls
               autoPlay
               preload="metadata"
+              controlsList="nodownload noplaybackrate"
+              disablePictureInPicture
               className="fullscreen-video"
               onClick={(e) => e.stopPropagation()}
             />
