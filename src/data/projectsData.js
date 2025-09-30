@@ -86,7 +86,7 @@ export const projectsByCategory = {
     "The project was implemented using HTML and CSS and is a landing page for a furniture manufacturing company. The main goal of the design is to emphasize the aesthetics of wood and the craftsmanship of artisans. The page structure includes: - Hero section with a large accent banner and CTA - About Us section with the company's history - Furniture categories (Bedroom, Lounge, Dining Room, Office) - A block with “Featured Products” and product cards with “Add to Cart” buttons\n- A Study Program section for additional engagement\n- A contact form and footer with social links\n\nThe project demonstrates the ability to create a minimalistic and modern interface with an emphasis on visual content and convenient navigation.",
   tech: "HTML • CSS",
   media: [{ type: "image", src: "/projects/WebApp/JS/3.png" },
-    { type: "video", src: "/projects/WebApp/JS/3.mov" }
+    { type: "video", src: "/projects/WebApp/JS/3.mp4" }
   ],
 },
      {
@@ -171,7 +171,7 @@ export const projectsByCategory = {
   tech: "HTML • CSS • JavaScript",
   media: [
     { type: "image", src: "/projects/WebApp/JS/8.jpeg" },
-    { type: "video", src: "/projects/WebApp/JS/8.mov" }
+    { type: "video", src: "/projects/WebApp/JS/8.mp4" }
   ]
 },
 
