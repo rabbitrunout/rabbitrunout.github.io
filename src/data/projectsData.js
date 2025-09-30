@@ -169,7 +169,19 @@ export const projectsByCategory = {
     { type: "image", src: "/projects/WebApp/JS/5.png" },
     { type: "video", src: "/projects/WebApp/JS/5.mov" } // если запишешь демо
   ],
-}
+},
+
+{
+  title: "Minion Land Interactive Selector",
+  shortDesc: "Interactive Minion-themed project with JS.",
+  fullDesc:
+    "This project was built using JavaScript, HTML, and CSS and represents an interactive selection game themed around Minion Land. The goal of the project is to let users pick their favorite attractions and complete a list.\n\n✨ Key features:\n- A set of six interactive Minion-themed cards (rides, shops, meet & greets, food).\n- Users can click to select activities.\n- A progress counter shows how many items are ready (e.g., '3 of 6 items ready').\n- Once all selections are made, pressing the 'Complete' button displays a thank you message.\n- The design uses bright Minion-style colors, playful typography, and cartoon-like UI elements.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/6.png" }
+  ],
+},
+
 
 
    
