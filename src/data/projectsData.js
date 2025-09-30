@@ -172,6 +172,18 @@ export const projectsByCategory = {
 },
 
 {
+      title: "Weekly Task Planner",
+      shortDesc: "Colorful weekly planner with day-based tasks.",
+      fullDesc:
+        "An interactive weekly planner where users can assign tasks to specific days. Each task appears as a color-coded card, making it visually easy to organize weekly routines.\n\nKey features:\n- Dropdown menu to select a day\n- Add task via input field\n- Tasks displayed as colorful blocks by weekday\n- Color-coding for each day improves usability",
+      tech: "HTML • CSS • JavaScript",
+      media: [
+        { type: "image", src: "/projects/WebApp/JS/7-1.png" },
+        { type: "image", src: "/projects/WebApp/JS/7.png" }
+      ],
+    },
+
+{
   title: "Minion Land Interactive Selector",
   shortDesc: "Interactive Minion-themed project with JS.",
   fullDesc:
