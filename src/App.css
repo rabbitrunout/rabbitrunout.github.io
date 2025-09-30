@@ -503,27 +503,102 @@ button.vvd:hover svg {
   box-shadow: 0 0 20px rgba(255, 75, 75, 0.4);
 }
 
+/* 🔥 Стрелки в модалке */
 .project-slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
-  font-size: 2rem;
+  font-size: 2.5rem; /* чуть больше */
   color: #fff;
   cursor: pointer;
-  padding: 0.3rem 0.7rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 50%;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 10;
 }
 
 .project-slider-btn:hover {
-  background: #e53935;
+  background: rgba(229, 57, 53, 0.9); /* красный акцент */
+  transform: translateY(-50%) scale(1.1);
 }
 
-.project-slider-btn.prev { left: 10px; }
-.project-slider-btn.next { right: 10px; }
+.project-slider-btn.prev {
+  left: 20px; /* 🔥 слева */
+}
 
+.project-slider-btn.next {
+  right: 20px; /* 🔥 справа */
+}
+
+
+/* Fullscreen overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* фото сверху */
+  overflow-y: auto;        /* можно скроллить */
+  z-index: 11000;
+  padding: 40px 20px;
+}
+
+.fullscreen-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+.fullscreen-video {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(229, 57, 53, 0.6);
+}
+
+
+.fullscreen-close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 12000;
+}
+.fullscreen-close:hover {
+  color: #ff4b4b;
+}
+
+/* Стрелки в fullscreen */
+.fullscreen-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 12000;
+  transition: background 0.3s;
+}
+.fullscreen-btn:hover {
+  background: rgba(229,57,53,0.8);
+}
+
+.fullscreen-btn.prev { left: 20px; }
+.fullscreen-btn.next { right: 20px; }
 
 
 

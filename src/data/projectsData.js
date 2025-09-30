@@ -63,6 +63,37 @@ export const projectsByCategory = {
 },
   ],
 
+// ////  Landing Pages. /////////
+
+  "Landing Pages": [
+     {
+  title: "Bean Scene Coffee Landing Page",
+  shortDesc: "HTML/CSS project – landing page for a coffee shop.",
+  fullDesc:
+    "An educational project created from scratch using HTML and CSS. The landing page showcases a modern design for a coffee shop: sections with product presentation, advantages, gallery, and action buttons. The main focus is on responsive layout and visual design to showcase skills in clean layout without frameworks. The project highlights the ability to work with typography, grids, indents, and creating a user experience (UX) for the landing page ",
+  tech: "HTML • CSS",
+  media: [{ type: "image", src: "/projects/WebApp/JS/1.jpeg" },
+    { type: "video", src: "/projects/WebApp/JS/1video.mov" }
+
+  ],
+},
+
+     {
+  title: "Bean Scene Coffee Landing Page",
+  shortDesc: "HTML/CSS project – landing page for a coffee shop.",
+  fullDesc:
+    "An educational project created from scratch using HTML and CSS. The landing page showcases a modern design for a coffee shop: sections with product presentation, advantages, gallery, and action buttons. The main focus is on responsive layout and visual design to showcase skills in clean layout without frameworks. The project highlights the ability to work with typography, grids, indents, and creating a user experience (UX) for the landing page ",
+  tech: "HTML • CSS",
+  media: [{ type: "image", src: "/projects/WebApp/JS/1.jpeg" },
+    { type: "video", src: "/projects/WebApp/JS/1video.mov" }
+
+  ],
+}
+  ],
+
+
+  // ///// Web Apps  ////////
+
    "Web Apps": [
     {
       title: "Glowi",
@@ -91,8 +122,8 @@ export const projectsByCategory = {
       title: "Reservation System",
       shortDesc: "React + PHP booking system.",
       fullDesc:
-        "This is a fully functional web application in which I implemented a frontend using React and a MySQL database via the backend. The main goal of the project is to demonstrate my skills in working with both the UI and the server side. Key features: - React architecture with modular components - State management and dynamic data display - Integration with a MySQL database via API (CRUD operations) - Implementation of modal windows for viewing details\n- **User registration and role-based access control**: Guest, User, Admin\n- Authorization and access restriction to certain sections depending on role\n- Adaptive interface for mobile and desktop devices\n - Working with images and videos: correct scaling and display\n- Focus on UX: smooth animations, hover effects, convenient navigation\n\nTech: React • JavaScript • CSS • MySQL • (REST API on PHP/Node.js) Translated with DeepL.com (free version)",
-      tech: "React • JavaScript • CSS • MySQL",
+        "This is a fully functional web application in which I implemented a frontend using React and a MySQL database via the backend. The main goal of the project is to demonstrate my skills in working with both the UI and the server side. Key features: - React architecture with modular components - State management and dynamic data display - Integration with a MySQL database via API (CRUD operations) - Implementation of modal windows for viewing details\n- **User registration and role-based access control**: Guest, User, Admin\n- Authorization and access restriction to certain sections depending on role\n- Adaptive interface for mobile and desktop devices\n - Working with images and videos: correct scaling and display\n- Focus on UX: smooth animations, hover effects, convenient navigation\n\n",
+      tech: "React • JavaScript • CSS • MySQL • (REST API on PHP/Node.js)",
       github: "https://github.com/rabbitrunout/ReactApp2",
       media: [{ type: "image", src: "/projects/WebApp/reserve/4.png" },
         { type: "image", src: "/projects/WebApp/reserve/1.png" },
@@ -108,8 +139,12 @@ export const projectsByCategory = {
 
       ],
     },
+
+   
   ],
 
+
+  // /////  Mobile Apps ///////
   "Mobile Apps": [
     {
       title: "FoodWasteTracker",
