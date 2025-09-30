@@ -67,13 +67,13 @@ export const projectsByCategory = {
 
   "Landing Pages": [
      {
-  title: "Bean Scene Coffee Landing Page",
-  shortDesc: "HTML/CSS project – landing page for a coffee shop.",
+  title: "IcyTales Ice Cream Landing Page",
+  shortDesc: "A vibrant landing page for an ice cream shop built with HTML/CSS.",
   fullDesc:
-    "An educational project created from scratch using HTML and CSS. The landing page showcases a modern design for a coffee shop: sections with product presentation, advantages, gallery, and action buttons. The main focus is on responsive layout and visual design to showcase skills in clean layout without frameworks. The project highlights the ability to work with typography, grids, indents, and creating a user experience (UX) for the landing page ",
+    "The project was created using HTML and CSS and is dedicated to an online ice cream shop showcase. The main focus is on a bright visual style and user-friendliness. The page structure includes:\n\n- Hero section with an accent banner and call-to-action button\n- Block about the company and its mission\n - A gallery of popular ice cream flavors with “Add to Cart” buttons\n- A promo section with limited offers\n- A footer with contact information and newsletter subscription\n\nThis project demonstrates the ability to work with color palettes, typography, and modern design for landing pages, creating an attractive UI/UX. ",
   tech: "HTML • CSS",
-  media: [{ type: "image", src: "/projects/WebApp/JS/1.jpeg" },
-    { type: "video", src: "/projects/WebApp/JS/1video.mov" }
+  media: [{ type: "image", src: "/projects/WebApp/JS/2.png" },
+    { type: "video", src: "/projects/WebApp/JS/2.mov" }
 
   ],
 },
