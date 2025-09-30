@@ -209,10 +209,47 @@ export const projectsByCategory = {
         { type: "image", src: "/projects/WebApp/reserve/7.png" },
         { type: "image", src: "/projects/WebApp/reserve/8.png" },
         { type: "image", src: "/projects/WebApp/reserve/9.png" },
-
-
       ],
     },
+
+{
+  title: "Students Directory System",
+  shortDesc: "PHP/MySQL CRUD app for managing students.",
+  fullDesc: 
+    "The Students Directory System is a web application built with PHP and MySQL to manage a list of students. It demonstrates skills in working with relational databases and implementing CRUD operations (Create, Read, Update, Delete).\n\nKey features:\n- Student management: add, edit, delete, and view students\n- Individual student card with photo, course, study type, and teacher notes\n- Attendance tracking with logs (Present, Absent, Late)\n- Authentication with session-based login/logout\n- Statistics summary for students (Total, Present, Absent)\n\nThe UI is designed in a fun cartoon style (Bikini Bottom edition 🧽⭐️🦀), making the project both functional and creative, while highlighting UI/UX attention.\n\nThis project demonstrates proficiency in PHP, MySQL, and integrating database logic into a user-friendly interface.",
+  tech: "PHP • MySQL • HTML • CSS • Sessions",
+  github: "https://github.com/rabbitrunout/PHPAssignment1", // 🔥 add once uploaded
+  media: [
+    { type: "image", src: "/projects/WebApp/student/1.png" },
+    { type: "image", src: "/projects/WebApp/student/2.png" },
+    { type: "image", src: "/projects/WebApp/student/3.png" },
+    { type: "image", src: "/projects/WebApp/student/4.png" },
+    { type: "image", src: "/projects/WebApp/student/5.png" },
+    { type: "image", src: "/projects/WebApp/student/6.png" },
+  ]
+},
+
+{
+  title: "Booking System",
+  shortDesc: "Angular + PHP/MySQL full-stack reservation app.",
+  fullDesc: 
+    "📌 Booking System (Angular + PHP/MySQL)\n\nThis project is a full-stack reservation management system designed to demonstrate integration between a modern Angular frontend and a PHP/MySQL backend. It allows users to create, manage, and track reservations in a clean and intuitive interface.\n\n🔑 Features:\n\n**User Authentication**\n- Registration and login with validation\n- Password security with backend storage\n\n**Reservation Management**\n- Create a new booking with location, start/end time, and image upload\n- Edit existing reservations with preview functionality\n- Delete reservations with confirmation\n- Status tracking: Pending vs Done\n\n**Interactive UI**\n- Reservation list displays all upcoming bookings with thumbnails\n- Edit/Delete buttons next to each item for quick actions\n- Success/error feedback messages\n- Mobile-friendly and responsive design\n\n**Backend & Database**\n- Reservations stored in a MySQL database\n- PHP backend provides CRUD API endpoints for Angular\n- Image upload and storage support\n\n🎯 What this project demonstrates:\n- Full-stack development skills (frontend + backend + DB)\n- RESTful API design and consumption in Angular\n- State management in Angular with dynamic UI updates\n- Secure authentication flow with login/registration\n- Practical CRUD implementation with modern UI",
+  tech: "Angular • TypeScript • PHP • MySQL • HTML • CSS",
+  github: "https://github.com/rabbitrunout/AngularApp2", // 🔥 update when repo is ready
+  media: [
+    { type: "image", src: "/projects/WebApp/booking/1.png" },
+    { type: "image", src: "/projects/WebApp/booking/2.png" },
+    { type: "image", src: "/projects/WebApp/booking/3.png" },
+    { type: "image", src: "/projects/WebApp/booking/4.png" },
+    { type: "image", src: "/projects/WebApp/booking/5.png" },
+    { type: "image", src: "/projects/WebApp/booking/6.png" },
+
+     // optional screencast
+  ]
+}
+
+
+
 
    
 
