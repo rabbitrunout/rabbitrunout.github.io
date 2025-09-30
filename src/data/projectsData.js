@@ -74,7 +74,7 @@ export const projectsByCategory = {
     "This project was built using HTML and CSS and represents a stylish, minimalist landing page dedicated to travel and outdoor adventures. The design is centered around large, impactful images of mountains and forests that create a sense of freedom and inspiration.\n\nKey sections of the page:\n\n- Hero section with a large background photo and a nature-inspired quote\n- Image gallery with panoramic views and scenic shots\n- Informational cards with steps and travel benefits\n- Motivational sections 'The mountains are calling' and 'Travel with us'\n- Subsections for Hiking Tours, Luxury Holidays, and Plan a Trip\n- Contact form and newsletter subscription in the footer\n\nThe main focus is on strong visual content and modern layout, balancing white space with immersive photography.",
   tech: "HTML • CSS",
   media: [{ type: "image", src: "/projects/WebApp/JS/4.png" },
-          { type: "video", src: "/projects/WebApp/JS/4.mov" }
+          { type: "video", src: "/projects/WebApp/JS/4.mp4" }
   ],
 },
 
