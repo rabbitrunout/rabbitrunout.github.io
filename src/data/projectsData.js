@@ -190,22 +190,22 @@ export const projectsByCategory = {
 
   // /////  Mobile Apps ///////
   "Mobile Apps": [
-    {
-      title: "FoodWasteTracker",
-      shortDesc: "iOS app to reduce food waste.",
-      fullDesc:
-        "Helps users reduce food waste with notifications, gamification, and recipes. Built with SwiftUI.",
-      tech: "SwiftUI • Core Data",
-      media: [{ type: "image", src: "/projects/foodwaste/" }],
-    },
-    {
-      title: "Car Maintenance Tracker",
-      shortDesc: "App to track car maintenance & OBD-II.",
-      fullDesc:
-        "Tracks car health with OBD-II, exports reports (PDF/CSV), analytics dashboard.",
-      tech: "React Native • Node.js • MongoDB",
-      media: [{ type: "image", src: "/projects/" }],
-    },
+    // {
+    //   title: "FoodWasteTracker",
+    //   shortDesc: "iOS app to reduce food waste.",
+    //   fullDesc:
+    //     "Helps users reduce food waste with notifications, gamification, and recipes. Built with SwiftUI.",
+    //   tech: "SwiftUI • Core Data",
+    //   media: [{ type: "image", src: "/projects/foodwaste/" }],
+    // },
+    // {
+    //   title: "Car Maintenance Tracker",
+    //   shortDesc: "App to track car maintenance & OBD-II.",
+    //   fullDesc:
+    //     "Tracks car health with OBD-II, exports reports (PDF/CSV), analytics dashboard.",
+    //   tech: "React Native • Node.js • MongoDB",
+    //   media: [{ type: "image", src: "/projects/" }],
+    // },
   ],
 
  
