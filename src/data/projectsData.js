@@ -66,6 +66,25 @@ export const projectsByCategory = {
 // ////  Landing Pages. /////////
 
   "Landing Pages": [
+
+    {
+  title: "Nature & Travel Landing Page",
+  shortDesc: "Atmospheric landing page for a travel service.",
+  fullDesc:
+    "This project was built using HTML and CSS and represents a stylish, minimalist landing page dedicated to travel and outdoor adventures. The design is centered around large, impactful images of mountains and forests that create a sense of freedom and inspiration.\n\nKey sections of the page:\n\n- Hero section with a large background photo and a nature-inspired quote\n- Image gallery with panoramic views and scenic shots\n- Informational cards with steps and travel benefits\n- Motivational sections 'The mountains are calling' and 'Travel with us'\n- Subsections for Hiking Tours, Luxury Holidays, and Plan a Trip\n- Contact form and newsletter subscription in the footer\n\nThe main focus is on strong visual content and modern layout, balancing white space with immersive photography.",
+  tech: "HTML • CSS",
+  media: [{ type: "image", src: "/projects/WebApp/JS/4.png" }],
+},
+
+
+    {
+  title: "Woodland Furniture Landing Page",
+  shortDesc: "Modern landing page for a furniture brand.",
+  fullDesc:
+    "The project was implemented using HTML and CSS and is a landing page for a furniture manufacturing company. The main goal of the design is to emphasize the aesthetics of wood and the craftsmanship of artisans. The page structure includes: - Hero section with a large accent banner and CTA - About Us section with the company's history - Furniture categories (Bedroom, Lounge, Dining Room, Office) - A block with “Featured Products” and product cards with “Add to Cart” buttons\n- A Study Program section for additional engagement\n- A contact form and footer with social links\n\nThe project demonstrates the ability to create a minimalistic and modern interface with an emphasis on visual content and convenient navigation.",
+  tech: "HTML • CSS",
+  media: [{ type: "image", src: "/projects/WebApp/JS/3.png" }],
+},
      {
   title: "IcyTales Ice Cream Landing Page",
   shortDesc: "A vibrant landing page for an ice cream shop built with HTML/CSS.",
