@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const certificates = [
-   
   {
     title: "CSS Fundamentals: Unlock the Power of Web Styling",
     img: "/certificates/css.png",

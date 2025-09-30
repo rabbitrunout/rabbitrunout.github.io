@@ -70,7 +70,7 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* 🔥 Один общий контейнер */}
+        {/* 🔥 Общий контейнер */}
         <div className="projects-container">
           {Object.entries(projectsByCategory).map(([category, projects]) => {
             if (activeCategory !== "All" && activeCategory !== category) return null;
@@ -108,57 +108,83 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* 🔥 Модалка */}
-      {selectedProject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>×</button>
-            <div className="modal-body">
-              {/* Левая часть (медиа) */}
-              <div className="modal-left">
-                {selectedProject.media[selectedMediaIndex].type === "image" ? (
-                  <img
-                    src={selectedProject.media[selectedMediaIndex].src}
-                    alt="preview"
-                    className="modal-img"
-                  />
-                ) : (
-                  <video
-                    src={selectedProject.media[selectedMediaIndex].src}
-                    controls
-                    className="modal-video"
-                  />
-                )}
-                {selectedProject.media.length > 1 && (
-                  <>
-                    <button className="slider-btn prev" onClick={prevMedia}>‹</button>
-                    <button className="slider-btn next" onClick={nextMedia}>›</button>
-                  </>
-                )}
-              </div>
-
-              {/* Правая часть (описание) */}
-              <div className="modal-right">
-                <h3>{selectedProject.title}</h3>
-                <p className="modal-desc">{selectedProject.fullDesc}</p>
-                <p className="modal-tech"><strong>Tech:</strong> {selectedProject.tech}</p>
-                <div className="modal-buttons">
-                  {selectedProject.github && (
-                    <a href={selectedProject.github} target="_blank" rel="noreferrer">
-                      GitHub
-                    </a>
-                  )}
-                  {selectedProject.link && (
-                    <a href={selectedProject.link} target="_blank" rel="noreferrer">
-                      View Project
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+   {/* 🔥 Modal (упрощённая с боковыми стрелками) */}
+{selectedProject && (
+  <div className="project-modal-overlay" onClick={closeModal}>
+    <div
+      className="project-modal-content"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button className="project-modal-close" onClick={closeModal}>
+        ×
+      </button>
+      <div className="project-modal-body">
+        <div className="project-modal-media">
+          {selectedProject.media[selectedMediaIndex].type === "image" ? (
+            <img
+              src={selectedProject.media[selectedMediaIndex].src}
+              alt="preview"
+              className="project-modal-img"
+            />
+          ) : (
+            <video
+              src={selectedProject.media[selectedMediaIndex].src}
+              controls
+              className="project-modal-video"
+            />
+          )}
+          {selectedProject.media.length > 1 && (
+            <>
+              <button
+                className="project-slider-btn prev"
+                onClick={prevMedia}
+              >
+                ‹
+              </button>
+              <button
+                className="project-slider-btn next"
+                onClick={nextMedia}
+              >
+                ›
+              </button>
+            </>
+          )}
         </div>
-      )}
+
+        {/* Текст под медиа */}
+        <h3>{selectedProject.title}</h3>
+        <p className="modal-desc">{selectedProject.fullDesc}</p>
+        <p className="modal-tech">
+          <strong>Tech:</strong> {selectedProject.tech}
+        </p>
+
+        <div className="modal-buttons">
+          {selectedProject.github && (
+            <a
+              href={selectedProject.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-link"
+            >
+              GitHub
+            </a>
+          )}
+          {selectedProject.link && (
+            <a
+              href={selectedProject.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-link"
+            >
+              View Project
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
     </section>
   );
 };

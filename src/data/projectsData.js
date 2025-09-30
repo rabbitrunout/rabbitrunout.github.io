@@ -63,6 +63,53 @@ export const projectsByCategory = {
 },
   ],
 
+   "Web Apps": [
+    {
+      title: "Glowi",
+      shortDesc: "Neon-style parent–child portal.",
+      fullDesc: 
+        "The main goal of the project was to build a neon-styled parent–child portal with event management, schedules, and payments. The design uses glowing gradients and vibrant UI for a playful yet modern look.\n\nThe mockup features:\n\n- Child profile dashboard with achievements and payments\n- FullCalendar integration for events\n- Weekly schedule view with navigation\n- Payments section with recent transactions\n- Responsive neon UI styled with Bootstrap",
+
+      tech: "PHP • MySQL • JavaScript • Bootstrap • FullCalendar • CSS",
+      github: "https://github.com/rabbitrunout/Glowi_app",
+      media: [
+        { type: "image", src: "/projects/WebApp/glowi/main-glowi.png" },
+        { type: "image", src: "/projects/WebApp/glowi/1.png" },
+        { type: "image", src: "/projects/WebApp/glowi/2.png" },
+        { type: "image", src: "/projects/WebApp/glowi/3.png" },
+        { type: "image", src: "/projects/WebApp/glowi/4.png" },
+        { type: "image", src: "/projects/WebApp/glowi/9.png" },
+        { type: "image", src: "/projects/WebApp/glowi/5.png" },
+        { type: "image", src: "/projects/WebApp/glowi/6.png" },
+        { type: "image", src: "/projects/WebApp/glowi/7.png" },
+        { type: "image", src: "/projects/WebApp/glowi/login.png" },
+        { type: "image", src: "/projects/WebApp/glowi/register-glowi.png" },
+        { type: "video", src: "/projects/WebApp/glowi/GlowiVideo.mp4" },
+      ],
+    },
+    {
+      title: "Reservation System",
+      shortDesc: "React + PHP booking system.",
+      fullDesc:
+        "This is a fully functional web application in which I implemented a frontend using React and a MySQL database via the backend. The main goal of the project is to demonstrate my skills in working with both the UI and the server side. Key features: - React architecture with modular components - State management and dynamic data display - Integration with a MySQL database via API (CRUD operations) - Implementation of modal windows for viewing details\n- **User registration and role-based access control**: Guest, User, Admin\n- Authorization and access restriction to certain sections depending on role\n- Adaptive interface for mobile and desktop devices\n - Working with images and videos: correct scaling and display\n- Focus on UX: smooth animations, hover effects, convenient navigation\n\nTech: React • JavaScript • CSS • MySQL • (REST API on PHP/Node.js) Translated with DeepL.com (free version)",
+      tech: "React • JavaScript • CSS • MySQL",
+      github: "https://github.com/rabbitrunout/ReactApp2",
+      media: [{ type: "image", src: "/projects/WebApp/reserve/4.png" },
+        { type: "image", src: "/projects/WebApp/reserve/1.png" },
+        { type: "image", src: "/projects/WebApp/reserve/2.png" },
+        { type: "image", src: "/projects/WebApp/reserve/3.png" },
+        { type: "image", src: "/projects/WebApp/reserve/4.png" },
+        { type: "image", src: "/projects/WebApp/reserve/5.png" },
+        { type: "image", src: "/projects/WebApp/reserve/6.png" },
+        { type: "image", src: "/projects/WebApp/reserve/7.png" },
+        { type: "image", src: "/projects/WebApp/reserve/8.png" },
+        { type: "image", src: "/projects/WebApp/reserve/9.png" },
+
+
+      ],
+    },
+  ],
+
   "Mobile Apps": [
     {
       title: "FoodWasteTracker",
@@ -82,29 +129,5 @@ export const projectsByCategory = {
     },
   ],
 
-  "Web Apps": [
-    {
-      title: "Glowi",
-      shortDesc: "Neon-style parent–child portal.",
-      fullDesc: 
-        "The main goal of the project was to build a neon-styled parent–child portal with event management, schedules, and payments. The design uses glowing gradients and vibrant UI for a playful yet modern look.\n\nThe mockup features:\n\n- Child profile dashboard with achievements and payments\n- FullCalendar integration for events\n- Weekly schedule view with navigation\n- Payments section with recent transactions\n- Responsive neon UI styled with Bootstrap",
-
-      tech: "PHP • MySQL • React • Bootstrap • FullCalendar",
-      github: "https://github.com/rabbitrunout/Glowi_app",
-      media: [
-        { type: "image", src: "/projects/WebApp/glowi/main-glowi.png" },
-        { type: "image", src: "/projects/WebApp/glowi/1-glowi.png" },
-        { type: "image", src: "/projects/WebApp/glowi/2-glowi.png" },
-        { type: "video", src: "/projects/WebApp/glowi/GlowiVideo.mp4" },
-      ],
-    },
-    {
-      title: "Reservation System",
-      shortDesc: "React + PHP booking system.",
-      fullDesc:
-        "Helps users book resources with timeslot management. React frontend + PHP backend.",
-      tech: "React • PHP • MySQL",
-      media: [{ type: "image", src: "/projects/reservation.png" }],
-    },
-  ],
+ 
 };
