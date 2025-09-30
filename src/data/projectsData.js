@@ -73,7 +73,9 @@ export const projectsByCategory = {
   fullDesc:
     "This project was built using HTML and CSS and represents a stylish, minimalist landing page dedicated to travel and outdoor adventures. The design is centered around large, impactful images of mountains and forests that create a sense of freedom and inspiration.\n\nKey sections of the page:\n\n- Hero section with a large background photo and a nature-inspired quote\n- Image gallery with panoramic views and scenic shots\n- Informational cards with steps and travel benefits\n- Motivational sections 'The mountains are calling' and 'Travel with us'\n- Subsections for Hiking Tours, Luxury Holidays, and Plan a Trip\n- Contact form and newsletter subscription in the footer\n\nThe main focus is on strong visual content and modern layout, balancing white space with immersive photography.",
   tech: "HTML • CSS",
-  media: [{ type: "image", src: "/projects/WebApp/JS/4.png" }],
+  media: [{ type: "image", src: "/projects/WebApp/JS/4.png" },
+          { type: "video", src: "/projects/WebApp/JS/4.mov" }
+  ],
 },
 
 
@@ -83,7 +85,9 @@ export const projectsByCategory = {
   fullDesc:
     "The project was implemented using HTML and CSS and is a landing page for a furniture manufacturing company. The main goal of the design is to emphasize the aesthetics of wood and the craftsmanship of artisans. The page structure includes: - Hero section with a large accent banner and CTA - About Us section with the company's history - Furniture categories (Bedroom, Lounge, Dining Room, Office) - A block with “Featured Products” and product cards with “Add to Cart” buttons\n- A Study Program section for additional engagement\n- A contact form and footer with social links\n\nThe project demonstrates the ability to create a minimalistic and modern interface with an emphasis on visual content and convenient navigation.",
   tech: "HTML • CSS",
-  media: [{ type: "image", src: "/projects/WebApp/JS/3.png" }],
+  media: [{ type: "image", src: "/projects/WebApp/JS/3.png" },
+    { type: "video", src: "/projects/WebApp/JS/3.mov" }
+  ],
 },
      {
   title: "IcyTales Ice Cream Landing Page",
@@ -160,6 +164,18 @@ export const projectsByCategory = {
     },
 
     {
+  title: "IcyTales Ice Cream Landing Page",
+  shortDesc: "Interactive ice cream shop landing page with JavaScript.",
+  fullDesc:
+    "A vibrant ice cream shop landing page built with HTML, CSS, and JavaScript. The project emphasizes interactivity and a smooth user experience.\n\nKey JavaScript features:\n- Dynamic product gallery with smooth transitions\n- Image sliders and product carousels\n- Interactive product cards with 'Add to Cart' actions\n- FAQ accordion with expand/collapse functionality\n- Contact form with basic validation and interactive states\n- Smooth animations and hover effects for better UX\n\nThis project demonstrates how JavaScript enhances a static landing page, making it dynamic, user-friendly, and visually engaging.",
+  tech: "HTML • CSS • JavaScript",
+  media: [
+    { type: "image", src: "/projects/WebApp/JS/8.jpeg" },
+    { type: "video", src: "/projects/WebApp/JS/8.mov" }
+  ]
+},
+
+    {
   title: "Website Launch Checklist",
   shortDesc: "Interactive checklist for launching websites.",
   fullDesc:
@@ -179,7 +195,8 @@ export const projectsByCategory = {
       tech: "HTML • CSS • JavaScript",
       media: [
         { type: "image", src: "/projects/WebApp/JS/7-1.png" },
-        { type: "image", src: "/projects/WebApp/JS/7.png" }
+        { type: "image", src: "/projects/WebApp/JS/7.png" },
+        { type: "video", src: "/projects/WebApp/JS/7.mov" } 
       ],
     },
 
@@ -190,7 +207,9 @@ export const projectsByCategory = {
     "This project was built using JavaScript, HTML, and CSS and represents an interactive selection game themed around Minion Land. The goal of the project is to let users pick their favorite attractions and complete a list.\n\n✨ Key features:\n- A set of six interactive Minion-themed cards (rides, shops, meet & greets, food).\n- Users can click to select activities.\n- A progress counter shows how many items are ready (e.g., '3 of 6 items ready').\n- Once all selections are made, pressing the 'Complete' button displays a thank you message.\n- The design uses bright Minion-style colors, playful typography, and cartoon-like UI elements.",
   tech: "HTML • CSS • JavaScript",
   media: [
-    { type: "image", src: "/projects/WebApp/JS/6.png" }
+    { type: "image", src: "/projects/WebApp/JS/6.png" },
+    { type: "image", src: "/projects/WebApp/JS/6-1.png" },
+    { type: "video", src: "/projects/WebApp/JS/6.mov" } 
   ],
 },
 
