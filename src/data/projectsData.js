@@ -247,13 +247,6 @@ export const projectsByCategory = {
      // optional screencast
   ]
 }
-
-
-
-
-   
-
-   
   ],
 
 
@@ -267,14 +260,20 @@ export const projectsByCategory = {
     //   tech: "SwiftUI • Core Data",
     //   media: [{ type: "image", src: "/projects/foodwaste/" }],
     // },
-    // {
-    //   title: "Car Maintenance Tracker",
-    //   shortDesc: "App to track car maintenance & OBD-II.",
-    //   fullDesc:
-    //     "Tracks car health with OBD-II, exports reports (PDF/CSV), analytics dashboard.",
-    //   tech: "React Native • Node.js • MongoDB",
-    //   media: [{ type: "image", src: "/projects/" }],
-    // },
+    {
+  title: "FluiDex Drive",
+  shortDesc: "Smart mobile tracker for vehicle maintenance.",
+  fullDesc: 
+    "🚗 FluiDex Drive is a mobile app that helps car owners stay on top of essential vehicle maintenance. It acts as a digital assistant, sending reminders, logging services, and simplifying auto care for beginners.\n\n🔑 Features:\n- Smart reminders (time + mileage) with auto-recalculation\n- Service log with expense tracking, charts, and PDF/CSV export\n- Beginner-friendly UX: receipt scanning, voice input, visual dashboards\n- Car integration: OBD-II (Bluetooth), GPS-based mileage, fuel API\n- Sync & extensions: cloud backup, multi-vehicle support, family sharing\n- AI-powered predictions, alerts, and explanations\n\n🎯 What this project demonstrates:\n- Mobile app development with modern UI (SwiftUI/Compose)\n- Data persistence, analytics, and API integration\n- Clean architecture (MVVM + Use Cases)\n- Portfolio-level project with CI/CD, tests, and demo video",
+  tech: "SwiftUI • Core Data • OBD-II • GPS • Cloud Sync • AI Integration",
+  github: "https://github.com/rabbitrunout/FluiDex_DriveApp", // 🔥 add repo later
+  media: [
+    { type: "image", src: "/projects/mobile/fluindex/logo.png" },
+    { type: "image", src: "/projects/mobile/fluindex/1.png" },
+    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
+  ]
+}
+
   ],
 
  
