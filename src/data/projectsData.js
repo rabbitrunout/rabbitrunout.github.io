@@ -8,7 +8,7 @@ export const projectsByCategory = {
 
       tech: "Adobe XD",
       media: [
-        { type: "image", src: "/projects/UI/UX_Design/1-1.png" },
+        { type: "image", src: "projects/UI/UX_Design/1-1.png" },
         { type: "image", src: "/projects/UI/UX_Design/1-2.png" },
         { type: "image", src: "/projects/UI/UX_Design/1-3.png" },
         { type: "video", src: "/projects/UI/UX_Design/SurfVideo.mp4" },
@@ -22,8 +22,8 @@ export const projectsByCategory = {
       tech: "Adobe XD",
       link: "https://xd.adobe.com/view/30072f89-14e7-47b9-9f61-1143514d85e3-6554/screen/98448917-c270-4393-8afa-ab779ef5dab0/",  // 🔥 ссылка на проект
       media: [
-        { type: "image", src: "/projects/UI/UX_Design/bakeryMain.png" },
-        { type: "video", src: "/projects/UI/UX_Design/bakeryVideo.mp4" },
+        { type: "image", src: "projects/UI/UX_Design/bakeryMain.png" },
+        { type: "video", src: "projects/UI/UX_Design/bakeryVideo.mp4" },
       ],
     },
     {
@@ -171,7 +171,7 @@ export const projectsByCategory = {
       fullDesc:
         "Helps users reduce food waste with notifications, gamification, and recipes. Built with SwiftUI.",
       tech: "SwiftUI • Core Data",
-      media: [{ type: "image", src: "/projects/foodwaste/foodwaste.png" }],
+      media: [{ type: "image", src: "/projects/foodwaste/" }],
     },
     {
       title: "Car Maintenance Tracker",
@@ -179,7 +179,7 @@ export const projectsByCategory = {
       fullDesc:
         "Tracks car health with OBD-II, exports reports (PDF/CSV), analytics dashboard.",
       tech: "React Native • Node.js • MongoDB",
-      media: [{ type: "image", src: "/projects/car/car.png" }],
+      media: [{ type: "image", src: "/projects/" }],
     },
   ],
 
