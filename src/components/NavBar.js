@@ -1,39 +1,45 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
 import { HashLink } from "react-router-hash-link";
-import { FileDown } from "lucide-react";
+import { FileDown, Linkedin, Github, Mail } from "lucide-react";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false); // ✅ контролируем бургер
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    setExpanded(false); // ✅ сворачиваем меню при клике
   };
 
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Navbar
+      expand="md"
+      className={scrolled ? "scrolled" : ""}
+      expanded={expanded}
+    >
       <Container>
         <Navbar.Brand href="/">
           <span className="brand-text">Irina.dev</span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
+        {/* ✅ Кастомный бургер */}
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpanded(expanded ? false : true)}
+        >
+          <div className={`burger ${expanded ? "open" : ""}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
@@ -67,7 +73,7 @@ export const NavBar = () => {
             </Nav.Link>
           </Nav>
 
-          {/* Правая часть */}
+          {/* 🔗 Правая часть */}
           <span className="navbar-text">
             <div className="social-icon">
               <a
@@ -75,18 +81,20 @@ export const NavBar = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={navIcon1} alt="LinkedIn" />
+                <Linkedin size={24} />
               </a>
               <a
                 href="https://github.com/rabbitrunout"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={navIcon2} alt="GitHub" />
+                <Github size={24} />
+              </a>
+              <a href="mailto:irina.safronova0801@gmail.com">
+                <Mail size={24} />
               </a>
             </div>
 
-            {/* 🔗 Кнопки действий */}
             <div className="nav-buttons">
               <HashLink smooth to="#connect">
                 <button className="vvd">
@@ -94,7 +102,6 @@ export const NavBar = () => {
                 </button>
               </HashLink>
 
-              {/* 📄 Resume */}
               <a
                 href="/Irina_Safronova_Resume.pdf"
                 target="_blank"
@@ -105,12 +112,11 @@ export const NavBar = () => {
                 <span>Resume</span>
               </a>
 
-              {/* 📝 Cover Letter */}
               <a
                 href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="vvd resume-btn"
+                className="vvd cover-btn"
               >
                 <FileDown size={18} />
                 <span>Cover Letter</span>

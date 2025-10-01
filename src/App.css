@@ -132,17 +132,30 @@ span.navbar-text {
   text-decoration: none !important;
 }
 
-/* 🔴 Resume — основная */
+/* 🔴 Resume */
 .vvd.resume-btn {
-  background: #ff1744;
+  background: var(--main-red);
   color: #fff;
-  border: 2px solid #ff1744;
+  border: 2px solid var(--main-red);
 }
 .vvd.resume-btn:hover {
   background: transparent;
-  color: #ff1744;
-  box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
+  color: var(--main-red);
+  box-shadow: 0 0 12px rgba(229, 57, 53, 0.6);
 }
+
+/* 🟢 Cover Letter */
+.vvd.cover-btn {
+  background: var(--accent-green);
+  color: #fff;
+  border: 2px solid var(--accent-green);
+}
+.vvd.cover-btn:hover {
+  background: transparent;
+  color: var(--accent-green);
+  box-shadow: 0 0 12px rgba(67, 160, 71, 0.6);
+}
+
 
 /* ⚪ Let’s Connect — второстепенная */
 .vvd {
@@ -156,34 +169,70 @@ span.navbar-text {
   box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
 }
 
-
-
-
 /************ Social Icons ************/
 .social-icon {
   display: flex;
   gap: 12px;
 }
+
 .social-icon a {
   width: 42px;
   height: 42px;
-  background: rgba(217, 217, 217, 0.1);
+  background: var(--main-red); /* ✅ единый красный из :root */
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+  color: #fff; /* ✅ иконки белые */
 }
-.social-icon a:hover {
-  background: var(--main-red);
-  border-color: var(--main-red);
-}
-.social-icon a img {
+
+.social-icon a svg {
   width: 22px;
   height: 22px;
-  filter: brightness(0) invert(1);
+  stroke-width: 2.2;
+  color: #fff; /* ✅ белые иконки */
 }
+
+.social-icon a:hover {
+  background: #b71c1c; /* 🔥 затемнённый оттенок для hover */
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(229, 57, 53, 0.6); /* неон в твоём красном */
+}
+
+/* === Custom Burger === */
+.burger {
+  width: 28px;
+  height: 22px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--main-red); /* 🔴 красный */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Анимация крестика */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(9px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px);
+}
+
+
+
 
 /************ Button ************/
 button.vvd {
@@ -882,6 +931,16 @@ button.vvd:hover svg {
 
   .banner .row {
     flex-direction: column-reverse; /* аватарка под текстом */
+  }
+  .nav-buttons .vvd {
+    font-size: 14px;        /* меньше шрифт */
+    padding: 8px 16px;      /* компактнее отступы */
+    min-width: auto;        /* убираем фикс. ширину */
+    height: auto;           /* авто-высота */
+  }
+
+  .nav-buttons .vvd span {
+    white-space: nowrap;    /* не переносим текст */
   }
 
   /* 🔹 Project Cards */
