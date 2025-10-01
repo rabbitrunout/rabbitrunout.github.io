@@ -95,14 +95,16 @@ export const NavBar = () => {
                 </button>
               </HashLink>
 
-              <a
-                href="/Irina_Safronova_Resume.pdf"
-                download
-                className="vvd resume-btn"
-              >
-                <FileDown size={18} />
-                <span>Resume</span>
-              </a>
+             <a 
+  href="/Irina_Safronova_Resume.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="vvd resume-btn"
+>
+  <FileDown size={18} />
+  <span>Resume</span>
+</a>
+
             </div>
           </span>
         </Navbar.Collapse>

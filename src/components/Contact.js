@@ -23,10 +23,10 @@ export const Contact = () => {
 
         {/* 📄 Резюме */}
         <div className="resume-buttons">
-          <a href="/assets/Irina_Safronova_Resume.pdf" download className="resume-btn">
+          <a href="/Irina_Safronova_Resume.pdf" download className="resume-btn">
             <FileDown size={22} /> Download Resume
           </a>
-          <a href="/assets/Irina_Safronova_Resume.pdf" target="_blank" rel="noreferrer" className="resume-btn secondary">
+          <a href="/Irina_Safronova_Resume.pdf" target="_blank" rel="noreferrer" className="resume-btn secondary">
             <ExternalLink size={22} /> View Resume
           </a>
         </div>
