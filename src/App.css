@@ -268,62 +268,56 @@ button.vvd:hover svg {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  margin: 0 10px;
+  min-height: 280px;       /* 🔥 не даём сжиматься как палочка */
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 340px;
-  max-height: 360px;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 15px #ff4b4b;
+  box-shadow: 0 6px 20px rgba(255, 75, 75, 0.4);
 }
 
-.project-img {
+/* === Изображение в карточке === */
+.project-card img.project-img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  height: 180px;           /* 🔥 фиксированная высота */
+  object-fit: cover;       /* чтобы не искажалось */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+/* === Текстовая часть карточки === */
 .project-info {
-  flex: 1;
-  padding: 1rem;
+  padding: 12px;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex: 1;
 }
 
 .project-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  margin-bottom: 6px;
   color: #fff;
 }
 
-.project-info .short-desc {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 0.5rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.project-info p.short-desc {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 6px;
 }
 
+
 .project-info span {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #ff4b4b;
-  margin-top: auto;
+  font-weight: bold;
 }
 
 
@@ -369,30 +363,23 @@ button.vvd:hover svg {
 }
 
 
-
-
 /* 🔥 адаптация для мобильных */
 @media (max-width: 768px) {
   .project-card {
-    min-height: 320px;
-    max-height: 340px;
+    min-height: 240px;     /* немного меньше на мобилке */
   }
 
-  .project-img {
-    height: 150px;
+  .project-card img.project-img {
+    height: 150px;         /* тоже уменьшаем */
   }
 
   .project-info h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-
-  .project-info .short-desc {
+  .project-info p.short-desc {
     font-size: 0.8rem;
-    /* -webkit-line-clamp: 3; на мобиле можно показывать 3 строки */
   }
 }
-
-
 
 
 /* === Project Modal: двухколоночный === */
