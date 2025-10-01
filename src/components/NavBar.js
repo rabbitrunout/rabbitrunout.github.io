@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import { HashLink } from "react-router-hash-link";
-import { FileDown } from "lucide-react"; // ✅ иконка резюме
+import { FileDown } from "lucide-react";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -17,7 +17,6 @@ export const NavBar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -68,7 +67,7 @@ export const NavBar = () => {
             </Nav.Link>
           </Nav>
 
-          {/* Правая часть: соцсети + кнопки */}
+          {/* Правая часть */}
           <span className="navbar-text">
             <div className="social-icon">
               <a
@@ -95,16 +94,27 @@ export const NavBar = () => {
                 </button>
               </HashLink>
 
-             <a 
-  href="/Irina_Safronova_Resume.pdf" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="vvd resume-btn"
->
-  <FileDown size={18} />
-  <span>Resume</span>
-</a>
+              {/* 📄 Resume */}
+              <a
+                href="/Irina_Safronova_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vvd resume-btn"
+              >
+                <FileDown size={18} />
+                <span>Resume</span>
+              </a>
 
+              {/* 📝 Cover Letter */}
+              <a
+                href="/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vvd resume-btn"
+              >
+                <FileDown size={18} />
+                <span>Cover Letter</span>
+              </a>
             </div>
           </span>
         </Navbar.Collapse>
