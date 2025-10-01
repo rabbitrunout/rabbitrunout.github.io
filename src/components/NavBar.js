@@ -96,7 +96,7 @@ export const NavBar = () => {
               </HashLink>
 
               <a
-                href="/assets/Irina_Safronova_Resume.pdf"
+                href="/Irina_Safronova_Resume.pdf"
                 download
                 className="vvd resume-btn"
               >
