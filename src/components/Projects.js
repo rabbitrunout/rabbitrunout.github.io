@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { projectsByCategory } from "../data/projectsData";
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All");
-  const [zoomed, setZoomed] = useState(false);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -20,22 +17,32 @@ export const Projects = () => {
 
   const closeModal = () => {
     setSelectedProject(null);
-    setZoomed(false);
   };
 
   const nextMedia = () => {
-    setSelectedMediaIndex(
-      (prev) => (prev + 1) % selectedProject.media.length
+    setSelectedMediaIndex((prev) =>
+      (prev + 1) % selectedProject.media.length
     );
   };
 
   const prevMedia = () => {
-    setSelectedMediaIndex(
-      (prev) =>
-        (prev - 1 + selectedProject.media.length) %
-        selectedProject.media.length
+    setSelectedMediaIndex((prev) =>
+      (prev - 1 + selectedProject.media.length) %
+      selectedProject.media.length
     );
   };
+
+  // Клавиши: ← → для слайдов, ESC — закрыть
+  useEffect(() => {
+    if (!selectedProject) return;
+    const onKey = (e) => {
+      if (e.key === "ArrowRight") nextMedia();
+      if (e.key === "ArrowLeft") prevMedia();
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  },);
 
   const sliderSettings = {
     dots: true,
@@ -61,7 +68,7 @@ export const Projects = () => {
         <h2>My Projects</h2>
         <p>Here are some of the applications I’ve built and contributed to.</p>
 
-        {/* 🔥 Фильтры */}
+        {/* Фильтры */}
         <div className="project-filters">
           {categories.map((cat) => (
             <button
@@ -74,11 +81,10 @@ export const Projects = () => {
           ))}
         </div>
 
-        {/* 🔥 Общий контейнер */}
+        {/* Ленты по категориям */}
         <div className="projects-container">
           {Object.entries(projectsByCategory).map(([category, projects]) => {
-            if (activeCategory !== "All" && activeCategory !== category)
-              return null;
+            if (activeCategory !== "All" && activeCategory !== category) return null;
 
             return (
               <div key={category}>
@@ -94,14 +100,8 @@ export const Projects = () => {
                       viewport={{ once: true }}
                       onClick={() => openModal(proj)}
                     >
-                      {proj.media &&
-                      proj.media.length > 0 &&
-                      proj.media[0].type === "image" ? (
-                        <img
-                          src={proj.media[0].src}
-                          alt={proj.title}
-                          className="project-img"
-                        />
+                      {proj.media && proj.media.length > 0 && proj.media[0].type === "image" ? (
+                        <img src={proj.media[0].src} alt={proj.title} className="project-img" />
                       ) : (
                         <div className="project-img placeholder">No Image</div>
                       )}
@@ -119,140 +119,76 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* 🔥 Modal */}
+      {/* Модал: слева медиа, справа текст */}
       {selectedProject && (
         <div className="project-modal-overlay" onClick={closeModal}>
           <div
             className="project-modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <button className="project-modal-close" onClick={closeModal}>
-              ×
-            </button>
-            <div className="project-modal-body">
+            <button className="project-modal-close" onClick={closeModal}>×</button>
+
+            <div className="project-modal-body two-columns">
+              {/* Левая колонка — медиа */}
               <div className="project-modal-media">
                 {selectedProject.media[selectedMediaIndex].type === "image" ? (
                   <img
                     src={selectedProject.media[selectedMediaIndex].src}
                     alt="preview"
                     className="project-modal-img"
-                    onClick={() => setZoomed(true)}
                   />
                 ) : (
                   <video
                     src={selectedProject.media[selectedMediaIndex].src}
                     controls
                     preload="metadata"
+                    className="project-modal-video"
                     controlsList="nodownload noplaybackrate"
                     disablePictureInPicture
-                    className="project-modal-video"
-                    onClick={() => setZoomed(true)}
                   />
                 )}
+
                 {selectedProject.media.length > 1 && (
                   <>
-                    <button
-                      className="project-slider-btn prev"
-                      onClick={prevMedia}
-                    >
-                      ‹
-                    </button>
-                    <button
-                      className="project-slider-btn next"
-                      onClick={nextMedia}
-                    >
-                      ›
-                    </button>
+                    <button className="project-slider-btn prev" onClick={prevMedia}>‹</button>
+                    <button className="project-slider-btn next" onClick={nextMedia}>›</button>
                   </>
                 )}
               </div>
 
-              {/* Текст */}
-              <h3>{selectedProject.title}</h3>
-              <p className="modal-desc">{selectedProject.fullDesc}</p>
-              <p className="modal-tech">
-                <strong>Tech:</strong> {selectedProject.tech}
-              </p>
+              {/* Правая колонка — текст */}
+              <div className="project-modal-text">
+                <h3 className="modal-title">{selectedProject.title}</h3>
+                <div className="modal-scroll">
+                  <p className="modal-desc">{selectedProject.fullDesc}</p>
+                  <p className="modal-tech"><strong>Tech:</strong> {selectedProject.tech}</p>
 
-              <div className="modal-buttons">
-                {selectedProject.github && (
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="modal-link"
-                  >
-                    GitHub
-                  </a>
-                )}
-                {selectedProject.link && (
-                  <a
-                    href={selectedProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="modal-link"
-                  >
-                    View Project
-                  </a>
-                )}
+                  <div className="modal-buttons">
+                    {selectedProject.github && (
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modal-link"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    {selectedProject.link && (
+                      <a
+                        href={selectedProject.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="modal-link"
+                      >
+                        View Project
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
-
-      {/* 🔥 Fullscreen просмотр */}
-      {zoomed && (
-        <div className="fullscreen-overlay" onClick={() => setZoomed(false)}>
-          {selectedProject.media[selectedMediaIndex].type === "image" ? (
-            <img
-              src={selectedProject.media[selectedMediaIndex].src}
-              alt="fullscreen"
-              className="fullscreen-img"
-              onClick={(e) => e.stopPropagation()}
-            />
-          ) : (
-            <video
-              src={selectedProject.media[selectedMediaIndex].src}
-              controls
-              autoPlay
-              preload="metadata"
-              controlsList="nodownload noplaybackrate"
-              disablePictureInPicture
-              className="fullscreen-video"
-              onClick={(e) => e.stopPropagation()}
-            />
-          )}
-
-          <button
-            className="fullscreen-close"
-            onClick={() => setZoomed(false)}
-          >
-            ×
-          </button>
-
-          {selectedProject.media.length > 1 && (
-            <>
-              <button
-                className="fullscreen-btn prev"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevMedia();
-                }}
-              >
-                ‹
-              </button>
-              <button
-                className="fullscreen-btn next"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextMedia();
-                }}
-              >
-                ›
-              </button>
-            </>
-          )}
         </div>
       )}
     </section>

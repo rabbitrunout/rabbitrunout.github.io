@@ -252,14 +252,7 @@ export const projectsByCategory = {
 
   // /////  Mobile Apps ///////
   "Mobile Apps": [
-    // {
-    //   title: "FoodWasteTracker",
-    //   shortDesc: "iOS app to reduce food waste.",
-    //   fullDesc:
-    //     "Helps users reduce food waste with notifications, gamification, and recipes. Built with SwiftUI.",
-    //   tech: "SwiftUI • Core Data",
-    //   media: [{ type: "image", src: "/projects/foodwaste/" }],
-    // },
+    
     {
   title: "FluiDex Drive",
   shortDesc: "Smart mobile tracker for vehicle maintenance.",
