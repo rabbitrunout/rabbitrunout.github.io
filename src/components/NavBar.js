@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import { HashLink } from "react-router-hash-link";
+import { FileDown } from "lucide-react"; // ✅ иконка резюме
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -65,8 +66,9 @@ export const NavBar = () => {
             >
               Skills
             </Nav.Link>
-            
           </Nav>
+
+          {/* Правая часть: соцсети + кнопки */}
           <span className="navbar-text">
             <div className="social-icon">
               <a
@@ -84,11 +86,24 @@ export const NavBar = () => {
                 <img src={navIcon2} alt="GitHub" />
               </a>
             </div>
-            <HashLink smooth to="#connect">
-              <button className="vvd">
-                <span>Let’s Connect</span>
-              </button>
-            </HashLink>
+
+            {/* 🔗 Кнопки действий */}
+            <div className="nav-buttons">
+              <HashLink smooth to="#connect">
+                <button className="vvd">
+                  <span>Let’s Connect</span>
+                </button>
+              </HashLink>
+
+              <a
+                href="/assets/Irina_Safronova_Resume.pdf"
+                download
+                className="vvd resume-btn"
+              >
+                <FileDown size={18} />
+                <span>Resume</span>
+              </a>
+            </div>
           </span>
         </Navbar.Collapse>
       </Container>

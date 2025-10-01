@@ -93,6 +93,71 @@ span.navbar-text {
   align-items: center;
   gap: 20px;
 }
+.navbar a,
+.navbar a:focus,
+.navbar a:hover {
+  text-decoration: none !important;
+  outline: none;
+}
+
+/* 🔘 Контейнер для кнопок */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* === Общий стиль кнопок === */
+.vvd,
+.vvd.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  min-width: 130px; /* одинаковая ширина */
+  height: 42px;     /* одинаковая высота */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  
+  /* 🔥 убираем подчёркивание полностью */
+  text-decoration: none !important;
+}
+.vvd *,
+.vvd.resume-btn * {
+  text-decoration: none !important;
+}
+
+/* 🔴 Resume — основная */
+.vvd.resume-btn {
+  background: #ff1744;
+  color: #fff;
+  border: 2px solid #ff1744;
+}
+.vvd.resume-btn:hover {
+  background: transparent;
+  color: #ff1744;
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
+}
+
+/* ⚪ Let’s Connect — второстепенная */
+.vvd {
+  background: transparent;
+  color: #ff1744;
+  border: 2px solid #ff1744;
+}
+.vvd:hover {
+  background: #ff1744;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
+}
+
+
+
 
 /************ Social Icons ************/
 .social-icon {
