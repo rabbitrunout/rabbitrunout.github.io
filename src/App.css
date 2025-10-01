@@ -276,8 +276,7 @@ button.vvd:hover svg {
 .banner img {
   max-width: 360px;
   border-radius: 50%;
-  border: none;   /* убрали рамку */
-  box-shadow: none; /* убрали свечение */
+  margin-left: 60px;   /* 🔥 смещаем вправо */
 }
 .banner a {
   text-decoration: none !important;
@@ -336,13 +335,14 @@ button.vvd:hover svg {
   background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  min-height: 320px;    /* фиксированная форма */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+  justify-content: flex-start;
   margin: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+  flex: 0 0 auto;   /* 🔥 чтобы слайдер не тянул карточку */
+  width: 90%;       /* 🔥 нормальная ширина на мобилке */
+  min-height: auto; /* 🔥 убираем палки */
 }
 
 .project-card:hover {
@@ -352,8 +352,9 @@ button.vvd:hover svg {
 
 .project-card img.project-img {
   width: 100%;
-  height: 200px;       /* одинаковая высота */
-  object-fit: cover;
+  height: 180px;        /* 🔥 фиксированная высота */
+  object-fit: cover;    /* 🔥 не тянет картинку */
+  background: #222;     /* 🔥 фон если картинки нет */
 }
 
 .project-info {

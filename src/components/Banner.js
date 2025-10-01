@@ -65,7 +65,7 @@ export const Banner = () => {
 
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={8}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -95,7 +95,7 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
 
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} md={5} xl={4}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
