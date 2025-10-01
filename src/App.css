@@ -271,13 +271,12 @@ button.vvd:hover svg {
   background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
-  padding: 0;
-  margin: 0 10px;
-  min-height: 280px;       /* 🔥 не даём сжиматься как палочка */
+  min-height: 320px;    /* фиксированная форма */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  margin: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -286,19 +285,18 @@ button.vvd:hover svg {
   box-shadow: 0 6px 20px rgba(255, 75, 75, 0.4);
 }
 
-/* === Изображение в карточке === */
 .project-card img.project-img {
   width: 100%;
-  height: 180px;           /* 🔥 фиксированная высота */
-  object-fit: cover;       /* чтобы не искажалось */
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  height: 200px;       /* одинаковая высота */
+  object-fit: cover;
 }
 
-/* === Текстовая часть карточки === */
 .project-info {
   padding: 12px;
-  text-align: left;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .project-info h3 {
@@ -313,12 +311,25 @@ button.vvd:hover svg {
   margin-bottom: 6px;
 }
 
-
 .project-info span {
   font-size: 0.75rem;
   color: #ff4b4b;
   font-weight: bold;
 }
+
+/* 📱 Мобилка */
+@media (max-width: 768px) {
+  .project-card {
+    min-height: 280px;
+    margin: 0 auto;  /* центрируем */
+    width: 90%;      /* почти вся ширина */
+  }
+
+  .project-card img.project-img {
+    height: 160px;
+  }
+}
+
 
 
 /* 🔥 Кнопка прижата к низу */
@@ -366,11 +377,13 @@ button.vvd:hover svg {
 /* 🔥 адаптация для мобильных */
 @media (max-width: 768px) {
   .project-card {
-    min-height: 240px;     /* немного меньше на мобилке */
+    min-height: 280px;
+    margin: 0 auto;  /* центрируем */
+    width: 90%;      /* почти вся ширина */
   }
 
   .project-card img.project-img {
-    height: 150px;         /* тоже уменьшаем */
+    height: 160px;
   }
 
   .project-info h3 {
