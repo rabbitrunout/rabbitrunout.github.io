@@ -855,11 +855,11 @@ button.vvd:hover svg {
 }
 
 
-/* === 📱 Адаптив для мобилок (max-width: 768px) === */
+/* === 📱 Адаптив для планшетов и телефонов (до 768px) === */
 @media (max-width: 768px) {
   /* 🔹 Banner */
   .banner {
-    padding: 160px 20px 60px 20px; /* меньше отступ сверху */
+    padding: 160px 20px 60px 20px;
     text-align: center;
   }
 
@@ -874,26 +874,30 @@ button.vvd:hover svg {
   }
 
   .banner img {
-    max-width: 240px;   /* меньше аватарка */
+    max-width: 240px;
     margin: 20px auto 0 auto;
     display: block;
   }
 
-  /* Текст и картинка друг под другом */
   .banner .row {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* аватарка под текстом */
   }
 
-  /* 🔹 Project Card */
+  /* 🔹 Project Cards */
+   .slick-slide {
+    width: 100% !important;
+    padding: 0 8px; /* чуть воздуха */
+    box-sizing: border-box;
+  }
+
   .project-card {
-    min-height: 280px;
-    margin: 0 auto;   /* центрируем */
-    width: 95%;       /* почти вся ширина */
+    width: 100%;
+    max-width: 360px; /* ограничим чтобы не были супер широкими */
+    margin: 0 auto;
   }
 
   .project-card img.project-img {
     height: 160px;
-    object-fit: cover;
   }
 
   .project-info h3 {
@@ -908,7 +912,7 @@ button.vvd:hover svg {
   .project-modal-content {
     width: 100%;
     height: auto;
-    border-radius: 0;  /* во всю ширину */
+    border-radius: 0;
     margin: 0;
   }
 
@@ -919,13 +923,13 @@ button.vvd:hover svg {
 
   .modal-left img,
   .modal-left video {
-    max-height: 40vh; /* фото/видео меньше */
+    max-height: 40vh;
     object-fit: contain;
   }
 
   .modal-right {
     max-height: none;
-    overflow-y: visible; /* текст всегда виден */
+    overflow-y: visible;
   }
 
   /* 🔹 Skills Grid */
@@ -944,6 +948,75 @@ button.vvd:hover svg {
   }
 
   .icon-box p {
-    max-width: 120px; /* подписи длиннее */
+    max-width: 120px;
+  }
+}
+
+/* === 📱 Адаптив для маленьких экранов (iPhone 16 Pro и до 430px) === */
+@media (max-width: 430px) {
+  /* 🔹 Banner */
+  .banner {
+    padding: 120px 15px 50px 15px;
+  }
+
+  .banner h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .banner img {
+    max-width: 200px;
+  }
+
+  /* 🔹 Project Cards */
+  
+  .project-card {
+    max-width: 95%; /* растягиваем почти на весь экран */
+  }
+
+  .project-card img.project-img {
+    height: 140px;
+    object-fit: cover; /* не тянем */
+  }
+
+  .project-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .project-info p.short-desc {
+    font-size: 0.75rem;
+  }
+
+  /* 🔹 Project Modal */
+  .project-modal-content {
+    padding: 1rem;
+  }
+
+  .modal-left img,
+  .modal-left video {
+    max-height: 30vh;
+  }
+
+  .modal-right {
+    font-size: 0.9rem;
+  }
+
+  /* 🔹 Skills Grid */
+  .icons-grid.full-width {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+  }
+
+  .icon-box svg {
+    font-size: 28px;
+  }
+
+  .icon-box p {
+    font-size: 12px;
+    max-width: 90px;
   }
 }

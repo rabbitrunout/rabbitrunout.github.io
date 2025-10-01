@@ -44,7 +44,7 @@ export const Projects = () => {
     return () => window.removeEventListener("keydown", onKey);
   },);
 
-  const sliderSettings = {
+ const sliderSettings = {
   dots: true,
   infinite: false,
   speed: 600,
@@ -55,10 +55,11 @@ export const Projects = () => {
   touchMove: true,
   arrows: true,
   responsive: [
-    { breakpoint: 1200, settings: { slidesToShow: 2 } }, // планшет
-    { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px" } }, // мобилка
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false } }, // ✅ одна карточка
   ],
 };
+
 
 
   const categories = ["All", ...Object.keys(projectsByCategory)];
