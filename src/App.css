@@ -383,18 +383,6 @@ button.vvd:hover svg {
   font-weight: bold;
 }
 
-/* 📱 Мобилка */
-@media (max-width: 768px) {
-  .project-card {
-    min-height: 280px;
-    margin: 0 auto;  /* центрируем */
-    width: 90%;      /* почти вся ширина */
-  }
-
-  .project-card img.project-img {
-    height: 160px;
-  }
-}
 
 
 
@@ -440,25 +428,7 @@ button.vvd:hover svg {
 }
 
 
-/* 🔥 адаптация для мобильных */
-@media (max-width: 768px) {
-  .project-card {
-    min-height: 280px;
-    margin: 0 auto;  /* центрируем */
-    width: 90%;      /* почти вся ширина */
-  }
 
-  .project-card img.project-img {
-    height: 160px;
-  }
-
-  .project-info h3 {
-    font-size: 0.9rem;
-  }
-  .project-info p.short-desc {
-    font-size: 0.8rem;
-  }
-}
 
 
 /* === Project Modal: двухколоночный === */
@@ -605,36 +575,6 @@ button.vvd:hover svg {
   background: #b71c1c;
 }
 
-/* 📱 Адаптив */
-/* 📱 Для мобилок */
-@media (max-width: 768px) {
-  .project-modal-content {
-    width: 100%;
-    height: auto;
-    border-radius: 0;      /* 🔥 во всю ширину экрана */
-    margin: 0;             /* без отступов */
-  }
-
-  .project-modal-body.two-col {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .modal-left img,
-  .modal-left video {
-    max-height: 40vh; /* 🔥 фото/видео меньше */
-    object-fit: contain;
-  }
-
-  .modal-right {
-    max-height: none;
-    overflow-y: visible;
-  }
-}
-
-
-
-
 /************ Skills Section ************/
 /* Контейнер секции */
 .skill {
@@ -719,26 +659,6 @@ button.vvd:hover svg {
 .icon-box:hover p {
   color: var(--main-red);
   text-shadow: 0 0 6px rgba(229, 57, 53, 0.6);
-}
-
-
-
-/* 📱 Адаптив */
-@media (max-width: 768px) {
-  .icons-grid.full-width {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-    max-width: 100%;      /* на мобилке пусть тянется */
-  }
-  .icon-box {
-     min-height: 100px;
-  }
-  .icon-box svg {
-    font-size: 34px;
-  }
-  .icon-box p {
-    max-width: 120px; /* больше пространства */
-  }
 }
 
 
@@ -935,5 +855,95 @@ button.vvd:hover svg {
 }
 
 
+/* === 📱 Адаптив для мобилок (max-width: 768px) === */
+@media (max-width: 768px) {
+  /* 🔹 Banner */
+  .banner {
+    padding: 160px 20px 60px 20px; /* меньше отступ сверху */
+    text-align: center;
+  }
 
+  .banner h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
 
+  .banner p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .banner img {
+    max-width: 240px;   /* меньше аватарка */
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+
+  /* Текст и картинка друг под другом */
+  .banner .row {
+    flex-direction: column-reverse;
+  }
+
+  /* 🔹 Project Card */
+  .project-card {
+    min-height: 280px;
+    margin: 0 auto;   /* центрируем */
+    width: 95%;       /* почти вся ширина */
+  }
+
+  .project-card img.project-img {
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .project-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .project-info p.short-desc {
+    font-size: 0.8rem;
+  }
+
+  /* 🔹 Project Modal */
+  .project-modal-content {
+    width: 100%;
+    height: auto;
+    border-radius: 0;  /* во всю ширину */
+    margin: 0;
+  }
+
+  .project-modal-body.two-col {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .modal-left img,
+  .modal-left video {
+    max-height: 40vh; /* фото/видео меньше */
+    object-fit: contain;
+  }
+
+  .modal-right {
+    max-height: none;
+    overflow-y: visible; /* текст всегда виден */
+  }
+
+  /* 🔹 Skills Grid */
+  .icons-grid.full-width {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .icon-box {
+    min-height: 100px;
+  }
+
+  .icon-box svg {
+    font-size: 34px;
+  }
+
+  .icon-box p {
+    max-width: 120px; /* подписи длиннее */
+  }
+}
