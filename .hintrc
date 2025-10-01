@@ -9,7 +9,8 @@
         "ignore": [
           "scroll-behavior",
           "scroll-behavior: smooth",
-          "inset"
+          "inset",
+          "min-height: auto"
         ]
       }
     ],
