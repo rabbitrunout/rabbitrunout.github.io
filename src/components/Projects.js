@@ -53,24 +53,55 @@ const sliderSettings = {
   dots: true,
   infinite: false,
   speed: 600,
-  slidesToShow: 3, // дефолт для десктопа
+  slidesToShow: 3, // десктоп
   slidesToScroll: 1,
   arrows: true,
   responsive: [
     {
-      breakpoint: 1200, // ноуты
-      settings: { slidesToShow: 2, slidesToScroll: 1, arrows: true }
+      breakpoint: 1200,
+      settings: { slidesToShow: 2, slidesToScroll: 1 }
     },
     {
-      breakpoint: 768, // планшеты и телефоны
-      settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false, dots: true }
+      breakpoint: 1024,
+      settings: { slidesToShow: 2, slidesToScroll: 1 }
     },
     {
-      breakpoint: 480, // маленькие телефоны
-      settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false, dots: true }
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,   // ❌ отключаем центрирование
+        centerPadding: "0px" // ❌ убираем отступы
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        centerPadding: "0px"
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        centerPadding: "0px"
+      }
     }
   ]
 };
+
+
 
 
 

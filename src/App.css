@@ -908,6 +908,38 @@ button.vvd:hover svg {
 }
 
 
+
+@media (max-width: 900px) {
+  .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .project-card {
+    width: 100% !important;     /* растягиваем */
+    max-width: none !important; /* убираем ограничение */
+    margin: 0 auto;             /* центрируем */
+  }
+
+  .project-card img.project-img {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* убираем стрелки */
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+
+  /* точки */
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #e53935 !important;
+  }
+}
+
+
 /* === 📱 Адаптив для планшетов и телефонов (до 768px) === */
 @media (max-width: 768px) {
   /* 🔹 Banner */
@@ -970,20 +1002,26 @@ button.vvd:hover svg {
   }
 
   /* 🔹 Project Cards */
- .slick-slide {
+  .slick-slide {
     display: flex !important;
     justify-content: center !important;
   }
 
   .project-card {
     width: 100% !important;
-    max-width: 360px; /* 🔥 аккуратная ширина */
+    max-width: 340px; /* аккуратная ширина */
     margin: 0 auto;
   }
 
-  /* ❌ скрываем стрелки на телефоне */
+  /* ❌ убираем стрелки */
   .slick-prev, .slick-next {
     display: none !important;
+  }
+
+  /* 🔴 делаем точки красными и крупнее */
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #e53935 !important;
   }
 
   /* .slick-slide > div {
