@@ -928,11 +928,34 @@ button.vvd:hover svg {
   .banner .row {
     flex-direction: column-reverse; /* аватарка под текстом */
   }
+   .navbar-collapse {
+    background: rgba(18, 18, 18, 0.95); /* тёмный прозрачный фон */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .navbar-text {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 1rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .nav-buttons .vvd {
-    font-size: 14px;        /* меньше шрифт */
-    padding: 8px 16px;      /* компактнее отступы */
-    min-width: auto;        /* убираем фикс. ширину */
-    height: auto;           /* авто-высота */
+    width: 100%;
+    justify-content: center;
   }
 
   .nav-buttons .vvd span {
