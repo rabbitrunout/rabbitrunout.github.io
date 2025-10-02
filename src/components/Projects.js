@@ -59,40 +59,18 @@ export const Projects = () => {
   responsive: [
     {
       breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
+      settings: { slidesToShow: 2, slidesToScroll: 1 }
     },
     {
       breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,   // ❌ отключаем
-        centerPadding: "0px",
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,   // ❌ отключаем
-        centerPadding: "0px",
-      },
-    },
-    {
-      breakpoint: 320,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,   // ❌ отключаем
-        centerPadding: "0px",
-      },
-    },
-  ],
+      settings: { slidesToShow: 1, slidesToScroll: 1 }
+    }
+  ]
 };
+
+
+
+
 
 
   const categories = ["All", ...Object.keys(projectsByCategory)];
