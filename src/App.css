@@ -970,24 +970,28 @@ button.vvd:hover svg {
   }
 
   /* 🔹 Project Cards */
-  /* .slick-list {
-    overflow: hidden;
-  } */
-
-    .slick-slide {
-    padding: 0;                /* убираем боковые отступы */
-    display: block !important; /* slick сам считает ширину */
-  }
-
-  .slick-slide > div {
-    width: 100% !important;    /* карточка занимает всю ширину слайда */
-    max-width: 100% !important;
+ .slick-slide {
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .project-card {
-    margin: 0 auto;            /* центрируем */
-    max-width: 95%;            /* делаем чуть меньше, чтобы красиво */
+    width: 100% !important;
+    max-width: 360px; /* 🔥 аккуратная ширина */
+    margin: 0 auto;
   }
+
+  /* ❌ скрываем стрелки на телефоне */
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+
+  /* .slick-slide > div {
+    width: 100% !important;   
+    max-width: 100% !important;
+  } */
+
+  
 
   .project-card img.project-img {
     width: 100%;

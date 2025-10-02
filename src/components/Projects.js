@@ -49,24 +49,31 @@ export const Projects = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [selectedProject, nextMedia, prevMedia]);
 
- const sliderSettings = {
+const sliderSettings = {
   dots: true,
   infinite: false,
   speed: 600,
-  slidesToShow: 3,
+  slidesToShow: 3, // дефолт для десктопа
   slidesToScroll: 1,
   arrows: true,
   responsive: [
     {
-      breakpoint: 1024,
-      settings: { slidesToShow: 2, slidesToScroll: 1 }
+      breakpoint: 1200, // ноуты
+      settings: { slidesToShow: 2, slidesToScroll: 1, arrows: true }
     },
     {
-      breakpoint: 768,
-      settings: { slidesToShow: 1, slidesToScroll: 1 }
+      breakpoint: 768, // планшеты и телефоны
+      settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false, dots: true }
+    },
+    {
+      breakpoint: 480, // маленькие телефоны
+      settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false, dots: true }
     }
   ]
 };
+
+
+
 
 
 
