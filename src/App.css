@@ -346,24 +346,31 @@ button.vvd:hover svg {
 }
 
 .project-filters {
+  display: flex;
+  flex-wrap: wrap;            /* кнопки переносятся */
+  justify-content: center;    /* центрируем */
+  gap: 12px;                  /* расстояние между кнопками */
   margin: 2rem 0;
 }
 
 .filter-btn {
-  margin: 0 0.5rem;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;         /* скругление для «чипсов» */
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width: 120px;            /* одинаковая ширина */
+  text-align: center;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: #ff4b4b;
-  color: #000;
+  background: var(--main-red);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(229, 57, 53, 0.6);
 }
 
 .projects-container {
@@ -1035,6 +1042,11 @@ button.vvd:hover svg {
   .icon-box p {
     max-width: 120px;
   }
+
+   .filter-btn {
+    flex: 1 1 45%;            /* 2 кнопки в ряд */
+    min-width: unset;         /* убираем фиксированную ширину */
+  }
 }
 
 /* === 📱 Адаптив для маленьких экранов (iPhone 16 Pro и до 430px) === */
@@ -1088,6 +1100,9 @@ button.vvd:hover svg {
 
   .modal-right {
     font-size: 0.9rem;
+  }
+   .filter-btn {
+    flex: 1 1 100%;           /* каждая кнопка в отдельной строке */
   }
 
   /* 🔹 Skills Grid */
