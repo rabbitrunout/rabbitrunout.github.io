@@ -940,19 +940,19 @@ button.vvd:hover svg {
   }
 
   /* 🔹 Project Cards */
-   .slick-slide {
+   
+    .slick-slide {
     display: flex !important;
     justify-content: center !important;
   }
-  .slick-slide > div {                /* внутренний обёртчик slick */
+
+  .slick-slide > div {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
-  
+
   .project-card {
-    width: 90% !important;
-    max-width: 360px;
+    width: 100% !important;
+    max-width: 360px; /* 🔥 ограничение для аккуратного вида */
     margin: 0 auto;
   }
 
@@ -960,7 +960,6 @@ button.vvd:hover svg {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   .project-info h3 {
