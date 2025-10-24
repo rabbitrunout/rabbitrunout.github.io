@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 // ✅ импорт видео как модуля
 import mainVideo from "./assets/video/main.mp4";
 

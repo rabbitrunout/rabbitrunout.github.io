@@ -387,25 +387,23 @@ button.vvd:hover svg {
   text-align: left;
 }
 
+/* Общие карточки */
 .project-card {
-  display: block;
   background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
   margin: 10px;
-  padding: 0;                     /* 🔥 убираем внутренние отступы */
   transition: transform 0.3s, box-shadow 0.3s;
+  width: auto; /* slick сам управляет шириной */
 }
 
 .project-card img.project-img {
   display: block;
   width: 100%;
   height: 200px;
-  object-fit: cover;      /* картинка не тянется */
-  object-position: top;   /* 🔥 фиксируем верхнюю часть */
+  object-fit: cover;
+  object-position: top;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  margin: 0;
-  padding: 0;
 }
 
 
@@ -455,11 +453,6 @@ button.vvd:hover svg {
   text-decoration: underline;
 }
 
-/* slick arrows + spacing */
-.slick-slide {
-  padding: 0 12px; /* расстояние между карточками */
-  box-sizing: border-box;
-}
 .slick-prev, .slick-next {
   z-index: 5;
 }
@@ -476,10 +469,6 @@ button.vvd:hover svg {
 .slick-dots li.slick-active button:before {
   color: #ff4b4b;
 }
-
-
-
-
 
 /* === Project Modal: двухколоночный === */
 .project-modal-overlay {
@@ -824,10 +813,7 @@ button.vvd:hover svg {
   color: #ff4b4b;
   cursor: pointer;
 }
-.slick-slide > div {
-  display: flex !important;
-  justify-content: center !important;
-}
+
 .slider-btn.prev { left: 10px; }
 .slider-btn.next { right: 10px; }
 
@@ -910,10 +896,7 @@ button.vvd:hover svg {
 
 
 @media (max-width: 900px) {
-  .slick-slide {
-    display: flex !important;
-    justify-content: center !important;
-  }
+ 
 
   .project-card {
     width: 100% !important;     /* растягиваем */
@@ -964,11 +947,9 @@ button.vvd:hover svg {
     display: block;
   }
 
-  .banner .row {
-    flex-direction: column-reverse; /* аватарка под текстом */
-  }
-   .navbar-collapse {
-    background: rgba(18, 18, 18, 0.95); /* тёмный прозрачный фон */
+  /* 🔹 Навбар */
+  .navbar-collapse {
+    background: rgba(18, 18, 18, 0.95);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
@@ -997,19 +978,18 @@ button.vvd:hover svg {
     justify-content: center;
   }
 
-  .nav-buttons .vvd span {
-    white-space: nowrap;    /* не переносим текст */
-  }
-
   /* 🔹 Project Cards */
   .slick-slide {
-    display: flex !important;
-    justify-content: center !important;
+    display: flex;           /* ✅ слайд занимает всю ширину */
+    justify-content: center;
+  }
+
+  .slick-slide > div {
+    width: 100%;             /* ✅ карточка растягивается */
   }
 
   .project-card {
-    width: 100% !important;
-    max-width: 340px; /* аккуратная ширина */
+    max-width: 95%;          /* ✅ почти на всю ширину экрана */
     margin: 0 auto;
   }
 
@@ -1018,18 +998,11 @@ button.vvd:hover svg {
     display: none !important;
   }
 
-  /* 🔴 делаем точки красными и крупнее */
+  /* 🔴 делаем точки красными */
   .slick-dots li button:before {
     font-size: 12px;
     color: #e53935 !important;
   }
-
-  /* .slick-slide > div {
-    width: 100% !important;   
-    max-width: 100% !important;
-  } */
-
-  
 
   .project-card img.project-img {
     width: 100%;
@@ -1120,9 +1093,9 @@ button.vvd:hover svg {
     max-width: 95%; /* растягиваем почти на весь экран */
   }
 
-  .project-card img.project-img {
+   .project-card img.project-img {
     height: 140px;
-    object-fit: cover; /* не тянем */
+    object-fit: cover;
   }
 
   .project-info h3 {

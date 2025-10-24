@@ -1,114 +1,60 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { projectsByCategory } from "../data/projectsData";
-import { ProjectModal } from "./ProjectModal";// ✅ импорт модалки
+import { ProjectModal } from "./ProjectModal";
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All");
+  const sliderRef = useRef(null);
 
   const openModal = (project) => {
     setSelectedProject(project);
     setSelectedMediaIndex(0);
   };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
+  const closeModal = () => setSelectedProject(null);
 
   const nextMedia = useCallback(() => {
     if (!selectedProject) return;
-    setSelectedMediaIndex((prev) =>
-      (prev + 1) % selectedProject.media.length
-    );
+    setSelectedMediaIndex((prev) => (prev + 1) % selectedProject.media.length);
   }, [selectedProject]);
 
   const prevMedia = useCallback(() => {
     if (!selectedProject) return;
-    setSelectedMediaIndex((prev) =>
-      (prev - 1 + selectedProject.media.length) %
-      selectedProject.media.length
+    setSelectedMediaIndex(
+      (prev) => (prev - 1 + selectedProject.media.length) % selectedProject.media.length
     );
   }, [selectedProject]);
 
-  // ✅ слушатель клавиш
   useEffect(() => {
     if (!selectedProject) return;
-
     const onKey = (e) => {
       if (e.key === "ArrowRight") nextMedia();
       if (e.key === "ArrowLeft") prevMedia();
       if (e.key === "Escape") closeModal();
     };
-
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [selectedProject, nextMedia, prevMedia]);
 
-const sliderSettings = {
+  // ✅ Настройки слайдера
+  const sliderSettings = {
   dots: true,
   infinite: false,
   speed: 600,
-  slidesToShow: 3, // десктоп
-  slidesToScroll: 1,
   arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   responsive: [
-    {
-      breakpoint: 1200,
-      settings: { slidesToShow: 2, slidesToScroll: 1 }
-    },
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 2, slidesToScroll: 1 }
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,   // ❌ отключаем центрирование
-        centerPadding: "0px" // ❌ убираем отступы
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        centerPadding: "0px"
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        centerPadding: "0px"
-      }
-    }
+    { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+    { breakpoint: 768,  settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    { breakpoint: 480,  settings: { slidesToShow: 1, slidesToScroll: 1 } }
   ]
 };
-
-
-
-
-
-
-
-
-
 
 
   const categories = ["All", ...Object.keys(projectsByCategory)];
@@ -132,7 +78,7 @@ const sliderSettings = {
           ))}
         </div>
 
-        {/* 🔘 Ленты по категориям */}
+        {/* 🔘 Ленты */}
         <div className="projects-container">
           {Object.entries(projectsByCategory).map(([category, projects]) => {
             if (activeCategory !== "All" && activeCategory !== category) return null;
@@ -140,7 +86,7 @@ const sliderSettings = {
             return (
               <div key={category}>
                 <h3 className="category-title">{category}</h3>
-                <Slider {...sliderSettings}>
+                <Slider ref={sliderRef} {...sliderSettings}>
                   {projects.map((proj, i) => (
                     <motion.div
                       key={i}
@@ -170,7 +116,7 @@ const sliderSettings = {
         </div>
       </div>
 
-      {/* 🔘 Модалка (теперь отдельный компонент) */}
+      {/* 🔘 Модалка */}
       {selectedProject && (
         <ProjectModal
           project={selectedProject}

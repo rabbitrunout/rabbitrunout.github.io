@@ -21,6 +21,9 @@
           "meta[name=theme-color]"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off",
+    "manifest-file-extension": "off",
+    "apple-touch-icons": "off"
   }
 }
