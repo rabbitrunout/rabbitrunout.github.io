@@ -252,12 +252,33 @@ export const projectsByCategory = {
 
   // /////  Mobile Apps ///////
   "Mobile Apps": [
+
+   {
+  title: "FocusTimerPlus",
+  shortDesc: "Smart Focus Timer for Apple Watch.",
+  fullDesc: 
+    " FocusTimerPlus is a beautifully designed focus timer built exclusively for Apple Watch to help users stay productive and mindful throughout the day. It transforms the act of focusing into a motivating, data-driven experience right from your wrist.\n\n Main Screen:\n- Elegant circular timer ring with dynamic glow accent based on the selected focus category\n- One-tap Start / Pause control for instant focus sessions\n- Adjust duration with the Digital Crown or intuitive + / − buttons\n\n Settings Screen:\n- Customize default session length and preferred haptic intensity\n- Choose your visual theme: Dark, Light, or System Adaptive\n- Save your personalized preferences instantly\n\n🧘 Focus Categories:\n- Work — Boost productivity and eliminate distractions\n- Study — Enhance concentration while learning\n-  Meditation — Support mindfulness and relaxation\nEach category dynamically updates the accent color and animation of the timer ring.\n\n History & Weekly Trends:\n- All completed sessions are stored locally with color-coded history bars\n- View total focus minutes, streaks, and weekly statistics\n- Analyze your productivity habits through intuitive charts\n\n What this project demonstrates:\n- Native watchOS development with SwiftUI\n- Real-time state management using Combine\n- Data persistence via UserDefaults + Codable\n- Integration of Charts Framework for progress visualization\n- Support for complications and quick access with WidgetKit\n- Strong UX design focused on clarity, minimalism, and motivation\n\n Getting Started:\n1. Clone the repository:\n   git clone https://github.com/rabbitrunout/iOSApp3\n2. Open the project in Xcode and build for Apple Watch simulator or device\n\nThis project highlights expertise in watchOS development, reactive programming, and creating engaging wearable experiences with a sleek, glowing visual design.",
+  tech: "SwiftUI • Combine • Charts Framework • WidgetKit • UserDefaults • watchOS",
+  github: "https://github.com/rabbitrunout/iOSApp3",
+  media: [
+    { type: "image", src: "/projects/mobile/focustimerplus/8.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/1.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/2.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/3.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/4.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/5.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/6.png" },
+    { type: "image", src: "/projects/mobile/focustimerplus/7.png" },
+    // { type: "video", src: "/projects/mobile/focustimerplus/demo.mp4" } // optional
+  ]
+},
+
     
     {
   title: "FluiDex Drive",
   shortDesc: "Smart mobile tracker for vehicle maintenance.",
   fullDesc: 
-    "🚗 FluiDex Drive is a mobile app that helps car owners stay on top of essential vehicle maintenance. It acts as a digital assistant, sending reminders, logging services, and simplifying auto care for beginners.\n\n🔑 Features:\n- Smart reminders (time + mileage) with auto-recalculation\n- Service log with expense tracking, charts, and PDF/CSV export\n- Beginner-friendly UX: receipt scanning, voice input, visual dashboards\n- Car integration: OBD-II (Bluetooth), GPS-based mileage, fuel API\n- Sync & extensions: cloud backup, multi-vehicle support, family sharing\n- AI-powered predictions, alerts, and explanations\n\n🎯 What this project demonstrates:\n- Mobile app development with modern UI (SwiftUI/Compose)\n- Data persistence, analytics, and API integration\n- Clean architecture (MVVM + Use Cases)\n- Portfolio-level project with CI/CD, tests, and demo video",
+    " FluiDex Drive is a mobile app that helps car owners stay on top of essential vehicle maintenance. It acts as a digital assistant, sending reminders, logging services, and simplifying auto care for beginners.\n\n Features:\n- Smart reminders (time + mileage) with auto-recalculation\n- Service log with expense tracking, charts, and PDF/CSV export\n- Beginner-friendly UX: receipt scanning, voice input, visual dashboards\n- Car integration: OBD-II (Bluetooth), GPS-based mileage, fuel API\n- Sync & extensions: cloud backup, multi-vehicle support, family sharing\n- AI-powered predictions, alerts, and explanations\n\n What this project demonstrates:\n- Mobile app development with modern UI (SwiftUI/Compose)\n- Data persistence, analytics, and API integration\n- Clean architecture (MVVM + Use Cases)\n- Portfolio-level project with CI/CD, tests, and demo video",
   tech: "SwiftUI • Core Data • OBD-II • GPS • Cloud Sync • AI Integration",
   github: "https://github.com/rabbitrunout/FluiDex_DriveApp", // 🔥 add repo later
   media: [
