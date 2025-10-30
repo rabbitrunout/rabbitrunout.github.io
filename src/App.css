@@ -374,28 +374,49 @@ button.vvd:hover svg {
 }
 
 .projects-container {
-  background: rgba(255, 255, 255, 0.03); /* 🔥 общий фон */
-  border-radius: 16px;
-  padding: 2rem;
-  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 3rem 2rem 3.5rem 2rem;   /* 🆕 добавляем “дыхание” снизу */
+  margin-top: 3rem;                 /* 🆕 больше отступ сверху */
+  margin-bottom: 4rem;
+  box-shadow: 0 0 40px rgba(255, 75, 75, 0.08);
 }
+
 
 .category-title {
   font-size: 1.8rem;
   color: #ff4b4b;
-  margin: 20px 0;
+  margin: 40px 0 20px 0;       /* 🆕 увеличен отступ сверху */
   text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 6px;
 }
+
 
 /* Общие карточки */
 .project-card {
   background: #1a1a1a;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  margin: 10px;
+  margin: 20px;                  /* 🆕 больше воздуха между карточками */
   transition: transform 0.3s, box-shadow 0.3s;
-  width: auto; /* slick сам управляет шириной */
+  width: auto;
+  box-shadow: 0 0 15px rgba(255, 75, 75, 0.1); /* 🆕 лёгкая тень */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 75, 75, 0.25);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .project-card img.project-img {
   display: block;
@@ -1299,4 +1320,29 @@ button.vvd:hover svg {
   .modal-right {
     font-size: 0.9rem;
   }
+}
+
+
+/* === Исправляем плотность карточек в Slick Slider === */
+.slick-track {
+  display: flex !important;
+  gap: 32px !important; /* 🔥 расстояние между карточками */
+}
+
+.slick-slide {
+  padding: 20px 0 !important; /* 🔥 немного вертикального отступа */
+}
+
+.project-card {
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 75, 75, 0.08);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 75, 75, 0.25);
 }
