@@ -301,6 +301,7 @@ export const projectsByCategory = {
   github: "https://github.com/rabbitrunout/FluiDex_DriveApp", // 🔥 add repo later
   media: [
     { type: "image", src: "/projects/mobile/fluindex/logo.png" },
+    { type: "image", src: "/projects/mobile/fluindex/f1.png" },
     { type: "image", src: "/projects/mobile/fluindex/f-1.png" },
     { type: "image", src: "/projects/mobile/fluindex/f-2.png" },
     { type: "image", src: "/projects/mobile/fluindex/f-3.png" },
