@@ -267,7 +267,10 @@ export const projectsByCategory = {
       { "type": "image", "src": "/projects/mobile/media/media-2.png" },
       { "type": "image", "src": "/projects/mobile/media/media-3.png" },
       { "type": "image", "src": "/projects/mobile/media/media-4.png" },
-      { "type": "image", "src": "/projects/mobile/media/media-7.png" }
+      { "type": "image", "src": "/projects/mobile/media/media-7.png" },
+      { "type": "image", "src": "/projects/mobile/media/media-8.png" },
+      { "type": "image", "src": "/projects/mobile/media/media-9.png" },
+      { "type": "image", "src": "/projects/mobile/media/media-10.png" }
     ]
   },
 
