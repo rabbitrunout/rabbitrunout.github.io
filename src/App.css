@@ -332,6 +332,29 @@ button.vvd:hover svg {
   color: inherit !important;
 }
 
+
+/* ABOUT ME */
+/* .about-section {
+  padding: 4rem 1.5rem;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+} */
+
+
 /* PROJECTS */
 .projects {
   padding: 4rem 2rem;
@@ -1346,3 +1369,117 @@ button.vvd:hover svg {
   transform: translateY(-8px);
   box-shadow: 0 0 25px rgba(255, 75, 75, 0.25);
 }
+
+
+/************ About Me ************/
+.about-section {
+  padding: 80px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  
+  border-radius: 18px;
+  padding: 40px 32px;
+  box-shadow: 0 0 30px rgba(229, 57, 53, 0.18);
+  /* backdrop-filter: blur(10px); */
+}
+
+/* заголовок секции в общем стиле */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--text-light);
+  text-shadow: 0 0 12px var(--main-red), 0 0 24px rgba(229, 57, 53, 0.5);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1.4fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.about-text-block p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.about-text-block strong {
+  color: var(--text-light);
+}
+
+/* правый блок с “What I can help with” */
+.about-highlight {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 20px 22px;
+  border: 1px solid rgba(229, 57, 53, 0.4);
+  box-shadow: 0 0 20px rgba(229, 57, 53, 0.25);
+}
+
+.about-highlight h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--main-red);
+}
+
+.about-highlight ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-highlight li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.about-highlight li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--main-red);
+}
+
+/* 📱 адаптив */
+@media (max-width: 900px) {
+  .about-inner {
+    padding: 32px 20px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-inner {
+    padding: 24px 16px;
+  }
+
+  .about-text-block p {
+    font-size: 14px;
+  }
+
+  .about-highlight {
+    padding: 16px 16px;
+  }
+}
+
