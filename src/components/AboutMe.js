@@ -22,7 +22,7 @@ const AboutMe = () => {
             </p>
             <p>
               My main tools are <strong>HTML, CSS, JavaScript, TypeScript, React,
-              Angular, Swift/SwiftUI, PHP and MySQL</strong>. I care about clean
+              Angular, Swift/SwiftUI, Kotlin, PHP and MySQL</strong>. I care about clean
               design, clear structure and code that is easy to read and maintain.
             </p>
           </div>
