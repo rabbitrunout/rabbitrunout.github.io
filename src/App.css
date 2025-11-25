@@ -1371,58 +1371,62 @@ button.vvd:hover svg {
 }
 
 
-/************ About Me ************/
+/* === Общий контейнер для About / Projects / Skills (одинаковая ширина) === */
+.section-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === ABOUT ME === */
 .about-section {
-  padding: 80px 20px;
+  padding: 120px 0 80px 0;
   position: relative;
   z-index: 1;
 }
 
 .about-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  
-  border-radius: 18px;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.35); */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
   padding: 40px 32px;
-  box-shadow: 0 0 30px rgba(229, 57, 53, 0.18);
-  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 0 40px rgba(229, 57, 53, 0.12);
+
 }
 
-/* заголовок секции в общем стиле */
 .section-title {
   font-size: 42px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 28px;
   color: var(--text-light);
-  text-shadow: 0 0 12px var(--main-red), 0 0 24px rgba(229, 57, 53, 0.5);
+  text-shadow: 0 0 12px var(--main-red), 0 0 24px rgba(229, 57, 53, 0.6);
 }
 
+/* две колонки */
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1.4fr;
-  gap: 32px;
+  grid-template-columns: 1.8fr 1.2fr;
+  gap: 28px;
   align-items: flex-start;
 }
 
 .about-text-block p {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-muted);
-  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 12px;
 }
 
-.about-text-block strong {
-  color: var(--text-light);
-}
-
-/* правый блок с “What I can help with” */
+/* правый блок */
 .about-highlight {
-  background: #1a1a1a;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(229, 57, 53, 0.35);
   border-radius: 16px;
-  padding: 20px 22px;
-  border: 1px solid rgba(229, 57, 53, 0.4);
-  box-shadow: 0 0 20px rgba(229, 57, 53, 0.25);
+  padding: 18px 20px;
+  box-shadow: 0 0 20px rgba(229, 57, 53, 0.18);
+  margin-top: 4px;
 }
 
 .about-highlight h3 {
@@ -1441,7 +1445,7 @@ button.vvd:hover svg {
   position: relative;
   padding-left: 18px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 8px;
 }
 
@@ -1453,33 +1457,24 @@ button.vvd:hover svg {
   color: var(--main-red);
 }
 
-/* 📱 адаптив */
+/* адаптив */
 @media (max-width: 900px) {
-  .about-inner {
-    padding: 32px 20px;
-  }
-
   .about-content {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
 
-  .section-title {
-    font-size: 32px;
+  .about-inner {
+    padding: 32px 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .about-text-block p {
+    font-size: 15px;
+  }
+
   .about-inner {
     padding: 24px 16px;
   }
-
-  .about-text-block p {
-    font-size: 14px;
-  }
-
-  .about-highlight {
-    padding: 16px 16px;
-  }
 }
-
