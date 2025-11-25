@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Hi, I'm Irina 👋  
+### Web & Mobile Developer | UI/UX Design | Full-Stack Beginner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I'm a Web & Mobile Developer based in Toronto, passionate about building responsive, user-friendly interfaces and mobile apps.  
+Currently studying **Mobile Web Developer using AI** at triOS College and working on real-world projects through my internship — from vehicle maintenance apps to booking systems.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tech Stack
 
-### `npm start`
+### **Frontend**
+- HTML, CSS (Flexbox, Grid), SASS  
+- JavaScript, TypeScript  
+- React, Angular  
+- UI/UX Design (Figma, responsive layouts, design systems)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Mobile**
+- Swift & SwiftUI  
+- Kotlin (beginner)  
+- Mobile-first design, iOS UI patterns
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Backend**
+- PHP, MySQL  
+- REST APIs  
+- Authentication, CRUD operations  
 
-### `npm test`
+### **Tools**
+- Git & GitHub  
+- GitHub Actions (CI/CD)  
+- VS Code, Xcode, Android Studio  
+- Postman  
+- Linux Hosting
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📌 Projects
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔹 **FluiDex Drive — Vehicle Maintenance App**  
+**SwiftUI | MVVM | Local Storage | Auto-Reminders**  
+A mobile app that helps users track car maintenance, service history, mileage, and expenses.  
+Features smart reminders, dashboards, and a clean iOS-style UI.  
+👉 *Capstone project*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔹 **Glowi Web App — Training Dashboard**  
+**HTML, CSS, JS, PHP, MySQL**  
+A dashboard designed for parents of rhythmic gymnasts:  
+✔ scheduling  
+✔ payments  
+✔ progress tracking  
+✔ gallery module  
+Clean UI and user-centered experience.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 **Angular Booking System**  
+**Angular | PHP | MySQL**  
+A full-stack booking platform with:  
+- real-time updates  
+- modal editing  
+- admin/user roles  
+- calendar and status tracking  
+👉 Built as part of a college internship.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔹 **Student Directory**  
+**PHP | MySQL | CRUD**  
+A simple CRUD system with authentication and search.  
+Useful as a foundation for admin panels or dashboards.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### 🎨 UI/UX Designs  
+- Surfing Landing Page  
+- Golden Crumb Bakery  
+- KikerCo Skateboarding Shop  
+Figma prototypes focusing on clean layout, hierarchy, and brand identity.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📫 Contact Me
 
-### Code Splitting
+📍 Toronto, Canada  
+📧 irina.safronova0801@gmail.com  
+🔗 Portfolio: https://rabbitrunout.github.io/  
+🔗 LinkedIn: https://www.linkedin.com/in/irina-safronova-688130243/ 
+🔗 GitHub: https://github.com/rabbitrunout  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🌱 Currently Learning  
+- Advanced SwiftUI animations  
+- REST API integrations  
+- Firebase  
+- TypeScript best practices  
+- Mobile + web app consistency in UI/UX  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ⭐ Fun Fact  
+I design rhythmic gymnastics leotards and accessories — combining creativity with code!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you like my work, feel free to ⭐ star some repos or connect with me on LinkedIn 😊 www.linkedin.com/in/irina-safronova-688130243
