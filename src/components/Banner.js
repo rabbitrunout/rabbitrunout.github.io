@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/mainPhoto.png";
@@ -17,11 +16,12 @@ export const Banner = () => {
 
   const tick = useCallback(() => {
     const toRotate = [
+      "Web & Mobile Developer",
       "Web Developer",
       "Mobile Developer",
-      "Web Designer",
-      "UI/UX Designer",
+      "UI/UX-minded Developer",
     ];
+
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
     let updatedText = isDeleting
@@ -75,15 +75,15 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    {`Hi! I'm Irina `}
+                    Hi! I&apos;m Irina{" "}
                     <span className="txt-rotate">
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Mobile Web Developer crafting responsive, user-friendly
-                    websites and apps 🚀 Ready to contribute to real projects
-                    and grow as a developer.
+                    Mobile &amp; Web Developer crafting responsive, user-friendly
+                    websites and apps. Ready to contribute to real projects and
+                    grow as a developer.
                   </p>
                   <HashLink to="#connect">
                     <button className="vvd">
@@ -103,7 +103,7 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img src={headerImg} alt="Irina illustration" />
                 </div>
               )}
             </TrackVisibility>

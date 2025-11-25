@@ -46,7 +46,7 @@ export const Skills = () => {
   return (
     <section className="skill" id="skills">
       <div className="skill-bx">
-        <h2>Skills & Tools</h2>
+        <h2>Skills & Tech Stack</h2>
         <p>Technologies and tools I use to bring ideas to life</p>
 
         <div className="icons-grid full-width">
