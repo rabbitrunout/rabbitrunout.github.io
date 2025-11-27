@@ -253,6 +253,23 @@ export const projectsByCategory = {
   // /////  Mobile Apps ///////
   "Mobile Apps": [
 
+    {
+  title: "Easter Bunny Egg Basket",
+  shortDesc: "Fast & fun Easter tap game for Android.",
+  fullDesc:
+    "Easter Bunny Egg Basket is a playful reaction-based Android mini-game built with Kotlin. The goal is simple: tap the bouncing Easter egg as many times as possible within 10 seconds — and try to catch rare golden bonus eggs!\n\n Main Gameplay:\n- 10-second countdown powered by CountDownTimer\n- A moving egg that jumps to random screen positions after every tap\n- Multiple egg designs including rare golden bonus eggs\n- A dynamic score counter that updates instantly during the game\n\n End-of-Game Summary:\n- Beautiful semi-transparent result card with soft glow\n- Total eggs collected this round\n- Rare golden eggs highlighted with icons\n- Personalized encouragement messages based on performance\n- Easter basket icon displayed next to score blocks\n\n UI & UX Features:\n- Clean layout using ConstraintLayout\n- Smooth fade-in / fade-out animations for game UI\n- Prevents egg spawning behind bottom buttons\n- Custom PNG assets: eggs, basket, Easter background\n- Modern and playful visuals designed for kids and families\n\n Technical Highlights:\n- Kotlin + Android Views architecture\n- Random movement & state management logic\n- SharedPreferences for local high-score storage\n- Custom animations using ViewPropertyAnimator\n- Responsive scaling for different devices\n- Reusable utility functions for animations and score formatting\n\n What this project demonstrates:\n- Practical Kotlin skills applied to real game logic\n- UI composition with ConstraintLayout\n- Resource management (drawables, strings, colors)\n- Local data persistence\n- Game loop implementation with CountDownTimer\n- Creating friendly, polished experiences for mobile users\n\n Getting Started:\n1. Clone the repository:\n   git clone https://github.com/rabbitrunout/EasterBunnyEggBasket\n2. Open the project in Android Studio\n3. Build & run on an Android emulator or device\n\nThis project highlights experience in interactive mobile UI, small-game mechanics, Kotlin state management, and creating joyful user experiences with custom assets and animation.",
+  tech: "Kotlin • Android • ConstraintLayout • SharedPreferences • ViewPropertyAnimator • PNG Assets",
+  github: "https://github.com/rabbitrunout/AndroidApp1",
+  media: [
+    { type: "image", src: "/projects/mobile/eggsGame/1.png" },
+    { type: "image", src: "/projects/mobile/eggsGame/2.png" },
+    { type: "image", src: "/projects/mobile/eggsGame/3.png" },
+    { type: "image", src: "/projects/mobile/eggsGame/4.png" },
+    { type: "image", src: "/projects/mobile/eggsGame/5.png" },
+    { type: "video", src: "/projects/mobile/eggsGame/egg.mp4" }
+  ]
+},
+
   {
     "title": "Media Planner App",
     "shortDesc": "Smart media reminder app for videos and audio.",
