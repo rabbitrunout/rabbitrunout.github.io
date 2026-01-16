@@ -1,107 +1,52 @@
-# Hi, I'm Irina 👋  
-### Web & Mobile Developer | UI/UX Design | Full-Stack Beginner
+Hi, I'm Irina 👋  
+**Junior iOS / Mobile Developer | SwiftUI · Core Data | UI/UX | Web & Mobile**
 
-I'm a Web & Mobile Developer based in Toronto, passionate about building responsive, user-friendly interfaces and mobile apps.  
-Currently studying **Mobile Web Developer using AI** at triOS College and working on real-world projects through my internship — from vehicle maintenance apps to booking systems.
+Based in Toronto, Canada. I build clean, user-friendly mobile apps with reliable data logic behind the UI.  
+Program completed at triOS College. Currently doing an internship and building real-world projects.
 
----
+## 🚀 Featured Projects
 
-## 🚀 Tech Stack
+### 🚗 FluiDex Drive — iOS Vehicle Maintenance App (Capstone)
+**SwiftUI · Core Data · (MVVM in progress)**
+- Service history (categories, costs, notes)
+- Next service due logic (mileage + date) + overdue / due-soon warnings
+- Multi-vehicle support with active car selection  
+🔗 Repo / Demo: (add link)
 
-### **Frontend**
-- HTML, CSS (Flexbox, Grid), SASS  
-- JavaScript, TypeScript  
-- React, Angular  
-- UI/UX Design (Figma, responsive layouts, design systems)
+### 🎧 SuperPodcast — Android Podcast App
+**Kotlin · Jetpack Compose**
+- Podcast search + browsing
+- Episode playback with a modern UI  
+🔗 Repo: https://github.com/rabbitrunout/AndroidApp5
 
-### **Mobile**
-- Swift & SwiftUI  
-- Kotlin (beginner)  
-- Mobile-first design, iOS UI patterns
+### 🧩 Angular Booking System (Full-Stack)
+**Angular · PHP · MySQL**
+- Booking workflow, admin/user roles, CRUD, status tracking  
+🔗 Repo / Demo: (add link)
 
-### **Backend**
-- PHP, MySQL  
-- REST APIs  
-- Authentication, CRUD operations  
+### 📚 Student Directory
+**PHP · MySQL**
+- CRUD + authentication + search (admin panel foundation)  
+🔗 Repo: (add link)
 
-### **Tools**
-- Git & GitHub  
-- GitHub Actions (CI/CD)  
-- VS Code, Xcode, Android Studio  
-- Postman  
-- Linux Hosting
+## 🧰 Tech Stack
+**iOS:** Swift · SwiftUI · Core Data  
+**Android:** Kotlin (beginner) · Jetpack Compose  
+**Web:** React · Angular · TypeScript · HTML/CSS/SASS  
+**Backend:** PHP · MySQL · REST APIs  
+**Tools:** Git/GitHub · GitHub Actions · Xcode · Android Studio · Postman
 
----
+## 🎨 UI/UX
+Figma prototypes focused on layout, hierarchy, and responsive design systems.
 
-## 📌 Projects
+## 🌱 Currently Learning
+SwiftUI animations · API integration · Firebase · TypeScript best practices
 
-### 🔹 **FluiDex Drive — Vehicle Maintenance App**  
-**SwiftUI | MVVM | Local Storage | Auto-Reminders**  
-A mobile app that helps users track car maintenance, service history, mileage, and expenses.  
-Features smart reminders, dashboards, and a clean iOS-style UI.  
-👉 *Capstone project*
+## 📫 Contact
+Toronto, Canada  
+Email: irina.safronova0801@gmail.com  
+Portfolio: https://rabbitrunout.github.io/  
+LinkedIn: https://www.linkedin.com/in/irina-safronova-688130243/  
+GitHub: https://github.com/rabbitrunout
 
----
-
-### 🔹 **Glowi Web App — Training Dashboard**  
-**HTML, CSS, JS, PHP, MySQL**  
-A dashboard designed for parents of rhythmic gymnasts:  
-✔ scheduling  
-✔ payments  
-✔ progress tracking  
-✔ gallery module  
-Clean UI and user-centered experience.
-
----
-
-### 🔹 **Angular Booking System**  
-**Angular | PHP | MySQL**  
-A full-stack booking platform with:  
-- real-time updates  
-- modal editing  
-- admin/user roles  
-- calendar and status tracking  
-👉 Built as part of a college internship.
-
----
-
-### 🔹 **Student Directory**  
-**PHP | MySQL | CRUD**  
-A simple CRUD system with authentication and search.  
-Useful as a foundation for admin panels or dashboards.
-
----
-
-### 🎨 UI/UX Designs  
-- Surfing Landing Page  
-- Golden Crumb Bakery  
-- KikerCo Skateboarding Shop  
-Figma prototypes focusing on clean layout, hierarchy, and brand identity.
-
----
-
-## 📫 Contact Me
-
-📍 Toronto, Canada  
-📧 irina.safronova0801@gmail.com  
-🔗 Portfolio: https://rabbitrunout.github.io/  
-🔗 LinkedIn: https://www.linkedin.com/in/irina-safronova-688130243/ 
-🔗 GitHub: https://github.com/rabbitrunout  
-
----
-
-## 🌱 Currently Learning  
-- Advanced SwiftUI animations  
-- REST API integrations  
-- Firebase  
-- TypeScript best practices  
-- Mobile + web app consistency in UI/UX  
-
----
-
-## ⭐ Fun Fact  
-I design rhythmic gymnastics leotards and accessories — combining creativity with code!
-
----
-
-If you like my work, feel free to ⭐ star some repos or connect with me on LinkedIn 😊 www.linkedin.com/in/irina-safronova-688130243
+⭐ Fun fact: I design rhythmic gymnastics leotards and accessories — combining creativity with code!
