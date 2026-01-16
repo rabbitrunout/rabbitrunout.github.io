@@ -16,10 +16,9 @@ export const Banner = () => {
 
   const tick = useCallback(() => {
     const toRotate = [
-      "Web & Mobile Developer",
-      "Web Developer",
-      "Mobile Developer",
-      "UI/UX-minded Developer",
+      "Junior iOS Developer",
+      "SwiftUI Enthusiast",
+       "Mobile App Builder"
     ];
 
     let i = loopNum % toRotate.length;
@@ -68,29 +67,30 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={8}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>
-                    Hi! I&apos;m Irina{" "}
-                    <span className="txt-rotate">
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    Mobile &amp; Web Developer crafting responsive, user-friendly
-                    websites and apps. Ready to contribute to real projects and
-                    grow as a developer.
-                  </p>
-                  <HashLink to="#connect">
-                    <button className="vvd">
-                      Let’s Connect <ArrowRightCircle size={25} />
-                    </button>
-                  </HashLink>
-                </div>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+  <span className="tagline">Mobile Developer Portfolio</span>
+
+  <h1>
+    Hi! I&apos;m Irina{" "}
+    <span className="txt-rotate">
+      <span className="wrap">{text}</span>
+    </span>
+  </h1>
+
+  <p>
+    Junior iOS / Mobile Developer building clean, user-friendly apps with
+    SwiftUI and solid data logic.  
+    Completed my studies and currently gaining real-world experience through
+    an internship.
+  </p>
+
+  <HashLink to="#connect">
+    <button className="vvd">
+      Let’s Connect <ArrowRightCircle size={25} />
+    </button>
+  </HashLink>
+</div>
+
               )}
             </TrackVisibility>
           </Col>
