@@ -254,6 +254,51 @@ export const projectsByCategory = {
   "Mobile Apps": [
 
     {
+  title: "FluiDex Drive",
+  shortDesc: "iOS app for vehicle maintenance tracking with smart reminders.",
+  fullDesc:
+  "FluiDex Drive is an iOS app that helps car owners stay on top of essential vehicle maintenance. It works as a simple digital assistant: you log services, track costs, and get next-service estimates based on both mileage and time.\n\nFeatures:\n- Smart next-service calculation (mileage + date)\n- Overdue / due-soon warnings\n- Service history: categories, costs, notes\n- Multi-vehicle support with active car selection\n- Maintenance overview with urgent items sorting\n- Local data persistence using Core Data\n\nWhat this project demonstrates:\n- SwiftUI state-driven UI and reusable components\n- Core Data CRUD, filtering, sorting, and data consistency\n- Business logic for reminders and maintenance tracking\n- Portfolio-ready mobile app structure and UX focus\n\nPlanned / Next:\n- Export (PDF/CSV)\n- Charts & analytics\n- Cloud sync / sharing",
+tech: "SwiftUI • Core Data • iOS Development",
+github: "https://github.com/rabbitrunout/FluiDex_DriveApp",
+media: [
+
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/2.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/3.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/4.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/5.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/6.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/7.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/8.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/9.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/10.png" },
+    { type: "image", src: "/projects/mobile/FluiDex_DriveApp/11.png" }
+    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
+  ]
+},
+
+{
+title: "SuperPodcast",
+shortDesc: "Android podcast player with search and audio playback.",
+fullDesc:
+  "SuperPodcast is a modern Android application built with Kotlin and Jetpack Compose that lets users search, filter, and listen to podcasts in a clean, responsive interface.\n\nFeatures:\n- Podcast search using the iTunes Search API with advanced filters\n- Podcast episode playback with mini player controls\n- Modern dark UI designed with Material 3 and Compose\n- Efficient media playback using Android Media3 (ExoPlayer)\n\nWhat this project demonstrates:\n- Android app architecture with MVVM\n- Networking and API integration (Retrofit + Gson)\n- State-driven UI with Jetpack Compose\n- Media playback management and asynchronous flows\n\nTech stack:\nKotlin • Jetpack Compose • MVVM • Retrofit • Media3 • Coroutines",
+tech: "Kotlin • Android • Jetpack Compose • ExoPlayer • MVVM",
+github: "https://github.com/rabbitrunout/AndroidApp5",
+media: [
+
+    { type: "image", src: "/projects/mobile/sound/1.png" },
+    { type: "image", src: "/projects/mobile/sound/2.png" },
+    { type: "image", src: "/projects/mobile/sound/3.png" },
+    { type: "image", src: "/projects/mobile/sound/4.png" },
+    { type: "image", src: "/projects/mobile/sound/5.png" },
+    { type: "image", src: "/projects/mobile/sound/6.png" },
+    { type: "image", src: "/projects/mobile/sound/7.png" },
+    { type: "image", src: "/projects/mobile/sound/8.png" },
+    { type: "image", src: "/projects/mobile/sound/9.png" },
+    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
+  ]
+},
+
+    {
   title: "Easter Bunny Egg Basket",
   shortDesc: "Fast & fun Easter tap game for Android.",
   fullDesc:
@@ -312,26 +357,7 @@ export const projectsByCategory = {
 },
 
     
-    {
-  title: "FluiDex Drive",
-  shortDesc: "Smart mobile tracker for vehicle maintenance.",
-  fullDesc: 
-    " FluiDex Drive is a mobile app that helps car owners stay on top of essential vehicle maintenance. It acts as a digital assistant, sending reminders, logging services, and simplifying auto care for beginners.\n\n Features:\n- Smart reminders (time + mileage) with auto-recalculation\n- Service log with expense tracking, charts, and PDF/CSV export\n- Beginner-friendly UX: receipt scanning, voice input, visual dashboards\n- Car integration: OBD-II (Bluetooth), GPS-based mileage, fuel API\n- Sync & extensions: cloud backup, multi-vehicle support, family sharing\n- AI-powered predictions, alerts, and explanations\n\n What this project demonstrates:\n- Mobile app development with modern UI (SwiftUI/Compose)\n- Data persistence, analytics, and API integration\n- Clean architecture (MVVM + Use Cases)\n- Portfolio-level project with CI/CD, tests, and demo video",
-  tech: "SwiftUI • Core Data • OBD-II • GPS • Cloud Sync • AI Integration",
-  github: "https://github.com/rabbitrunout/FluiDex_DriveApp", // 🔥 add repo later
-  media: [
-    { type: "image", src: "/projects/mobile/fluindex/logo.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f1.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-1.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-2.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-3.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-4.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-5.png" },
-    { type: "image", src: "/projects/mobile/fluindex/f-6.png" },
-    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
-  ]
-}
-
+    
   ],
 
  
