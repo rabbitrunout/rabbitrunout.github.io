@@ -37,7 +37,7 @@ export const NavBar = () => {
           onClick={() => handleNavClick("home")}
           className="editorial-navbar__brand"
         >
-          <span className="editorial-navbar__brand-text">IRINA.DEV</span>
+          <span className="editorial-navbar__brand-text">IRINA.S</span>
         </Navbar.Brand>
 
         <Navbar.Toggle
