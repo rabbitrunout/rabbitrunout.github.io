@@ -13,14 +13,17 @@ const Contact = () => {
         </h2>
 
         <p className="editorial-contact__text">
-          Mobile & Web Developer open to internship and junior opportunities.
-          <br />
-          I’m focused on frontend, product development, and building real-world applications.
+          Mobile & Web Developer focused on building clean, user-friendly
+          applications with strong UI and structured frontend architecture.
         </p>
 
-        {/* 🔥 важный блок */}
         <p className="editorial-contact__availability">
-          Currently available for internships and junior roles
+          Open to <strong>Junior Mobile / Frontend Developer roles</strong> and
+          product-focused teams.
+        </p>
+
+        <p className="editorial-contact__extra">
+          Available for internships, part-time, and full-time opportunities.
         </p>
 
         <div className="editorial-contact__links">

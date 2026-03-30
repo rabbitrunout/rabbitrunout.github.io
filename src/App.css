@@ -904,6 +904,11 @@ button {
   font-size: 0.88rem; /* было слишком мелко */
   max-width: 420px;
 }
+.featured-impact {
+  background: rgba(255, 74, 74, 0.04);
+  border-left: 2px solid rgba(255, 74, 74, 0.3);
+  padding-left: 12px;
+}
 
 .featured-impact p {
   color: var(--text);
@@ -2981,12 +2986,32 @@ button {
   }
 }
 
+.editorial-contact__extra {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .editorial-contact__availability {
-  margin-top: 12px;
+  margin-top: 16px;
   font-size: 0.82rem;
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--text);
+  font-weight: 500;
   letter-spacing: 0.04em;
+}
+
+.editorial-contact__links {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.editorial-contact__links a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  transition: all 0.25s ease;
 }
 
 .editorial-contact__links a:hover {
@@ -3050,5 +3075,145 @@ button {
 
   .featured-project-btn {
     width: 100%;
+  }
+}
+
+/* =========================
+   PROJECT MODAL — WOW ANIMATION
+========================= */
+
+.project-modal-overlay {
+  animation: modalOverlayFade 0.28s ease forwards;
+}
+
+.project-modal {
+  transform-origin: center center;
+  animation: modalCardIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.project-modal__media {
+  animation: modalSectionUp 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.06s both;
+}
+
+.project-modal__content {
+  animation: modalSectionUp 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.project-modal__close,
+.project-modal__nav,
+.project-modal__thumb {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.project-modal__close:hover {
+  transform: rotate(90deg) scale(1.04);
+  border-color: rgba(255, 74, 74, 0.28);
+  background: #fff;
+}
+
+.project-modal__nav:hover {
+  transform: translateY(-50%) scale(1.06);
+  border-color: rgba(255, 74, 74, 0.28);
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.project-modal__thumb:hover {
+  transform: translateY(-2px) scale(1.03);
+  opacity: 1;
+  border-color: rgba(255, 74, 74, 0.28);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-modal__main-image-wrap {
+  overflow: hidden;
+}
+
+.project-modal__main-image {
+  animation: modalImageIn 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-modal__content h3 {
+  animation: modalTextIn 0.42s ease 0.16s both;
+}
+
+.project-modal__lead {
+  animation: modalTextIn 0.42s ease 0.22s both;
+}
+
+.project-modal__meta {
+  animation: modalTextIn 0.42s ease 0.28s both;
+}
+
+/* optional subtle glow */
+.project-modal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 20% 15%,
+    rgba(255, 74, 74, 0.05),
+    transparent 35%
+  );
+}
+
+@keyframes modalOverlayFade {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes modalCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalSectionUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalImageIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

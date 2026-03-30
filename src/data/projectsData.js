@@ -299,21 +299,27 @@ role:
   title: "FluiDex Drive",
   badge: "iOS App",
   shortDesc:
-    "iOS app for tracking vehicle maintenance with smart reminders based on mileage and time.",
+    "Vehicle maintenance tracking app with smart reminders and structured dashboard.",
   fullDesc:
     "FluiDex Drive is an iOS application designed to help users manage vehicle maintenance and avoid missed services through structured tracking and smart reminders.\n\nProblem:\nMany car owners lose track of maintenance schedules, leading to overdue services, higher repair costs, and reduced vehicle lifespan.\n\nSolution:\nI built a mobile app that simplifies maintenance tracking by combining mileage-based and time-based reminder logic in a clean, easy-to-use interface.\n\nKey features:\n- Smart reminders based on both mileage and date\n- Overdue and upcoming service indicators\n- Service history with categories, notes, and costs\n- Multi-vehicle support\n- Prioritized maintenance list for urgent items\n\nWhat this project demonstrates:\n- SwiftUI state-driven UI\n- Core Data persistence and CRUD operations\n- Business logic for reminders and service tracking\n- Real-world problem solving through mobile product design",
   problem:
-    "Many car owners lose track of maintenance schedules, which leads to overdue services, higher repair costs, and inconsistent vehicle care.",
+    "Many car owners lose track of maintenance schedules, leading to overdue services, unexpected repair costs, and poor visibility of vehicle health.",
+
   built:
-    "Built a SwiftUI-based mobile app with structured flows for service tracking, reminder logic, vehicle records, and maintenance history.",
- impact: [
-  "Designed a clean dashboard for tracking vehicle maintenance",
-  "Improved clarity of service data and reduced user friction",
-  "Built with SwiftUI using MVVM architecture"
-],
+    "Designed and developed a SwiftUI application with structured flows for tracking services, managing vehicles, and handling reminder logic based on mileage and time.",
+
+  impact: [
+    "Reduced friction in tracking vehicle maintenance through a clear dashboard",
+    "Designed logic for overdue and upcoming service prioritization",
+    "Implemented combined mileage + time-based reminder system",
+    "Created a structured and scalable mobile UI using MVVM architecture"
+  ],
+
   role:
     "iOS Developer · Product Design · UI/UX",
-  tech: "SwiftUI • Core Data • iOS",
+
+  tech: "SwiftUI • Core Data • MVVM • iOS",
+
   github: "https://github.com/rabbitrunout/FluiDex_DriveApp",
   media: [
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/2.png" },
