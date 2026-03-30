@@ -6,123 +6,169 @@ import { FileDown, Linkedin, Github, Mail } from "lucide-react";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const [expanded, setExpanded] = useState(false); // ✅ контролируем бургер
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+    };
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) => {
+  const handleNavClick = (value) => {
     setActiveLink(value);
-    setExpanded(false); // ✅ сворачиваем меню при клике
+    setExpanded(false);
   };
 
   return (
     <Navbar
       expand="md"
-      className={scrolled ? "scrolled" : ""}
       expanded={expanded}
+      className={`editorial-navbar ${scrolled ? "scrolled" : ""}`}
+      fixed="top"
     >
-      <Container>
-        <Navbar.Brand href="/">
-          <span className="brand-text">Irina.dev</span>
+      <Container className="editorial-navbar__container">
+        <Navbar.Brand
+          as={HashLink}
+          smooth
+          to="#home"
+          onClick={() => handleNavClick("home")}
+          className="editorial-navbar__brand"
+        >
+          <span className="editorial-navbar__brand-text">IRINA.DEV</span>
         </Navbar.Brand>
 
-        {/* ✅ Кастомный бургер */}
         <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(expanded ? false : true)}
+          aria-controls="editorial-navbar-nav"
+          className="editorial-navbar__toggle"
+          onClick={() => setExpanded(!expanded)}
         >
-          <div className={`burger ${expanded ? "open" : ""}`}>
+          <span className={`editorial-burger ${expanded ? "open" : ""}`}>
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link
-              href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
-              className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Skills
-            </Nav.Link>
-          </Nav>
+        <Navbar.Collapse id="editorial-navbar-nav">
+          <div className="editorial-navbar__collapse">
+            <Nav className="editorial-navbar__links">
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="#home"
+                onClick={() => handleNavClick("home")}
+                className={`editorial-navbar__link ${
+                  activeLink === "home" ? "active" : ""
+                }`}
+              >
+                Home
+              </Nav.Link>
 
-          {/* 🔗 Правая часть */}
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a
-                href="https://www.linkedin.com/in/irina-safronova-688130243/"
-                target="_blank"
-                rel="noreferrer"
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="#about"
+                onClick={() => handleNavClick("about")}
+                className={`editorial-navbar__link ${
+                  activeLink === "about" ? "active" : ""
+                }`}
               >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="https://github.com/rabbitrunout"
-                target="_blank"
-                rel="noreferrer"
+                About
+              </Nav.Link>
+
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="#featured"
+                onClick={() => handleNavClick("featured")}
+                className={`editorial-navbar__link ${
+                  activeLink === "featured" ? "active" : ""
+                }`}
               >
-                <Github size={24} />
-              </a>
-              <a href="mailto:irina.safronova0801@gmail.com">
-                <Mail size={24} />
-              </a>
+                Selected Work
+              </Nav.Link>
+
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="#skills"
+                onClick={() => handleNavClick("skills")}
+                className={`editorial-navbar__link ${
+                  activeLink === "skills" ? "active" : ""
+                }`}
+              >
+                Skills
+              </Nav.Link>
+
+              <Nav.Link
+                as={HashLink}
+                smooth
+                to="#connect"
+                onClick={() => handleNavClick("connect")}
+                className={`editorial-navbar__link ${
+                  activeLink === "connect" ? "active" : ""
+                }`}
+              >
+                Contact
+              </Nav.Link>
+            </Nav>
+
+            <div className="editorial-navbar__right">
+              <div className="editorial-navbar__socials">
+                <a
+                  href="https://www.linkedin.com/in/irina-safronova-688130243/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="editorial-navbar__social"
+                >
+                  <Linkedin size={16} />
+                </a>
+
+                <a
+                  href="https://github.com/rabbitrunout"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="editorial-navbar__social"
+                >
+                  <Github size={16} />
+                </a>
+
+                <a
+                  href="mailto:irina.safronova0801@gmail.com"
+                  aria-label="Email"
+                  className="editorial-navbar__social"
+                >
+                  <Mail size={16} />
+                </a>
+              </div>
+
+              <div className="editorial-navbar__actions">
+                <a
+                  href="/Irina_Safronova_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="editorial-navbar__btn editorial-navbar__btn--ghost"
+                >
+                  <FileDown size={16} />
+                  <span>Resume</span>
+                </a>
+
+                <HashLink
+                  smooth
+                  to="#connect"
+                  onClick={() => handleNavClick("connect")}
+                  className="editorial-navbar__btn editorial-navbar__btn--primary"
+                >
+                  <span>Let&apos;s Connect</span>
+                </HashLink>
+              </div>
             </div>
-
-            <div className="nav-buttons">
-              <HashLink smooth to="#connect">
-                <button className="vvd">
-                  <span>Let’s Connect</span>
-                </button>
-              </HashLink>
-
-              <a
-                href="/Irina_Safronova_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vvd resume-btn"
-              >
-                <FileDown size={18} />
-                <span>Resume</span>
-              </a>
-
-              <a
-                href="/CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="vvd cover-btn"
-              >
-                <FileDown size={18} />
-                <span>Cover Letter</span>
-              </a>
-            </div>
-          </span>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

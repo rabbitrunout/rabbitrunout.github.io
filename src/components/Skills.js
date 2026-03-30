@@ -1,66 +1,40 @@
 import React from "react";
-import {
-  Cpu,
-  Layout,
-  Smartphone,
-  Apple,
-  Paintbrush,
-  Atom,
-  Code,
-  Blocks,
-  BookOpen,
-  Coffee,
-  Boxes,
-  FileCode,
-  Palette,
-  SquareCode,
-  CircleDot,
-  Database,
-  Bird,
-  Terminal,
-  Globe,
-} from "lucide-react";
 
-const skills = [
-  { icon: <Cpu size={38} />, name: "Artificial Intelligence (AI)" },
-{ icon: <Layout size={38} />, name: "UI/UX Web Design" },
-{ icon: <Smartphone size={38} />, name: "Android Development" },
-{ icon: <Blocks size={38} />, name: "Kotlin Development" },
-{ icon: <Apple size={38} />, name: "iOS Development" },
-{ icon: <Paintbrush size={38} />, name: "Graphic Design" },
-{ icon: <Atom size={38} />, name: "Web Applications" },
-{ icon: <Code size={38} />, name: "Web Development" },
-{ icon: <BookOpen size={38} />, name: "Intro to Web Design & Dev" },
-{ icon: <Coffee size={38} />, name: "Java Development" },
-{ icon: <Boxes size={38} />, name: "User Interface Design" },
-{ icon: <FileCode size={38} />, name: "HTML" },
-{ icon: <Palette size={38} />, name: "CSS" },
-{ icon: <SquareCode size={38} />, name: "JavaScript Development" },
-{ icon: <Atom size={38} />, name: "React Development" },
-{ icon: <CircleDot size={38} />, name: "Angular" },
-{ icon: <Database size={38} />, name: "PHP & MySQL" },
-{ icon: <Bird size={38} />, name: "Swift Development" },
-{ icon: <Terminal size={38} />, name: "Linux" },
-{ icon: <Globe size={38} />, name: "WordPress" },
-
-];
-
-export const Skills = () => {
+const Skills = () => {
   return (
-    <section className="skill" id="skills">
-      <div className="skill-bx">
-        <h2>Skills & Tech Stack</h2>
-        <p>Technologies and tools I use to bring ideas to life</p>
+    <section className="editorial-section editorial-skills" id="skills">
+      <div className="section-heading">
+        <p className="section-label">Capabilities</p>
+        <h2>Technical range with a strong product and interface mindset.</h2>
+      </div>
 
-        <div className="icons-grid full-width">
-          {skills.map((skill, index) => (
-            <div className="icon-box" key={index}>
-              {skill.icon}
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+      <div className="editorial-skills__grid">
+        <article className="skill-block">
+          <p className="skill-block__index">01</p>
+          <h3>Mobile</h3>
+          <p>SwiftUI · iOS · Kotlin basics</p>
+        </article>
+
+        <article className="skill-block">
+          <p className="skill-block__index">02</p>
+          <h3>Frontend</h3>
+          <p>HTML · CSS · JavaScript · Angular · React</p>
+        </article>
+
+        <article className="skill-block">
+          <p className="skill-block__index">03</p>
+          <h3>Backend & Data</h3>
+          <p>PHP · MySQL · REST API · CRUD logic</p>
+        </article>
+
+        <article className="skill-block">
+          <p className="skill-block__index">04</p>
+          <h3>Design</h3>
+          <p>UI/UX · Graphic Design · Product Thinking</p>
+        </article>
       </div>
     </section>
   );
 };
+
+export default Skills;

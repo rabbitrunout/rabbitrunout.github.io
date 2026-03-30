@@ -1,36 +1,58 @@
 import React from "react";
-import { Mail, Linkedin, Github, FileDown, ExternalLink } from "lucide-react";
 
-export const Contact = () => {
+const Contact = () => {
   return (
-    <section className="contact" id="connect">
-      <div className="contact-bx">
-        <h2>Contact Me</h2>
-        <p>Let’s connect! You can reach out to me via email, LinkedIn, or GitHub.</p>
+    <section className="editorial-section editorial-contact" id="connect">
+      <div className="editorial-contact__inner">
+        <p className="section-label">Contact</p>
 
-        {/* 🔗 Соцсети */}
-        <div className="contact-links">
-          <a href="mailto:irina.safronova0801@gmail.com" target="_blank" rel="noreferrer">
-            <Mail size={28} /> Email
-          </a>
-          <a href="https://www.linkedin.com/in/irina-safronova-688130243/" target="_blank" rel="noreferrer">
-            <Linkedin size={28} /> LinkedIn
-          </a>
-          <a href="https://github.com/rabbitrunout" target="_blank" rel="noreferrer">
-            <Github size={28} /> GitHub
-          </a>
-        </div>
+        <h2>
+          Let&apos;s build
+          <br />
+          something together
+        </h2>
 
-        {/* 📄 Резюме */}
-        <div className="resume-buttons">
-          <a href="/CV.pdf" download className="resume-btn">
-            <FileDown size={22} /> Download Resume
+        <p className="editorial-contact__text">
+          Mobile & Web Developer open to internship and junior opportunities.
+          <br />
+          I’m focused on frontend, product development, and building real-world applications.
+        </p>
+
+        {/* 🔥 важный блок */}
+        <p className="editorial-contact__availability">
+          Currently available for internships and junior roles
+        </p>
+
+        <div className="editorial-contact__links">
+          <a href="mailto:irina.safronova0801@gmail.com">Email</a>
+
+          <a
+            href="https://www.linkedin.com/in/irina-safronova-688130243/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
           </a>
-          <a href="/Irina_Safronova_Resume.pdf" target="_blank" rel="noreferrer" className="resume-btn secondary">
-            <ExternalLink size={22} /> View Resume
+
+          <a
+            href="https://github.com/rabbitrunout"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="/Irina_Safronova_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
           </a>
         </div>
       </div>
     </section>
   );
 };
+
+export default Contact;

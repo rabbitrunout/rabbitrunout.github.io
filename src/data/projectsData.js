@@ -2,6 +2,7 @@ export const projectsByCategory = {
   "UI/UX & Design": [
     {
       title: "Surfing Club",
+      badge: "UI/UX",
       shortDesc: "Surfing Club website concept.",
       fullDesc: 
             "The main goal of the project was to capture the surfing spirit through a dynamic and user-friendly interface. The design focuses on emotions, clarity, and smooth navigation to engage new members.\n\nThe mockup features:\n\n- A hero section with large visuals and bold typography\n- Navigation (Home, About, Surfboards, Lessons, Contact)\n- A gallery of surfboards and lifestyle images\n",
@@ -16,6 +17,7 @@ export const projectsByCategory = {
     },
     {
       title: "Golden Crumb Bakery",
+      badge: "UX Concept",
       shortDesc: "Bakery UI/UX concept.",
       fullDesc: 
             "The main goal of the project was to combine family tradition with a clean, modern user experience for online orders. Storytelling and simple navigation help create trust and highlight the bakery’s artisanal identity.\n\nThe mockup features:\n\n- A hero section with brand story and visuals of bread\n- Navigation (Home, About, Menu, History, Contact)\n- Storytelling blocks with images of baking process\n- Product grid with clear categories\n- CTA buttons for quick ordering",    
@@ -28,6 +30,7 @@ export const projectsByCategory = {
     },
     {
       title: "Skate Shop",
+      badge: "E-Commerce Design",
       shortDesc: "E-commerce skate shop design.",
       fullDesc: 
              "The main goal of the project was to design a bold and youth-oriented e-commerce website for skateboards and accessories. The focus was on strong typography, edgy visuals, and an energetic layout.\n\nThe mockup features:\n\n- A hero banner with skateboarding lifestyle imagery\n- Navigation (Home, Shop, Categories, Blog, Contact)\n- Product showcase grid with hover effects\n- Highlight section for promotions and sales\n- Branded footer with social media links",
@@ -41,6 +44,7 @@ export const projectsByCategory = {
 
     {
       title: "Wild Souls",
+      badge: "Brand Mockup",
       shortDesc: "Digital mockup of a website for a nut paste brand",
      fullDesc: 
   "The main goal of the project was to convey the brand's atmosphere through a bright color palette and geometric composition. In the design, I used a grid and Photoshop guides to align blocks and maintain balance between product photography and informational sections. Key elements were developed: navigation menu, product block, product cards, and branded footer. Special attention was paid to the combination of photos and color fills to emphasize the “naturalness” and modern style of the brand.\n\nThe mockup features:\n\n- A hero section with product photography\n- Navigation (Home, Who We Are, Products, Recipes, Contact)\n- A section with brand messages and highlights (“Wild like a Nut?”)\n- Product cards with visual separation by color blocks",
@@ -53,6 +57,7 @@ export const projectsByCategory = {
 
     {
   title: "Space, The Final Frontier",
+  badge: "Illustration",
   shortDesc: "First digital illustration project on a space theme",
   fullDesc: 
   "This was my very first independent project in illustration, created with zero prior experience in this field. The task was to design a bright and dynamic composition on a space theme. I worked with shapes, colors, and characters, ensuring every element matched the overall concept. Despite being a beginner, I managed to accurately capture details such as planets, a rocket with an astronaut, a telescope, and an alien character. The illustration reflects attention to balance, composition, and precision of elements.\n\nKey highlights:\n\n- A rocket flying into space with an astronaut\n- Planets, stars, and comets forming a cosmic background\n- A telescope on Earth pointing into space\n- A cartoon-style alien character adding a playful accent\n- Bold typography for the title “Space, The Final Frontier”\n\nThe main achievement of this project is that, even without prior practice in illustration, the result turned out clean, with sharp lines, a vibrant palette, and a complete visual style.",
@@ -126,7 +131,9 @@ export const projectsByCategory = {
 
     {
   title: "Website Launch Checklist",
-  shortDesc: "Interactive checklist for launching websites.",
+  badge: "JavaScript Tool",
+  shortDesc: "Interactive launch-prep tool for tracking essential website release tasks.",
+
   fullDesc:
     "This project is an interactive task management tool developed using HTML, CSS, and JavaScript. The main goal of the app is to help users organize and track key steps before launching a website.\n\nKey features:\n- Predefined list of essential website launch tasks (hosting, design, SEO, legal docs)\n- Ability to mark tasks as completed, with instant UI updates\n- Reset functionality to restart the checklist\n- Stylish dark-themed UI with icons and split layout for 'Tasks vs Completed'\n- Responsive design for both desktop and mobile\n\nThis project demonstrates working with arrays, DOM manipulation, event handling, and intuitive UI/UX design.",
   tech: "HTML • CSS • JavaScript",
@@ -138,6 +145,7 @@ export const projectsByCategory = {
 
 {
       title: "Weekly Task Planner",
+      badge: "Planner App",
       shortDesc: "Colorful weekly planner with day-based tasks.",
       fullDesc:
         "An interactive weekly planner where users can assign tasks to specific days. Each task appears as a color-coded card, making it visually easy to organize weekly routines.\n\nKey features:\n- Dropdown menu to select a day\n- Add task via input field\n- Tasks displayed as colorful blocks by weekday\n- Color-coding for each day improves usability",
@@ -151,6 +159,7 @@ export const projectsByCategory = {
 
 {
   title: "Minion Land Interactive Selector",
+  badge: "Interactive UI",
   shortDesc: "Interactive Minion-themed project with JS.",
   fullDesc:
     "This project was built using JavaScript, HTML, and CSS and represents an interactive selection game themed around Minion Land. The goal of the project is to let users pick their favorite attractions and complete a list.\n\n✨ Key features:\n- A set of six interactive Minion-themed cards (rides, shops, meet & greets, food).\n- Users can click to select activities.\n- A progress counter shows how many items are ready (e.g., '3 of 6 items ready').\n- Once all selections are made, pressing the 'Complete' button displays a thank you message.\n- The design uses bright Minion-style colors, playful typography, and cartoon-like UI elements.",
@@ -169,98 +178,144 @@ export const projectsByCategory = {
   // ///// Web Apps  ////////
 
    "Web Apps": [
-    {
-      title: "Glowi",
-      shortDesc: "Neon-style parent–child portal.",
-      fullDesc: 
-        "The main goal of the project was to build a neon-styled parent–child portal with event management, schedules, and payments. The design uses glowing gradients and vibrant UI for a playful yet modern look.\n\nThe mockup features:\n\n- Child profile dashboard with achievements and payments\n- FullCalendar integration for events\n- Weekly schedule view with navigation\n- Payments section with recent transactions\n- Responsive neon UI styled with Bootstrap",
+  {
+  title: "Glowi",
+  badge: "Product Concept",
+  shortDesc:
+    "Parent portal for schedules, payments, and event management with a dashboard-first UX.",
+  fullDesc:
+    "Glowi is a dashboard-style parent portal concept designed to organize schedules, payments, and event information in one place. The project focused on usability, clear navigation, and a product-oriented interface for everyday use.\n\nKey features:\n- Child profile dashboard\n- Weekly schedule navigation\n- Event calendar integration\n- Payments overview and recent transactions\n- Neon-inspired visual identity with responsive layout\n\nWhat this project demonstrates:\n- Product thinking and dashboard structure\n- UX clarity for multi-section interfaces\n- Frontend implementation with PHP, MySQL, and JavaScript\n- Combining functionality with strong visual branding",
+  problem:
+    "Parents often manage schedules, payments, and event information across disconnected tools, which creates friction and confusion in everyday use.",
+  built:
+    "Designed and developed a dashboard-style web experience with scheduling flows, payments overview, calendar structure, and parent-focused navigation.",
+  impact:
+    "Designed a structured dashboard experience that simplifies scheduling, payments, and event management for parents.",
+  role:
+    "Frontend Developer · UI Structure · Product Thinking",
+  tech: "PHP • MySQL • JavaScript • Bootstrap",
+  github: "https://github.com/rabbitrunout/Glowi_app",
+  media: [
+    { type: "image", src: "/projects/WebApp/glowi/main-glowi.png" },
+    { type: "image", src: "/projects/WebApp/glowi/1.png" },
+    { type: "image", src: "/projects/WebApp/glowi/2.png" },
+    { type: "image", src: "/projects/WebApp/glowi/3.png" },
+    { type: "image", src: "/projects/WebApp/glowi/4.png" },
+    { type: "image", src: "/projects/WebApp/glowi/9.png" },
+    { type: "image", src: "/projects/WebApp/glowi/5.png" },
+    { type: "image", src: "/projects/WebApp/glowi/6.png" },
+    { type: "image", src: "/projects/WebApp/glowi/7.png" },
+    { type: "image", src: "/projects/WebApp/glowi/login.png" },
+    { type: "image", src: "/projects/WebApp/glowi/register-glowi.png" },
+    { type: "video", src: "/projects/WebApp/glowi/GlowiVideo.mp4" }
+  ]
+},
+  {
+  title: "Reservation System",
+  badge: "Web App",
+  shortDesc:
+    "Reservation app with role-based access, API integration, and a dynamic React UI.",
+ 
+    fullDesc:
+    "Reservation System is a React-based booking application connected to a backend and MySQL database. It was built to demonstrate frontend architecture, role-based access, and database-driven UI.\n\nKey features:\n- Modular React component structure\n- Role-based access control\n- CRUD operations through API integration\n- Responsive layouts and modal-based details view\n- User-friendly booking flow\n\nWhat this project demonstrates:\n- React application structure\n- Dynamic UI rendering\n- API and database integration\n- Practical UX thinking for admin and user flows",
+    problem:
+  "Booking systems become hard to use when user roles, data visibility, and actions are not clearly structured in the interface.",
 
-      tech: "PHP • MySQL • JavaScript • Bootstrap • FullCalendar • CSS",
-      github: "https://github.com/rabbitrunout/Glowi_app",
-      media: [
-        { type: "image", src: "/projects/WebApp/glowi/main-glowi.png" },
-        { type: "image", src: "/projects/WebApp/glowi/1.png" },
-        { type: "image", src: "/projects/WebApp/glowi/2.png" },
-        { type: "image", src: "/projects/WebApp/glowi/3.png" },
-        { type: "image", src: "/projects/WebApp/glowi/4.png" },
-        { type: "image", src: "/projects/WebApp/glowi/9.png" },
-        { type: "image", src: "/projects/WebApp/glowi/5.png" },
-        { type: "image", src: "/projects/WebApp/glowi/6.png" },
-        { type: "image", src: "/projects/WebApp/glowi/7.png" },
-        { type: "image", src: "/projects/WebApp/glowi/login.png" },
-        { type: "image", src: "/projects/WebApp/glowi/register-glowi.png" },
-        { type: "video", src: "/projects/WebApp/glowi/GlowiVideo.mp4" },
-      ],
-    },
-    {
-      title: "Reservation System",
-      shortDesc: "React + PHP booking system.",
-      fullDesc:
-        "This is a fully functional web application in which I implemented a frontend using React and a MySQL database via the backend. The main goal of the project is to demonstrate my skills in working with both the UI and the server side. Key features: - React architecture with modular components - State management and dynamic data display - Integration with a MySQL database via API (CRUD operations) - Implementation of modal windows for viewing details\n- **User registration and role-based access control**: Guest, User, Admin\n- Authorization and access restriction to certain sections depending on role\n- Adaptive interface for mobile and desktop devices\n - Working with images and videos: correct scaling and display\n- Focus on UX: smooth animations, hover effects, convenient navigation\n\n",
-      tech: "React • JavaScript • CSS • MySQL • (REST API on PHP/Node.js)",
-      github: "https://github.com/rabbitrunout/ReactApp2",
-      media: [{ type: "image", src: "/projects/WebApp/reserve/4.png" },
-        { type: "image", src: "/projects/WebApp/reserve/1.png" },
-        { type: "image", src: "/projects/WebApp/reserve/2.png" },
-        { type: "image", src: "/projects/WebApp/reserve/3.png" },
-        { type: "image", src: "/projects/WebApp/reserve/5.png" },
-        { type: "image", src: "/projects/WebApp/reserve/6.png" },
-        { type: "image", src: "/projects/WebApp/reserve/7.png" },
-        { type: "image", src: "/projects/WebApp/reserve/8.png" },
-        { type: "image", src: "/projects/WebApp/reserve/9.png" },
-      ],
-    },
+built:
+  "Built a React-based reservation interface with role-based access, CRUD flows, and API-connected dynamic views.",
 
-{
+impact:
+  "Built a scalable booking interface with role-based flows and dynamic UI connected to a backend system.",
+
+role:
+  "Frontend Developer · React · API Integration",
+  tech: "React • JavaScript • REST API • MySQL",
+  github: "https://github.com/rabbitrunout/ReactApp2",
+  media: [
+    { type: "image", src: "/projects/WebApp/reserve/4.png" },
+    { type: "image", src: "/projects/WebApp/reserve/1.png" },
+    { type: "image", src: "/projects/WebApp/reserve/2.png" },
+    { type: "image", src: "/projects/WebApp/reserve/3.png" },
+    { type: "image", src: "/projects/WebApp/reserve/5.png" },
+    { type: "image", src: "/projects/WebApp/reserve/6.png" },
+    { type: "image", src: "/projects/WebApp/reserve/7.png" },
+    { type: "image", src: "/projects/WebApp/reserve/8.png" },
+    { type: "image", src: "/projects/WebApp/reserve/9.png" }
+  ]
+},
+  {
   title: "Students Directory System",
-  shortDesc: "PHP/MySQL CRUD app for managing students.",
-  fullDesc: 
-    "The Students Directory System is a web application built with PHP and MySQL to manage a list of students. It demonstrates skills in working with relational databases and implementing CRUD operations (Create, Read, Update, Delete).\n\nKey features:\n- Student management: add, edit, delete, and view students\n- Individual student card with photo, course, study type, and teacher notes\n- Attendance tracking with logs (Present, Absent, Late)\n- Authentication with session-based login/logout\n- Statistics summary for students (Total, Present, Absent)\n\nThe UI is designed in a fun cartoon style (Bikini Bottom edition 🧽⭐️🦀), making the project both functional and creative, while highlighting UI/UX attention.\n\nThis project demonstrates proficiency in PHP, MySQL, and integrating database logic into a user-friendly interface.",
-  tech: "PHP • MySQL • HTML • CSS • Sessions",
-  github: "https://github.com/rabbitrunout/PHPAssignment1", // 🔥 add once uploaded
+  badge: "CRUD App",
+  shortDesc:
+    "PHP/MySQL CRUD app for managing student records, attendance, and admin workflows.",
+  fullDesc:
+    "Students Directory System is a PHP/MySQL web application for managing student records, attendance, and admin-facing data in a structured interface.\n\nKey features:\n- Add, edit, delete, and view students\n- Individual student profiles with extra details\n- Attendance tracking with logs and status updates\n- Session-based authentication\n- Summary statistics for student records\n\nWhat this project demonstrates:\n- PHP and MySQL integration\n- CRUD operations with relational data\n- Session-based authentication flows\n- Building practical database-driven interfaces",
+  tech: "PHP • MySQL • HTML • CSS",
+  github: "https://github.com/rabbitrunout/PHPAssignment1",
   media: [
     { type: "image", src: "/projects/WebApp/student/1.png" },
     { type: "image", src: "/projects/WebApp/student/2.png" },
     { type: "image", src: "/projects/WebApp/student/3.png" },
     { type: "image", src: "/projects/WebApp/student/4.png" },
     { type: "image", src: "/projects/WebApp/student/5.png" },
-    { type: "image", src: "/projects/WebApp/student/6.png" },
+    { type: "image", src: "/projects/WebApp/student/6.png" }
   ]
 },
-
-{
+  {
   title: "Booking System",
-  shortDesc: "Angular + PHP/MySQL full-stack reservation app.",
-  fullDesc: 
-    "📌 Booking System (Angular + PHP/MySQL)\n\nThis project is a full-stack reservation management system designed to demonstrate integration between a modern Angular frontend and a PHP/MySQL backend. It allows users to create, manage, and track reservations in a clean and intuitive interface.\n\n🔑 Features:\n\n**User Authentication**\n- Registration and login with validation\n- Password security with backend storage\n\n**Reservation Management**\n- Create a new booking with location, start/end time, and image upload\n- Edit existing reservations with preview functionality\n- Delete reservations with confirmation\n- Status tracking: Pending vs Done\n\n**Interactive UI**\n- Reservation list displays all upcoming bookings with thumbnails\n- Edit/Delete buttons next to each item for quick actions\n- Success/error feedback messages\n- Mobile-friendly and responsive design\n\n**Backend & Database**\n- Reservations stored in a MySQL database\n- PHP backend provides CRUD API endpoints for Angular\n- Image upload and storage support\n\n🎯 What this project demonstrates:\n- Full-stack development skills (frontend + backend + DB)\n- RESTful API design and consumption in Angular\n- State management in Angular with dynamic UI updates\n- Secure authentication flow with login/registration\n- Practical CRUD implementation with modern UI",
-  tech: "Angular • TypeScript • PHP • MySQL • HTML • CSS",
-  github: "https://github.com/rabbitrunout/AngularApp2", // 🔥 update when repo is ready
+  badge: "Full-Stack",
+  shortDesc:
+    "Full-stack booking platform with auth, CRUD operations, and role-based flows.",
+ 
+    fullDesc:
+    "Booking System is a full-stack reservation platform built with Angular, PHP, and MySQL. The goal of the project was to demonstrate practical frontend-backend integration, authentication, and a structured booking workflow.\n\nKey features:\n- User registration and login with validation\n- Create, edit, and delete reservations\n- Booking status tracking\n- Image upload support\n- Responsive UI for desktop and mobile\n\nWhat this project demonstrates:\n- Full-stack development across frontend, backend, and database layers\n- REST API communication between Angular and PHP\n- CRUD operations with MySQL\n- Form handling, state updates, and user flow design",
+    problem:
+  "Full-stack booking systems require clear user flows, authentication, and reliable CRUD handling to stay usable and consistent.",
+
+built:
+  "Developed an Angular + PHP + MySQL booking platform with authentication, reservation management, and structured admin/user flows.",
+
+impact:
+  "Developed a full-stack booking system with authentication, CRUD operations, and structured user flows.",
+
+role:
+  "Full-Stack Developer · Angular · PHP · MySQL",
+  tech: "Angular • TypeScript • PHP • MySQL",
+  github: "https://github.com/rabbitrunout/AngularApp2",
   media: [
     { type: "image", src: "/projects/WebApp/booking/1.png" },
     { type: "image", src: "/projects/WebApp/booking/2.png" },
     { type: "image", src: "/projects/WebApp/booking/3.png" },
     { type: "image", src: "/projects/WebApp/booking/4.png" },
     { type: "image", src: "/projects/WebApp/booking/5.png" },
-    { type: "image", src: "/projects/WebApp/booking/6.png" },
-
-     // optional screencast
+    { type: "image", src: "/projects/WebApp/booking/6.png" }
   ]
 }
-  ],
+],
+// /////  Mobile Apps ///////
+"Mobile Apps": [
 
-
-  // /////  Mobile Apps ///////
-  "Mobile Apps": [
-
-    {
+  {
   title: "FluiDex Drive",
-  shortDesc: "iOS app for vehicle maintenance tracking with smart reminders.",
+  badge: "iOS App",
+  shortDesc:
+    "iOS app for tracking vehicle maintenance with smart reminders based on mileage and time.",
   fullDesc:
-  "FluiDex Drive is an iOS app that helps car owners stay on top of essential vehicle maintenance. It works as a simple digital assistant: you log services, track costs, and get next-service estimates based on both mileage and time.\n\nFeatures:\n- Smart next-service calculation (mileage + date)\n- Overdue / due-soon warnings\n- Service history: categories, costs, notes\n- Multi-vehicle support with active car selection\n- Maintenance overview with urgent items sorting\n- Local data persistence using Core Data\n\nWhat this project demonstrates:\n- SwiftUI state-driven UI and reusable components\n- Core Data CRUD, filtering, sorting, and data consistency\n- Business logic for reminders and maintenance tracking\n- Portfolio-ready mobile app structure and UX focus\n\nPlanned / Next:\n- Export (PDF/CSV)\n- Charts & analytics\n- Cloud sync / sharing",
-tech: "SwiftUI • Core Data • iOS Development",
-github: "https://github.com/rabbitrunout/FluiDex_DriveApp",
-media: [
-
+    "FluiDex Drive is an iOS application designed to help users manage vehicle maintenance and avoid missed services through structured tracking and smart reminders.\n\nProblem:\nMany car owners lose track of maintenance schedules, leading to overdue services, higher repair costs, and reduced vehicle lifespan.\n\nSolution:\nI built a mobile app that simplifies maintenance tracking by combining mileage-based and time-based reminder logic in a clean, easy-to-use interface.\n\nKey features:\n- Smart reminders based on both mileage and date\n- Overdue and upcoming service indicators\n- Service history with categories, notes, and costs\n- Multi-vehicle support\n- Prioritized maintenance list for urgent items\n\nWhat this project demonstrates:\n- SwiftUI state-driven UI\n- Core Data persistence and CRUD operations\n- Business logic for reminders and service tracking\n- Real-world problem solving through mobile product design",
+  problem:
+    "Many car owners lose track of maintenance schedules, which leads to overdue services, higher repair costs, and inconsistent vehicle care.",
+  built:
+    "Built a SwiftUI-based mobile app with structured flows for service tracking, reminder logic, vehicle records, and maintenance history.",
+ impact: [
+  "Designed a clean dashboard for tracking vehicle maintenance",
+  "Improved clarity of service data and reduced user friction",
+  "Built with SwiftUI using MVVM architecture"
+],
+  role:
+    "iOS Developer · Product Design · UI/UX",
+  tech: "SwiftUI • Core Data • iOS",
+  github: "https://github.com/rabbitrunout/FluiDex_DriveApp",
+  media: [
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/2.png" },
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/3.png" },
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/4.png" },
@@ -271,19 +326,19 @@ media: [
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/9.png" },
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/10.png" },
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/11.png" }
-    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
   ]
 },
 
-{
-title: "SuperPodcast",
-shortDesc: "Android podcast player with search and audio playback.",
-fullDesc:
-  "SuperPodcast is a modern Android application built with Kotlin and Jetpack Compose that lets users search, filter, and listen to podcasts in a clean, responsive interface.\n\nFeatures:\n- Podcast search using the iTunes Search API with advanced filters\n- Podcast episode playback with mini player controls\n- Modern dark UI designed with Material 3 and Compose\n- Efficient media playback using Android Media3 (ExoPlayer)\n\nWhat this project demonstrates:\n- Android app architecture with MVVM\n- Networking and API integration (Retrofit + Gson)\n- State-driven UI with Jetpack Compose\n- Media playback management and asynchronous flows\n\nTech stack:\nKotlin • Jetpack Compose • MVVM • Retrofit • Media3 • Coroutines",
-tech: "Kotlin • Jetpack Compose • Coroutines • Retrofit • ExoPlayer/Media3",
-github: "https://github.com/rabbitrunout/AndroidApp5",
-media: [
-
+  {
+  title: "SuperPodcast",
+  badge: "Android App",
+  shortDesc:
+    "Android podcast app with API search, playback controls, and Jetpack Compose UI.",
+  fullDesc:
+    "SuperPodcast is a modern Android application built with Kotlin and Jetpack Compose that lets users search, filter, and listen to podcasts in a clean, responsive interface.\n\nFeatures:\n- Podcast search using the iTunes Search API with advanced filters\n- Podcast episode playback with mini player controls\n- Modern dark UI designed with Material 3 and Compose\n- Efficient media playback using Android Media3 (ExoPlayer)\n\nWhat this project demonstrates:\n- Android app architecture with MVVM\n- Networking and API integration (Retrofit + Gson)\n- State-driven UI with Jetpack Compose\n- Media playback management and asynchronous flows\n\nTech stack:\nKotlin • Jetpack Compose • MVVM • Retrofit • Media3 • Coroutines",
+  tech: "Kotlin • Compose • Retrofit • Media3",
+  github: "https://github.com/rabbitrunout/AndroidApp5",
+  media: [
     { type: "image", src: "/projects/mobile/sound/1.png" },
     { type: "image", src: "/projects/mobile/sound/2.png" },
     { type: "image", src: "/projects/mobile/sound/3.png" },
@@ -292,75 +347,70 @@ media: [
     { type: "image", src: "/projects/mobile/sound/6.png" },
     { type: "image", src: "/projects/mobile/sound/7.png" },
     { type: "image", src: "/projects/mobile/sound/8.png" },
-    { type: "image", src: "/projects/mobile/sound/9.png" },
-    // { type: "video", src: "/projects/mobile/fluindex/demo.mp4" } // optional
-  ]
-},
-
- {
-  title: "Focus Timer Plus",
-  shortDesc: "Apple Watch focus timer built with SwiftUI.",
-  fullDesc:
-    "Focus Timer Plus is a SwiftUI-based focus timer designed for Apple Watch. The app keeps sessions simple and motivating with a clean interface and quick controls.\n\nKey features:\n- Start / Pause focus sessions\n- Adjustable duration using watch-friendly controls\n- Focus categories (Work / Study / Meditation) with different visual accents\n- Local session storage (basic history)\n- Lightweight UX designed for small screens\n\nWhat this project demonstrates:\n- SwiftUI for watchOS UI patterns\n- Managing timer state and user interactions on Apple Watch\n- Lightweight local persistence (e.g., UserDefaults/Codable)\n- Designing a minimal, wearable-first experience",
-  tech: "SwiftUI • watchOS • Timer • UserDefaults",
-  github: "https://github.com/rabbitrunout/iOSApp3",
-  media: [
-    { type: "image", src: "/projects/mobile/focustimerplus/8.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/1.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/2.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/3.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/4.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/5.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/6.png" },
-    { type: "image", src: "/projects/mobile/focustimerplus/7.png" }
-  ]
-},
-
-
-    {
-  title: "Easter Bunny Egg Basket",
-  shortDesc: "Fast & fun Easter tap game for Android.",
-  fullDesc:
-    "Easter Bunny Egg Basket is a playful reaction-based Android mini-game built with Kotlin. The goal is simple: tap the bouncing Easter egg as many times as possible within 10 seconds — and try to catch rare golden bonus eggs!\n\n Main Gameplay:\n- 10-second countdown powered by CountDownTimer\n- A moving egg that jumps to random screen positions after every tap\n- Multiple egg designs including rare golden bonus eggs\n- A dynamic score counter that updates instantly during the game\n\n End-of-Game Summary:\n- Beautiful semi-transparent result card with soft glow\n- Total eggs collected this round\n- Rare golden eggs highlighted with icons\n- Personalized encouragement messages based on performance\n- Easter basket icon displayed next to score blocks\n\n UI & UX Features:\n- Clean layout using ConstraintLayout\n- Smooth fade-in / fade-out animations for game UI\n- Prevents egg spawning behind bottom buttons\n- Custom PNG assets: eggs, basket, Easter background\n- Modern and playful visuals designed for kids and families\n\n Technical Highlights:\n- Kotlin + Android Views architecture\n- Random movement & state management logic\n- SharedPreferences for local high-score storage\n- Custom animations using ViewPropertyAnimator\n- Responsive scaling for different devices\n- Reusable utility functions for animations and score formatting\n\n What this project demonstrates:\n- Practical Kotlin skills applied to real game logic\n- UI composition with ConstraintLayout\n- Resource management (drawables, strings, colors)\n- Local data persistence\n- Game loop implementation with CountDownTimer\n- Creating friendly, polished experiences for mobile users\n\n Getting Started:\n1. Clone the repository:\n   git clone https://github.com/rabbitrunout/EasterBunnyEggBasket\n2. Open the project in Android Studio\n3. Build & run on an Android emulator or device\n\nThis project highlights experience in interactive mobile UI, small-game mechanics, Kotlin state management, and creating joyful user experiences with custom assets and animation.",
-  tech: "Kotlin • Android • ConstraintLayout • SharedPreferences • ViewPropertyAnimator • PNG Assets",
-  github: "https://github.com/rabbitrunout/AndroidApp1",
-  media: [
-    { type: "image", src: "/projects/mobile/eggsGame/1.png" },
-    { type: "image", src: "/projects/mobile/eggsGame/2.png" },
-    { type: "image", src: "/projects/mobile/eggsGame/3.png" },
-    { type: "image", src: "/projects/mobile/eggsGame/4.png" },
-    { type: "image", src: "/projects/mobile/eggsGame/5.png" },
-    { type: "video", src: "/projects/mobile/eggsGame/egg.mp4" }
+    { type: "image", src: "/projects/mobile/sound/9.png" }
   ]
 },
 
   {
-  title: "Media Planner App",
-  shortDesc: "SwiftUI planner for video/audio reminders with local notifications.",
-  fullDesc:
-    "Media Planner App is a SwiftUI project that helps users organize and schedule reminders for video and audio content. It focuses on a clean UI and practical reminder flows.\n\nKey features:\n- Switch between Video / Audio content\n- Media list with basic metadata (title, duration/preview when available)\n- Create reminders with date & time\n- Duplicate prevention for the same time slot\n- Local notifications for scheduled reminders\n- Manage reminders (view and delete)\n\nWhat this project demonstrates:\n- SwiftUI UI composition and state management\n- Working with local files (FileManager) and media utilities\n- Local notifications with UserNotifications\n- MVVM-style separation (View + Model)\n\nPlanned / Next:\n- Cloud sync\n- Analytics and charts\n- Sharing reminders",
-  tech: "SwiftUI • UserNotifications • FileManager • AVFoundation",
-  github: "https://github.com/rabbitrunout/iOSApp5",
-  media: [
-    { type: "image", src: "/projects/mobile/media/media-6.png" },
-    { type: "image", src: "/projects/mobile/media/media-5.png" },
-    { type: "image", src: "/projects/mobile/media/media-1.png" },
-    { type: "image", src: "/projects/mobile/media/media-2.png" },
-    { type: "image", src: "/projects/mobile/media/media-3.png" },
-    { type: "image", src: "/projects/mobile/media/media-4.png" },
-    { type: "image", src: "/projects/mobile/media/media-7.png" },
-    { type: "image", src: "/projects/mobile/media/media-8.png" },
-    { type: "image", src: "/projects/mobile/media/media-9.png" },
-    { type: "image", src: "/projects/mobile/media/media-10.png" }
-  ]
-},
+    title: "Focus Timer Plus",
+    badge: "watchOS App",
+    shortDesc: "watchOS focus timer with session controls and lightweight local persistence.",
+    fullDesc:
+      "Focus Timer Plus is a SwiftUI-based focus timer designed for Apple Watch. The app keeps sessions simple and motivating with a clean interface and quick controls.\n\nKey features:\n- Start / Pause focus sessions\n- Adjustable duration using watch-friendly controls\n- Focus categories (Work / Study / Meditation) with different visual accents\n- Local session storage (basic history)\n- Lightweight UX designed for small screens\n\nWhat this project demonstrates:\n- SwiftUI for watchOS UI patterns\n- Managing timer state and user interactions on Apple Watch\n- Lightweight local persistence (e.g., UserDefaults/Codable)\n- Designing a minimal, wearable-first experience",
+    tech: "SwiftUI • watchOS • Timer • UserDefaults",
+    github: "https://github.com/rabbitrunout/iOSApp3",
+    media: [
+      { type: "image", src: "/projects/mobile/focustimerplus/8.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/1.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/2.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/3.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/4.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/5.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/6.png" },
+      { type: "image", src: "/projects/mobile/focustimerplus/7.png" }
+    ]
+  },
 
+  {
+    title: "Easter Bunny Egg Basket",
+    badge: "Android Game",
+    shortDesc: "Fast & fun Easter tap game for Android.",
+    fullDesc:
+      "Easter Bunny Egg Basket is a playful reaction-based Android mini-game built with Kotlin. The goal is simple: tap the bouncing Easter egg as many times as possible within 10 seconds — and try to catch rare golden bonus eggs!\n\n Main Gameplay:\n- 10-second countdown powered by CountDownTimer\n- A moving egg that jumps to random screen positions after every tap\n- Multiple egg designs including rare golden bonus eggs\n- A dynamic score counter that updates instantly during the game\n\n End-of-Game Summary:\n- Beautiful semi-transparent result card with soft glow\n- Total eggs collected this round\n- Rare golden eggs highlighted with icons\n- Personalized encouragement messages based on performance\n- Easter basket icon displayed next to score blocks\n\n UI & UX Features:\n- Clean layout using ConstraintLayout\n- Smooth fade-in / fade-out animations for game UI\n- Prevents egg spawning behind bottom buttons\n- Custom PNG assets: eggs, basket, Easter background\n- Modern and playful visuals designed for kids and families\n\n Technical Highlights:\n- Kotlin + Android Views architecture\n- Random movement & state management logic\n- SharedPreferences for local high-score storage\n- Custom animations using ViewPropertyAnimator\n- Responsive scaling for different devices\n- Reusable utility functions for animations and score formatting\n\n What this project demonstrates:\n- Practical Kotlin skills applied to real game logic\n- UI composition with ConstraintLayout\n- Resource management (drawables, strings, colors)\n- Local data persistence\n- Game loop implementation with CountDownTimer\n- Creating friendly, polished experiences for mobile users\n\n Getting Started:\n1. Clone the repository:\n   git clone https://github.com/rabbitrunout/EasterBunnyEggBasket\n2. Open the project in Android Studio\n3. Build & run on an Android emulator or device\n\nThis project highlights experience in interactive mobile UI, small-game mechanics, Kotlin state management, and creating joyful user experiences with custom assets and animation.",
+    tech: "Kotlin • Android • ConstraintLayout • SharedPreferences • ViewPropertyAnimator • PNG Assets",
+    github: "https://github.com/rabbitrunout/AndroidApp1",
+    media: [
+      { type: "image", src: "/projects/mobile/eggsGame/1.png" },
+      { type: "image", src: "/projects/mobile/eggsGame/2.png" },
+      { type: "image", src: "/projects/mobile/eggsGame/3.png" },
+      { type: "image", src: "/projects/mobile/eggsGame/4.png" },
+      { type: "image", src: "/projects/mobile/eggsGame/5.png" },
+      { type: "video", src: "/projects/mobile/eggsGame/egg.mp4" }
+    ]
+  },
 
-  
-
-    
-    
-  ],
+  {
+    title: "Media Planner App",
+    badge: "iOS App",
+    shortDesc: "SwiftUI reminder app for organizing video and audio content with local notifications.",
+    fullDesc:
+      "Media Planner App is a SwiftUI project that helps users organize and schedule reminders for video and audio content. It focuses on a clean UI and practical reminder flows.\n\nKey features:\n- Switch between Video / Audio content\n- Media list with basic metadata (title, duration/preview when available)\n- Create reminders with date & time\n- Duplicate prevention for the same time slot\n- Local notifications for scheduled reminders\n- Manage reminders (view and delete)\n\nWhat this project demonstrates:\n- SwiftUI UI composition and state management\n- Working with local files (FileManager) and media utilities\n- Local notifications with UserNotifications\n- MVVM-style separation (View + Model)\n\nPlanned / Next:\n- Cloud sync\n- Analytics and charts\n- Sharing reminders",
+    tech: "SwiftUI • UserNotifications • FileManager • AVFoundation",
+    github: "https://github.com/rabbitrunout/iOSApp5",
+    media: [
+      { type: "image", src: "/projects/mobile/media/media-6.png" },
+      { type: "image", src: "/projects/mobile/media/media-5.png" },
+      { type: "image", src: "/projects/mobile/media/media-1.png" },
+      { type: "image", src: "/projects/mobile/media/media-2.png" },
+      { type: "image", src: "/projects/mobile/media/media-3.png" },
+      { type: "image", src: "/projects/mobile/media/media-4.png" },
+      { type: "image", src: "/projects/mobile/media/media-7.png" },
+      { type: "image", src: "/projects/mobile/media/media-8.png" },
+      { type: "image", src: "/projects/mobile/media/media-9.png" },
+      { type: "image", src: "/projects/mobile/media/media-10.png" }
+    ]
+  }
+],
 
  
 };

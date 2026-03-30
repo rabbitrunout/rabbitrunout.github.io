@@ -10,7 +10,11 @@
           "scroll-behavior",
           "scroll-behavior: smooth",
           "inset",
-          "min-height: auto"
+          "min-height: auto",
+          "backdrop-filter",
+          "scrollbar-width",
+          "scrollbar-width: none",
+          "aspect-ratio"
         ]
       }
     ],

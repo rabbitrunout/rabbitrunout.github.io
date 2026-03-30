@@ -1,109 +1,102 @@
-import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/mainPhoto.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { HashLink } from "react-router-hash-link";
+import mainPhoto from "../assets/img/mainPhoto.png";
 
-export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-
-  const period = 2000;
-
-  const tick = useCallback(() => {
-    const toRotate = [
-      "Junior iOS Developer",
-      "SwiftUI Enthusiast",
-       "Mobile App Builder"
-    ];
-
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  }, [loopNum, isDeleting, text]);
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => clearInterval(ticker);
-  }, [text, delta, tick]);
-
+const Banner = () => {
   return (
-    <section className="banner" id="home">
-      {/* 🎬 Видео фон */}
-      <video autoPlay muted loop playsInline className="bg-video">
-        <source src="/video/main.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* 🔲 Затемняющий оверлей */}
-      <div className="overlay"></div>
-
+    <section className="banner editorial-hero" id="home">
       <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={8}>
-            <TrackVisibility>
+        <Row className="editorial-hero__row align-items-center">
+          <Col xs={12} lg={7} className="editorial-hero__left">
+            <TrackVisibility partialVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-  <span className="tagline">Mobile Developer Portfolio</span>
+                <div
+                  className={`editorial-hero__content ${
+                    isVisible ? "is-visible" : ""
+                  }`}
+                >
+                  {/* <span className="editorial-kicker">Irina S</span> */}
 
-  <h1>
-    Hi! I&apos;m Irina{" "}
-    <span className="txt-rotate">
-      <span className="wrap">{text}</span>
-    </span>
-  </h1>
+                  <h1 className="editorial-hero__title">
+                    <span className="editorial-hero__title-line">Mobile</span>
+                    <span className="editorial-hero__title-line">Web</span>
+                    <span className="editorial-hero__title-line">Developer</span>
+                  </h1>
 
-  <p>
-    Junior iOS / Mobile Developer building clean, user-friendly apps with
-    SwiftUI and solid data logic.  
-    Completed my studies and currently gaining real-world experience through
-    an internship.
-  </p>
+                  <p className="editorial-hero__subtitle">
+                    Mobile &amp; Web Developer with hands-on experience building
+                    real applications using SwiftUI, React, Angular, and backend
+                    systems.
+                    <br />
+                    <br />
+                    Focused on clean UI, structured frontend architecture, and
+                    product-driven development.
+                  </p>
 
-  <HashLink to="#connect">
-    <button className="vvd">
-      Let’s Connect <ArrowRightCircle size={25} />
-    </button>
-  </HashLink>
-</div>
+                  <div className="editorial-hero__meta">
+                    <span>SwiftUI</span>
+                    <span>React / Angular</span>
+                    <span>PHP / MySQL</span>
+                    <span>UI / UX</span>
+                  </div>
 
+                  <div className="editorial-hero__actions">
+                    <HashLink
+                      smooth
+                      to="#featured"
+                      className="editorial-btn editorial-btn--primary"
+                    >
+                      <span>Selected Work</span>
+                      <ArrowRightCircle size={20} />
+                    </HashLink>
+
+                    <HashLink
+                      smooth
+                      to="#connect"
+                      className="editorial-btn editorial-btn--ghost"
+                    >
+                      <span>Let&apos;s Connect</span>
+                    </HashLink>
+                  </div>
+
+                  <p className="editorial-hero__proof">
+                    Real projects • Internship experience • Full-stack development
+                  </p>
+                </div>
               )}
             </TrackVisibility>
           </Col>
 
-          <Col xs={12} md={5} xl={4}>
-            <TrackVisibility>
+          <Col xs={12} lg={5}>
+            <TrackVisibility partialVisibility>
               {({ isVisible }) => (
                 <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
-                  }
+                  className={`editorial-hero__visual ${
+                    isVisible ? "is-visible" : ""
+                  }`}
                 >
-                  <img src={headerImg} alt="Irina illustration" />
+                  <div className="editorial-hero__avatar-top">
+                    <img
+                      src={mainPhoto}
+                      alt="Irina S"
+                      className="editorial-hero__avatar"
+                    />
+                    <div className="editorial-hero__avatar-meta">
+                      <span>Irina S</span>
+                      <strong>Mobile &amp; Web Developer</strong>
+                    </div>
+                  </div>
+
+                  <div className="editorial-hero__project-card">
+                    <img
+                      src="/projects/mobile/FluiDex_DriveApp/7.png"
+                      alt="FluiDex Drive preview"
+                      className="editorial-hero__project-image"
+                    />
+                  </div>
                 </div>
               )}
             </TrackVisibility>
@@ -113,3 +106,5 @@ export const Banner = () => {
     </section>
   );
 };
+
+export default Banner;

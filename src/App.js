@@ -1,38 +1,29 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router } from "react-router-dom";
+import React from "react";
+import "./App.css";
+
 import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import AboutMe from './components/AboutMe';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { Certificates } from './components/Certificates';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-
-
-// ✅ импорт видео как модуля
-import mainVideo from "./assets/video/main.mp4";
+import Banner from "./components/Banner";
+import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import FeaturedProjects from "./components/FeaturedProjects";
+import HorizontalProjects from "./components/HorizontalProjects";
+import Skills from "./components/Skills";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <Router>
-      {/* 🎬 Видео фон глобально */}
-      <video autoPlay muted loop playsInline className="bg-video">
-        <source src={mainVideo} type="video/mp4" />
-      </video>
-
-      <div className="overlay"></div>
+    <div className="app editorial-app">
       <NavBar />
       <Banner />
       <AboutMe />
-      <Projects />
+      <Experience />
+      <FeaturedProjects />
+      <HorizontalProjects />
       <Skills />
       <Certificates />
       <Contact />
-    </Router>
+    </div>
   );
 }
 

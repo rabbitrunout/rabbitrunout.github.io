@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { ArrowUpRightCircle } from "react-bootstrap-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { projectsByCategory } from "../data/projectsData";
@@ -9,127 +10,158 @@ import { ProjectModal } from "./ProjectModal";
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Mobile Apps");
   const sliderRef = useRef(null);
+
+  const displayCategories = [
+    "Mobile Apps",
+    "Web Apps",
+    "UI/UX & Design",
+    "Landing Pages",
+    "JavaScript Projects",
+  ];
+
+  const currentProjects = projectsByCategory[activeCategory] || [];
 
   const openModal = (project) => {
     setSelectedProject(project);
     setSelectedMediaIndex(0);
   };
-  const closeModal = () => setSelectedProject(null);
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setSelectedMediaIndex(0);
+  };
 
   const nextMedia = useCallback(() => {
-    if (!selectedProject) return;
+    if (!selectedProject || !selectedProject.media?.length) return;
     setSelectedMediaIndex((prev) => (prev + 1) % selectedProject.media.length);
   }, [selectedProject]);
 
   const prevMedia = useCallback(() => {
-    if (!selectedProject) return;
+    if (!selectedProject || !selectedProject.media?.length) return;
     setSelectedMediaIndex(
-      (prev) => (prev - 1 + selectedProject.media.length) % selectedProject.media.length
+      (prev) =>
+        (prev - 1 + selectedProject.media.length) % selectedProject.media.length
     );
   }, [selectedProject]);
 
-  // 🎹 Клавиатурная навигация в модалке
   useEffect(() => {
     if (!selectedProject) return;
+
     const onKey = (e) => {
       if (e.key === "ArrowRight") nextMedia();
       if (e.key === "ArrowLeft") prevMedia();
       if (e.key === "Escape") closeModal();
     };
+
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [selectedProject, nextMedia, prevMedia]);
 
-  // ⚙️ Настройки слайдера
+  useEffect(() => {
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0, true);
+    }
+  }, [activeCategory]);
+
   const sliderSettings = {
     dots: true,
-    infinite: false,
-    speed: 600,
+    infinite: currentProjects.length > 3,
+    speed: 550,
     arrows: true,
-    slidesToShow: 3,
+    slidesToShow: Math.min(3, Math.max(currentProjects.length, 1)),
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
-      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: Math.min(2, Math.max(currentProjects.length, 1)),
+          slidesToScroll: 1,
+          infinite: currentProjects.length > 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: currentProjects.length > 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: currentProjects.length > 1,
+        },
+      },
     ],
   };
 
-  const categories = ["All", ...Object.keys(projectsByCategory)];
-
   return (
-    <section className="projects" id="projects">
+    <section className="projects premium-projects" id="projects">
       <div className="container">
-        <motion.h2
+        <motion.div
+          className="projects-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.55 }}
           viewport={{ once: true }}
         >
-          My Projects
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Here are some of the applications I’ve built and contributed to.
-        </motion.p>
+          <span className="section-badge">Project Library</span>
+          <h2>All Projects</h2>
+          <p>
+            A broader collection of mobile, web, UI/UX, and JavaScript projects
+            built across different technologies, interfaces, and product ideas.
+          </p>
+        </motion.div>
 
-        {/* 🔘 Фильтры */}
         <div className="project-filters">
-          {categories.map((cat) => (
+          {displayCategories.map((cat) => (
             <button
               key={cat}
               className={`filter-btn ${activeCategory === cat ? "active" : ""}`}
               onClick={() => setActiveCategory(cat)}
+              type="button"
             >
               {cat}
             </button>
           ))}
         </div>
 
-        {/* 🔘 Проекты по категориям */}
-        <div className="projects-container">
-          {Object.entries(projectsByCategory).map(([category, projects]) => {
-            if (activeCategory !== "All" && activeCategory !== category) return null;
+        <div className="projects-container premium-projects-container">
+          <motion.div
+            className="projects-subheader"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="category-title">{activeCategory}</h3>
+            <span className="project-count">
+              {currentProjects.length} project
+              {currentProjects.length !== 1 ? "s" : ""}
+            </span>
+          </motion.div>
 
-            return (
-              <div key={category}>
-                {/* Заголовок категории с анимацией */}
-                <motion.h3
-                  className="category-title"
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
+          {currentProjects.length === 0 ? (
+            <p className="no-projects">No projects in this category yet.</p>
+          ) : (
+            <Slider key={activeCategory} ref={sliderRef} {...sliderSettings}>
+              {currentProjects.map((proj, index) => (
+                <div
+                  key={`${activeCategory}-${proj.title}-${index}`}
+                  className="project-slide"
                 >
-                  {category}
-                </motion.h3>
-
-                <Slider ref={sliderRef} {...sliderSettings}>
-                  {projects.map((proj, i) => (
-                    <motion.div
-                      key={i}
-                      className="project-card"
-                      initial={{ opacity: 0, y: 40, scale: 0.96 }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                      transition={{
-                        duration: 0.6,
-                        ease: "easeOut",
-                        delay: i * 0.15,
-                      }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      whileHover={{
-                        scale: 1.04,
-                        boxShadow: "0 0 25px rgba(255, 75, 75, 0.45)",
-                        filter: "brightness(1.15)",
-                      }}
-                      onClick={() => openModal(proj)}
-                    >
+                  <motion.article
+                    className="project-card premium-project-card"
+                    onClick={() => openModal(proj)}
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="project-media-wrap">
                       {proj.media?.[0]?.type === "image" ? (
                         <img
                           src={proj.media[0].src}
@@ -137,24 +169,36 @@ export const Projects = () => {
                           className="project-img"
                         />
                       ) : (
-                        <div className="project-img placeholder">No Image</div>
+                        <div className="project-img placeholder">
+                          Preview unavailable
+                        </div>
                       )}
 
-                      <div className="project-info">
+                      {proj.badge && (
+                        <span className="project-badge">{proj.badge}</span>
+                      )}
+                    </div>
+
+                    <div className="project-info">
+                      <div className="project-header-row">
                         <h3>{proj.title}</h3>
-                        <p className="short-desc">{proj.shortDesc}</p>
-                        <span>{proj.tech}</span>
+                        <span className="project-open-icon">
+                          <ArrowUpRightCircle size={17} />
+                        </span>
                       </div>
-                    </motion.div>
-                  ))}
-                </Slider>
-              </div>
-            );
-          })}
+
+                      <p className="short-desc">{proj.shortDesc}</p>
+
+                      <span className="project-tech">{proj.tech}</span>
+                    </div>
+                  </motion.article>
+                </div>
+              ))}
+            </Slider>
+          )}
         </div>
       </div>
 
-      {/* 🔘 Модальное окно */}
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
