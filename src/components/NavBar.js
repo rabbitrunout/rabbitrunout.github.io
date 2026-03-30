@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
 import { FileDown, Linkedin, Github, Mail } from "lucide-react";
 
 export const NavBar = () => {
@@ -17,9 +16,14 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleNavClick = (value) => {
+  const scrollToSection = (id, value) => {
+    const el = document.getElementById(id);
     setActiveLink(value);
     setExpanded(false);
+
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -31,11 +35,9 @@ export const NavBar = () => {
     >
       <Container className="editorial-navbar__container">
         <Navbar.Brand
-          as={HashLink}
-          smooth
-          to="#home"
-          onClick={() => handleNavClick("home")}
+          onClick={() => scrollToSection("home", "home")}
           className="editorial-navbar__brand"
+          style={{ cursor: "pointer" }}
         >
           <span className="editorial-navbar__brand-text">IRINA.S</span>
         </Navbar.Brand>
@@ -56,10 +58,7 @@ export const NavBar = () => {
           <div className="editorial-navbar__collapse">
             <Nav className="editorial-navbar__links">
               <Nav.Link
-                as={HashLink}
-                smooth
-                to="#home"
-                onClick={() => handleNavClick("home")}
+                onClick={() => scrollToSection("home", "home")}
                 className={`editorial-navbar__link ${
                   activeLink === "home" ? "active" : ""
                 }`}
@@ -68,10 +67,7 @@ export const NavBar = () => {
               </Nav.Link>
 
               <Nav.Link
-                as={HashLink}
-                smooth
-                to="#about"
-                onClick={() => handleNavClick("about")}
+                onClick={() => scrollToSection("about", "about")}
                 className={`editorial-navbar__link ${
                   activeLink === "about" ? "active" : ""
                 }`}
@@ -80,10 +76,7 @@ export const NavBar = () => {
               </Nav.Link>
 
               <Nav.Link
-                as={HashLink}
-                smooth
-                to="#featured"
-                onClick={() => handleNavClick("featured")}
+                onClick={() => scrollToSection("featured", "featured")}
                 className={`editorial-navbar__link ${
                   activeLink === "featured" ? "active" : ""
                 }`}
@@ -92,10 +85,7 @@ export const NavBar = () => {
               </Nav.Link>
 
               <Nav.Link
-                as={HashLink}
-                smooth
-                to="#skills"
-                onClick={() => handleNavClick("skills")}
+                onClick={() => scrollToSection("skills", "skills")}
                 className={`editorial-navbar__link ${
                   activeLink === "skills" ? "active" : ""
                 }`}
@@ -104,10 +94,7 @@ export const NavBar = () => {
               </Nav.Link>
 
               <Nav.Link
-                as={HashLink}
-                smooth
-                to="#connect"
-                onClick={() => handleNavClick("connect")}
+                onClick={() => scrollToSection("connect", "connect")}
                 className={`editorial-navbar__link ${
                   activeLink === "connect" ? "active" : ""
                 }`}
@@ -158,14 +145,13 @@ export const NavBar = () => {
                   <span>Resume</span>
                 </a>
 
-                <HashLink
-                  smooth
-                  to="#connect"
-                  onClick={() => handleNavClick("connect")}
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("connect", "connect")}
                   className="editorial-navbar__btn editorial-navbar__btn--primary"
                 >
                   <span>Let&apos;s Connect</span>
-                </HashLink>
+                </button>
               </div>
             </div>
           </div>

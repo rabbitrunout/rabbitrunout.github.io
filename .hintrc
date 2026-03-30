@@ -14,7 +14,8 @@
           "backdrop-filter",
           "scrollbar-width",
           "scrollbar-width: none",
-          "aspect-ratio"
+          "aspect-ratio",
+          "scroll-behavior: auto"
         ]
       }
     ],

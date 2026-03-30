@@ -2,10 +2,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { HashLink } from "react-router-hash-link";
 import mainPhoto from "../assets/img/mainPhoto.png";
 
 const Banner = () => {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="banner editorial-hero" id="home">
       <Container>
@@ -18,8 +24,6 @@ const Banner = () => {
                     isVisible ? "is-visible" : ""
                   }`}
                 >
-                  {/* <span className="editorial-kicker">Irina S</span> */}
-
                   <h1 className="editorial-hero__title">
                     <span className="editorial-hero__title-line">Mobile</span>
                     <span className="editorial-hero__title-line">Web</span>
@@ -44,22 +48,22 @@ const Banner = () => {
                   </div>
 
                   <div className="editorial-hero__actions">
-                    <HashLink
-                      smooth
-                      to="#featured"
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("featured")}
                       className="editorial-btn editorial-btn--primary"
                     >
                       <span>Selected Work</span>
                       <ArrowRightCircle size={20} />
-                    </HashLink>
+                    </button>
 
-                    <HashLink
-                      smooth
-                      to="#connect"
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("connect")}
                       className="editorial-btn editorial-btn--ghost"
                     >
                       <span>Let&apos;s Connect</span>
-                    </HashLink>
+                    </button>
                   </div>
 
                   <p className="editorial-hero__proof">

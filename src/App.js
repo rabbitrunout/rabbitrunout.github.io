@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import "./App.css";
 
 import { NavBar } from "./components/NavBar";
@@ -12,9 +12,11 @@ import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 
 function App() {
+  useLayoutEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
 
-  // 🔥 ВОТ ЭТО ДОБАВЬ
-  useEffect(() => {
     if (window.location.hash) {
       window.history.replaceState(
         null,
@@ -23,7 +25,15 @@ function App() {
       );
     }
 
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    window.scrollTo(0, 0);
+
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
   }, []);
 
   return (
