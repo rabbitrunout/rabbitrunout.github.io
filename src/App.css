@@ -3218,3 +3218,19 @@ button {
   }
 }
 
+.editorial-footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: transparent;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 60px;
+}
+.editorial-footer p {
+  transition: 0.3s;
+}
+
+.editorial-footer p:hover {
+  color: #fff;
+}

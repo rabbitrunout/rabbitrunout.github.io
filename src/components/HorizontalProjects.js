@@ -11,11 +11,11 @@ import ProjectModal from "./ProjectModal";
 const HorizontalProjects = () => {
   const trackRef = useRef(null);
   const isManualScroll = useRef(false);
+  const isFirstRender = useRef(true);
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // 👉 собираем все проекты
   const allProjects = useMemo(() => {
     return Object.values(projectsByCategory)
       .flat()
@@ -29,7 +29,6 @@ const HorizontalProjects = () => {
       }));
   }, []);
 
-  // 👉 центрирование карточки (идеально стабильное)
   const centerCard = useCallback((index) => {
     const track = trackRef.current;
     if (!track) return;
@@ -46,7 +45,6 @@ const HorizontalProjects = () => {
     }
   }, []);
 
-  // 👉 определяем активную карточку при скролле
   const updateActiveCard = useCallback(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -69,13 +67,11 @@ const HorizontalProjects = () => {
       }
     });
 
-    // 🔥 ФИКС ДЕРГАНИЯ
     if (!isManualScroll.current) {
       setActiveIndex(closestIndex);
     }
   }, []);
 
-  // 👉 подписка на scroll
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -86,16 +82,18 @@ const HorizontalProjects = () => {
     track.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleResize);
 
-    updateActiveCard();
-
     return () => {
       track.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, [updateActiveCard]);
 
-  // 👉 центр при изменении activeIndex
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     const timer = setTimeout(() => {
       centerCard(activeIndex);
     }, 40);
@@ -103,7 +101,6 @@ const HorizontalProjects = () => {
     return () => clearTimeout(timer);
   }, [activeIndex, centerCard]);
 
-  // 👉 вертикальный scroll → горизонтальный
   const handleWheel = (e) => {
     const track = trackRef.current;
     if (!track) return;
@@ -114,7 +111,6 @@ const HorizontalProjects = () => {
     }
   };
 
-  // 👉 клик по карточке
   const handleCardClick = (index) => {
     isManualScroll.current = true;
 
@@ -127,7 +123,6 @@ const HorizontalProjects = () => {
     }, 400);
   };
 
-  // 👉 стрелки
   const goNext = () => {
     if (!allProjects.length) return;
 
@@ -178,7 +173,6 @@ const HorizontalProjects = () => {
           </p>
         </div>
 
-        {/* 🔥 TOP BAR */}
         <div className="horizontal-projects__topbar">
           <div className="horizontal-projects__progress">
             {allProjects.map((_, index) => (
@@ -209,7 +203,6 @@ const HorizontalProjects = () => {
           </div>
         </div>
 
-        {/* 🔥 TRACK */}
         <div
           className="horizontal-projects__track"
           ref={trackRef}

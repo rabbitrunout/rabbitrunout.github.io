@@ -10,6 +10,7 @@ import HorizontalProjects from "./components/HorizontalProjects";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   useLayoutEffect(() => {
@@ -47,6 +48,7 @@ function App() {
       <Skills />
       <Certificates />
       <Contact />
+      <Footer />
     </div>
   );
 }
