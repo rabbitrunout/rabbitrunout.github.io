@@ -12,25 +12,25 @@ const Skills = () => {
         <article className="skill-block">
           <p className="skill-block__index">01</p>
           <h3>Mobile</h3>
-          <p>SwiftUI · iOS · Kotlin basics</p>
+          <p>SwiftUI · iOS Development · MVVM Architecture · Core Data · Structured Mobile UI</p>
         </article>
 
         <article className="skill-block">
           <p className="skill-block__index">02</p>
           <h3>Frontend</h3>
-          <p>HTML · CSS · JavaScript · Angular · React</p>
+          <p>React · Angular · JavaScript · TypeScript · Component-Based Architecture · Responsive UI</p>
         </article>
 
         <article className="skill-block">
           <p className="skill-block__index">03</p>
           <h3>Backend & Data</h3>
-          <p>PHP · MySQL · REST API · CRUD logic</p>
+          <p>PHP · MySQL · REST APIs · CRUD Systems · Authentication · Data Modeling</p>
         </article>
 
         <article className="skill-block">
           <p className="skill-block__index">04</p>
           <h3>Design</h3>
-          <p>UI/UX · Graphic Design · Product Thinking</p>
+          <p>UI/UX Design · Product Thinking · User Flows · Wireframing · Interaction Design</p>
         </article>
       </div>
     </section>
