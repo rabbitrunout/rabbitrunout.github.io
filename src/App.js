@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 
 import { NavBar } from "./components/NavBar";
@@ -12,6 +12,20 @@ import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 
 function App() {
+
+  // 🔥 ВОТ ЭТО ДОБАВЬ
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
+
   return (
     <div className="app editorial-app">
       <NavBar />
