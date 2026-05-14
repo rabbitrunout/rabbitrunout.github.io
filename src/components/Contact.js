@@ -7,14 +7,12 @@ const Contact = () => {
         <p className="section-label">Contact</p>
 
         <h2>
-          Let&apos;s build
-          <br />
-          something together
+          Let’s build something meaningful  
         </h2>
 
         <p className="editorial-contact__text">
-          Mobile & Web Developer focused on building clean, user-friendly
-          applications with strong UI and structured frontend architecture.
+          I’m open to junior and entry-level opportunities in frontend, mobile, or full-stack development.  
+
         </p>
 
         <p className="editorial-contact__availability">
@@ -23,7 +21,7 @@ const Contact = () => {
         </p>
 
         <p className="editorial-contact__extra">
-          Available for internships, part-time, and full-time opportunities.
+          Feel free to reach out — I’d be happy to connect.
         </p>
 
         <div className="editorial-contact__links">

@@ -7,43 +7,37 @@ import mainPhoto from "../assets/img/mainPhoto.png";
 const Banner = () => {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <section className="banner editorial-hero" id="home">
       <Container>
         <Row className="editorial-hero__row align-items-center">
+
+          {/* LEFT */}
           <Col xs={12} lg={7} className="editorial-hero__left">
             <TrackVisibility partialVisibility>
               {({ isVisible }) => (
-                <div
-                  className={`editorial-hero__content ${
-                    isVisible ? "is-visible" : ""
-                  }`}
-                >
+                <div className={`editorial-hero__content ${isVisible ? "is-visible" : ""}`}>
+
+                  <p className="section-label">Portfolio / 2026</p>
+
                   <h1 className="editorial-hero__title">
-                    <span className="editorial-hero__title-line">Mobile</span>
-                    <span className="editorial-hero__title-line">Web</span>
+                    <span className="editorial-hero__title-line">iOS &amp;</span>
+                    <span className="editorial-hero__title-line">Frontend</span>
                     <span className="editorial-hero__title-line">Developer</span>
                   </h1>
 
                   <p className="editorial-hero__subtitle">
-                    Mobile &amp; Web Developer with hands-on experience building
-                    real applications using SwiftUI, React, Angular, and backend
-                    systems.
-                    <br />
-                    <br />
-                    Focused on clean UI, structured frontend architecture, and
-                    product-driven development.
+                    I build clean, scalable mobile and web applications with a focus on 
+                    real-world product development, user experience, and structured architecture.
                   </p>
 
                   <div className="editorial-hero__meta">
                     <span>SwiftUI</span>
-                    <span>React / Angular</span>
-                    <span>PHP / MySQL</span>
+                    <span>React / Next.js</span>
+                    <span>REST APIs</span>
                     <span>UI / UX</span>
                   </div>
 
@@ -53,7 +47,7 @@ const Banner = () => {
                       onClick={() => scrollToSection("featured")}
                       className="editorial-btn editorial-btn--primary"
                     >
-                      <span>Selected Work</span>
+                      <span>View Projects</span>
                       <ArrowRightCircle size={20} />
                     </button>
 
@@ -67,21 +61,20 @@ const Banner = () => {
                   </div>
 
                   <p className="editorial-hero__proof">
-                    Real projects • Internship experience • Full-stack development
+                    Software Developer Intern @ R-A-Ones · Real product experience · API integration
                   </p>
+
                 </div>
               )}
             </TrackVisibility>
           </Col>
 
+          {/* RIGHT */}
           <Col xs={12} lg={5}>
             <TrackVisibility partialVisibility>
               {({ isVisible }) => (
-                <div
-                  className={`editorial-hero__visual ${
-                    isVisible ? "is-visible" : ""
-                  }`}
-                >
+                <div className={`editorial-hero__visual ${isVisible ? "is-visible" : ""}`}>
+
                   <div className="editorial-hero__avatar-top">
                     <img
                       src={mainPhoto}
@@ -90,7 +83,7 @@ const Banner = () => {
                     />
                     <div className="editorial-hero__avatar-meta">
                       <span>Irina S</span>
-                      <strong>Mobile &amp; Web Developer</strong>
+                      <strong>iOS &amp; Frontend Developer</strong>
                     </div>
                   </div>
 
@@ -101,10 +94,12 @@ const Banner = () => {
                       className="editorial-hero__project-image"
                     />
                   </div>
+
                 </div>
               )}
             </TrackVisibility>
           </Col>
+
         </Row>
       </Container>
     </section>

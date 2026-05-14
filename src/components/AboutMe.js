@@ -9,47 +9,54 @@ const AboutMe = () => {
       </div>
 
       <div className="editorial-about__grid">
+
+        {/* LEFT */}
         <div className="editorial-about__text">
           <p>
-            I’m a Mobile &amp; Web Developer with hands-on experience building
-            real applications across mobile and web platforms.
+            I’m an iOS & Frontend Developer focused on building structured,
+            user-centered applications across mobile and web platforms.
           </p>
 
           <p>
-            I work with SwiftUI, React, Angular, PHP, and MySQL to create
-            structured, scalable, and user-focused products. My approach combines
-            development with UI/UX thinking — ensuring that what I build is not
-            only functional, but intuitive and visually refined.
+            I specialize in SwiftUI and modern frontend frameworks like React and Next.js, 
+            creating clean, scalable interfaces with strong attention to user experience.
           </p>
 
           <p>
-            Through academic projects and internship experience, I’ve worked on
-            full product flows — from interface design to frontend architecture
-            and backend integration.
+            Through internship and academic projects, I’ve worked across full product flows — 
+            from UI design and reusable components to API integration and real-world features.
+          </p>
+
+          <p className="editorial-about__highlight">
+             Building real products · Internship experience · API-driven development
           </p>
         </div>
 
+        {/* RIGHT */}
         <div className="editorial-about__facts">
+
           <div className="fact-card">
             <span className="fact-card__label">Location</span>
-            <strong>Ontario, Canada</strong>
+            <strong>Mississauga, ON, Canada</strong>
           </div>
 
           <div className="fact-card">
-            <span className="fact-card__label">Specialization</span>
-            <strong>Mobile + Frontend Development Using AI </strong>
+            <span className="fact-card__label">Currently</span>
+            <strong>Software Developer Intern @ R-A-Ones</strong>
           </div>
 
           <div className="fact-card">
-            <span className="fact-card__label">Tech Stack</span>
-            <strong>SwiftUI · React · Angular · PHP · MySQL</strong>
+            <span className="fact-card__label">Core Stack</span>
+            <strong>SwiftUI · React · Next.js · PHP · MySQL</strong>
           </div>
 
           <div className="fact-card">
             <span className="fact-card__label">Focus</span>
-            <strong>Product Thinking · UI/UX · Clean Architecture</strong>
+            <strong>UI/UX · Clean Architecture · API Integration</strong>
           </div>
+
         </div>
+
       </div>
     </section>
   );
