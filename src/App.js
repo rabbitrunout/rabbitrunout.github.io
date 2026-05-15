@@ -3,6 +3,7 @@ import "./App.css";
 
 import { NavBar } from "./components/NavBar";
 import Banner from "./components/Banner";
+import AISection from "./components/AISection";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 import FeaturedProjects from "./components/FeaturedProjects";
@@ -41,6 +42,7 @@ function App() {
     <div className="app editorial-app">
       <NavBar />
       <Banner />
+      <AISection />
       <AboutMe />
       <Experience />
       <FeaturedProjects />

@@ -340,19 +340,19 @@ role:
 // /////  Mobile Apps ///////
 "Mobile Apps": [
 
-  {
+ {
   title: "Glowi — Product System",
 
   badge: "iOS · Web · Product System",
 
   shortDesc:
-    "Multi-platform product system for managing gymnastics training, events, and payments with real-world role-based logic and scalable architecture.",
+    "Multi-platform product system for managing gymnastics training, events, payments, and athlete workflows with role-based logic and scalable architecture.",
 
   problem:
-    "Parents of rhythmic gymnasts often manage training schedules, competitions, and payments across fragmented tools, leading to missed deadlines, poor visibility, and inefficient coordination.",
+    "Parents of rhythmic gymnasts often manage schedules, competitions, and payments across fragmented tools, resulting in missed deadlines, limited visibility, and inefficient coordination.",
 
   built:
-    "Designed and developed a multi-platform product system that centralizes event management, payments, and athlete tracking into a structured dashboard experience across mobile and web.",
+    "Designed and developed a multi-platform product system that centralizes athlete management, events, schedules, and payment workflows into a structured dashboard experience across mobile and web platforms.",
 
   platforms: [
     "iOS (SwiftUI) — parent-facing mobile experience",
@@ -361,43 +361,53 @@ role:
 
   engineering: [
     "MVVM architecture with separation of UI, business logic, and data layers",
-    "State-driven UI using SwiftUI and ObservableObject (Combine)",
     "Role-based UX logic (parent vs coach/admin responsibilities)",
-    "Multi-entity data modeling (children, events, payments)",
-    "Payment lifecycle system (Paid / Pending / Overdue / Due Soon)",
-    "Platform-specific UI design (mobile vs dashboard experience)",
-    "Reusable UI component system (cards, badges, layout blocks)",
-    "Dynamic UI states: loading, empty, active, and error handling",
-    "Local persistence using structured JSON mock data",
-    "REST-ready architecture for backend integration"
+    "State-driven SwiftUI interface using ObservableObject and reactive updates",
+    "Multi-entity data modeling for children, payments, events, and sessions",
+    "Dynamic payment lifecycle system (Paid / Pending / Due Soon / Overdue)",
+    "Reusable component-based UI system for scalable product growth",
+    "Responsive dashboard workflows across mobile and web platforms",
+    "REST-ready architecture prepared for backend integration",
+    "Structured mock persistence using JSON-based local data storage",
+    "Modern UI states including loading, empty, success, and error handling"
+  ],
+
+  aiFeatures: [
+    "Exploration of AI-assisted training insights and athlete progress analysis",
+    "AI-enhanced product planning and workflow prototyping",
+    "Intelligent notification and reminder system concepts",
+    "Research into personalized athlete recommendations and schedule optimization"
   ],
 
   impact: [
-    "Centralized fragmented workflows into a single product experience",
-    "Improved visibility of schedules, payments, and events",
-    "Simulated production-level architecture and real-world product logic",
-    "Established scalable foundation for backend and SaaS expansion"
+    "Centralized fragmented workflows into a single product ecosystem",
+    "Improved visibility of athlete schedules, competitions, and payments",
+    "Simulated production-level product architecture and real-world UX logic",
+    "Established scalable foundation for future SaaS and backend expansion"
   ],
 
-  role: "iOS Developer · Frontend Developer · Product Design · UI/UX",
+  role:
+    "iOS Developer · Frontend Developer · Product Design · UI/UX",
 
   tech:
     "SwiftUI · MVVM · Combine · Angular · PHP · MySQL · REST APIs · JSON",
 
   status:
-    "In active development — expanding into multi-role system with admin and coach functionality",
+    "In active development — expanding into multi-role coach/admin system",
 
   future: [
-    "Admin/Coach dashboard for managing athletes and assigning levels",
-    "Backend integration with authentication and role-based access",
-    "Real-time data synchronization between mobile and web",
+    "Coach/admin dashboard with athlete management",
+    "Authentication and role-based backend integration",
+    "Real-time synchronization between mobile and web platforms",
     "Stripe payment integration",
-    "Push notifications and reminders",
-    "AI-based training insights and analytics"
+    "Push notifications and smart reminders",
+    "AI-assisted athlete insights and training analytics"
   ],
 
   fullDesc:
-    "Glowi is a multi-platform product system designed for rhythmic gymnastics families, combining mobile and web experiences into a unified platform. The project focuses on real-world product logic, role-based access, and scalable architecture, simulating a production-ready environment.",
+    "Glowi is a multi-platform product system designed for rhythmic gymnastics families, combining mobile and web experiences into a unified ecosystem. The project focuses on scalable product architecture, role-based workflows, and real-world user experience patterns while simulating production-level application logic."
+,
+github: "https://github.com/rabbitrunout/Glowi_mobile",
 
   media: [
     { type: "image", src: "/projects/mobile/glowi_mobile/1.png" },
@@ -407,46 +417,60 @@ role:
     { type: "image", src: "/projects/mobile/glowi_mobile/5.png" },
     { type: "image", src: "/projects/mobile/glowi_mobile/6.png" },
     { type: "image", src: "/projects/mobile/glowi_mobile/7.png" },
+    { type: "video", src: "/projects/mobile/glowi_mobile/demo_glowi_mobile.mp4" }
   ]
 },
 
   {
   title: "FluiDex Drive",
+
   badge: "iOS App",
-  product: [
-  "Parent App — current implementation",
-  "Admin/Coach System — in progress"
-],
+
   shortDesc:
-    "Vehicle maintenance tracking app with smart reminders and structured dashboard.",
-  fullDesc:
-    "FluiDex Drive is an iOS application designed to help users manage vehicle maintenance and avoid missed services through structured tracking and smart reminders.\n\nProblem:\nMany car owners lose track of maintenance schedules, leading to overdue services, higher repair costs, and reduced vehicle lifespan.\n\nSolution:\nI built a mobile app that simplifies maintenance tracking by combining mileage-based and time-based reminder logic in a clean, easy-to-use interface.\n\nKey features:\n- Smart reminders based on both mileage and date\n- Overdue and upcoming service indicators\n- Service history with categories, notes, and costs\n- Multi-vehicle support\n- Prioritized maintenance list for urgent items\n\nWhat this project demonstrates:\n- SwiftUI state-driven UI\n- Core Data persistence and CRUD operations\n- Business logic for reminders and service tracking\n- Real-world problem solving through mobile product design",
+    "Vehicle maintenance tracking application with smart reminders, predictive workflows, and structured dashboard-based UX.",
+
   problem:
-    "Many car owners lose track of maintenance schedules, leading to overdue services, unexpected repair costs, and poor visibility of vehicle health.",
+    "Many vehicle owners lose track of maintenance schedules, leading to overdue services, unexpected repair costs, and reduced visibility into vehicle health.",
 
   built:
-    "Designed and developed a SwiftUI application with structured flows for tracking services, managing vehicles, and handling reminder logic based on mileage and time.",
+    "Designed and developed a SwiftUI vehicle maintenance system with predictive reminder workflows, structured dashboard UX, and intelligent service tracking logic.",
+
   engineering: [
-  "MVVM architecture with separation of UI and business logic",
-  "Core Data persistence for structured data storage",
-  "Mileage-based and time-based reminder logic",
-  "State-driven SwiftUI interface updates",
-  "CRUD flows for vehicles and service records",
-  "Data modeling with relationships",
-  "Scalable mobile UI architecture"
-],
+    "MVVM architecture with clear separation of UI and business logic",
+    "Core Data persistence for structured local data management",
+    "Mileage-based and time-based reminder engine",
+    "State-driven SwiftUI updates and reactive UI flows",
+    "CRUD operations for vehicles and service records",
+    "Relational data modeling for maintenance history tracking",
+    "Scalable mobile UI architecture with reusable components",
+    "Smart prioritization logic for overdue and urgent maintenance items"
+  ],
+
+  aiFeatures: [
+    "AI-assisted maintenance prediction logic",
+    "Predictive workflows based on historical vehicle service patterns",
+    "Smart reminders and urgency tracking",
+    "Exploration of intelligent maintenance scheduling systems"
+  ],
+
   impact: [
-    "Reduced friction in tracking vehicle maintenance through a clear dashboard",
-    "Designed logic for overdue and upcoming service prioritization",
-    "Implemented combined mileage + time-based reminder system",
-    "Created a structured and scalable mobile UI using MVVM architecture"
+    "Reduced friction in tracking vehicle maintenance through a structured dashboard experience",
+    "Improved service visibility with overdue and upcoming maintenance prioritization",
+    "Implemented combined mileage + time-based reminder workflows",
+    "Built scalable mobile architecture using SwiftUI and MVVM patterns"
   ],
 
   role:
     "iOS Developer · Product Design · UI/UX",
 
-  tech: "SwiftUI • Core Data • MVVM • iOS",
+  tech:
+    "SwiftUI · Core Data · MVVM · iOS",
 
+  status:
+    "Completed portfolio project with ongoing UI and feature improvements",
+
+  fullDesc:
+    "FluiDex Drive is an iOS application designed to simplify vehicle maintenance management through structured tracking, smart reminders, and predictive service workflows. The project focuses on real-world usability, scalable architecture, and modern mobile product design.",
   github: "https://github.com/rabbitrunout/FluiDex_DriveApp",
   media: [
     { type: "image", src: "/projects/mobile/FluiDex_DriveApp/2.png" },

@@ -30,8 +30,7 @@ const Banner = () => {
                   </h1>
 
                   <p className="editorial-hero__subtitle">
-                    I build clean, scalable mobile and web applications with a focus on 
-                    real-world product development, user experience, and structured architecture.
+                    Building modern mobile and web applications using AI-assisted workflows and product-focused engineering.
                   </p>
 
                   <div className="editorial-hero__meta">
@@ -61,7 +60,7 @@ const Banner = () => {
                   </div>
 
                   <p className="editorial-hero__proof">
-                    Software Developer Intern @ R-A-Ones · Real product experience · API integration
+                    Software Developer Intern @ R-A-Ones · AI-assisted workflows · Real product development
                   </p>
 
                 </div>
