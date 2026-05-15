@@ -1,87 +1,124 @@
-Hi, I'm Irina 👋  
-**Junior iOS / Mobile Developer | SwiftUI · Core Data | UI/UX | Web & Mobile**
+# 👋 Hi, I'm Irina
 
-Based in Toronto, Canada.  
-I build clean, user-friendly mobile apps with reliable data logic behind the UI.
+### Mobile & Frontend Developer
 
-🎓 **Mobile Web Developer using AI — triOS College (Completed)**  
-🧑‍💻 **Currently completing an internship (until May)** and working on real-world projects.
+SwiftUI · React · Product Engineering · AI-Assisted Workflows
+
+📍 Mississauga, ON, Canada
 
 ---
 
-## 🚀 Featured Projects
+## 🚀 About Me
 
-### 🚗 FluiDex Drive — iOS Vehicle Maintenance App (Capstone)
-**SwiftUI · Core Data**
-- Service history (categories, costs, notes)
-- Next service due logic (mileage + date) with overdue / due-soon warnings
-- Multi-vehicle support with active car selection  
+Mobile and frontend developer focused on building modern digital products with clean architecture, scalable UI systems, and real-world product thinking.
+
+Experienced in developing iOS and web applications using SwiftUI, React, Angular, PHP, and REST APIs, with growing focus on AI-assisted development workflows and intelligent product systems.
+
+I enjoy building structured user experiences that combine frontend engineering, product design, and modern development tooling.
+
+---
+
+## 💼 Experience
+
+### Software Developer Intern — R-A-Ones Corporation
+
+**Brampton, ON · Jan 2026 – Present**
+
+* Developed frontend features using React and Next.js in Agile team environments
+* Implemented CRUD API integrations and authentication workflows
+* Built reusable UI components and dashboard-based interfaces
+* Worked with real-world product flows, API validation, and error handling
+* Participated in AI-assisted development workflows, debugging, and rapid feature iteration
+
+---
+
+# ✨ Featured Projects
+
+## 📱 Glowi — Product System
+
+**SwiftUI · Angular · PHP · MySQL**
+
+Multi-platform product system for rhythmic gymnastics families focused on:
+
+* athlete management
+* events & schedules
+* payments & notifications
+* role-based workflows
+* scalable dashboard architecture
+
+### Highlights
+
+* Multi-child support
+* Payment lifecycle system
+* Dashboard-based UX
+* Role-based product logic
+* AI-enhanced workflow concepts
+
+🔗 Portfolio: https://rabbitrunout.github.io/
+
+---
+
+## 🚗 FluiDex Drive
+
+**SwiftUI · Core Data · MVVM**
+
+Vehicle maintenance tracking application with:
+
+* predictive reminder workflows
+* smart maintenance scheduling
+* dashboard-based UX
+* structured Core Data persistence
+
+### AI-Enhanced Features
+
+* AI-assisted maintenance prediction logic
+* Smart urgency tracking
+* Predictive service workflows
+* Intelligent reminder systems
+
 🔗 Repo: https://github.com/rabbitrunout/FluiDex_DriveApp
-
----
-
-### 🎧 SuperPodcast — Android Podcast App
-**Kotlin · Jetpack Compose**
-- Podcast search and browsing
-- Episode playback with a modern, clean UI  
-🔗 Repo: https://github.com/rabbitrunout/AndroidApp5
-
----
-
-### 🧩 Angular Booking System (Full-Stack)
-**Angular · PHP · MySQL**
-- Booking workflow with admin/user roles
-- CRUD operations, status tracking, calendar-based UI  
-🔗 Repo / Demo: (add link if public)
-
----
-
-### 📚 Student Directory
-**PHP · MySQL**
-- Authentication, CRUD, and search
-- Foundation for admin dashboards  
-🔗 Repo: (add link)
 
 ---
 
 ## 🧰 Tech Stack
 
-**iOS:**  
-Swift · SwiftUI · Core Data  
+### Mobile
 
-**Android:**  
-Kotlin (beginner) · Jetpack Compose  
+Swift · SwiftUI · Core Data · MVVM · Kotlin · Jetpack Compose
 
-**Web:**  
-React · Angular · TypeScript · HTML · CSS · SASS  
+### Frontend
 
-**Backend:**  
-PHP · MySQL · REST APIs  
+React · Next.js · Angular · TypeScript · HTML · CSS · SASS
 
-**Tools:**  
-Git & GitHub · GitHub Actions (CI/CD) · Xcode · Android Studio · Postman
+### Backend
 
----
+PHP · MySQL · REST APIs
 
-## 🎨 UI/UX
-Figma prototypes focused on layout, hierarchy, and responsive design systems.
+### Tools & Workflow
+
+Git · GitHub · Postman · Xcode · Android Studio · AI-assisted development workflows
 
 ---
 
-## 🌱 Currently Learning
-Advanced SwiftUI animations  
-REST API integration  
-Firebase  
-TypeScript best practices  
-Mobile + web UI consistency
+## 🧠 AI & Modern Development
+
+Interested in:
+
+* AI-assisted engineering workflows
+* intelligent product systems
+* automation-enhanced user experiences
+* AI-supported prototyping and debugging
+* modern product-focused development workflows
 
 ---
 
 ## 📫 Contact
-📍 Toronto, Canada  
-📧 irina.safronova0801@gmail.com  
-🔗 Portfolio: https://rabbitrunout.github.io/  
-🔗 LinkedIn: https://www.linkedin.com/in/irina-safronova-688130243/  
-🔗 GitHub: https://github.com/rabbitrunout  
 
-⭐ Fun fact: I design rhythmic gymnastics leotards and accessories — combining creativity with code!
+📧 [irina.safronova0801@gmail.com](mailto:irina.safronova0801@gmail.com)
+🔗 Portfolio: https://rabbitrunout.github.io/
+🔗 LinkedIn: https://www.linkedin.com/in/irina-safronova-688130243/
+🔗 GitHub: https://github.com/rabbitrunout
+
+---
+
+⭐ Outside development, I also design rhythmic gymnastics leotards and accessories — combining creativity, visual design, and technical precision.
