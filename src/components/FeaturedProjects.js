@@ -98,6 +98,42 @@ const FeaturedProjects = () => {
                     </div>
                   )}
 
+                  {Array.isArray(project.engineering) && (
+                    <div className="featured-detail">
+                      <span>Engineering Highlights</span>
+
+                      <ul className="featured-engineering-list">
+                        {project.engineering.slice(0, 5).map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {Array.isArray(project.aiFeatures) && (
+                    <div className="featured-detail">
+                      <span>AI-Assisted Features</span>
+
+                      <ul className="featured-engineering-list">
+                        {project.aiFeatures.slice(0, 4).map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {Array.isArray(project.future) && (
+                    <div className="featured-detail">
+                      <span>Future Expansion</span>
+
+                      <ul className="featured-engineering-list">
+                        {project.future.slice(0, 4).map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
                   {Array.isArray(project.impact) && (
                     <div className="featured-impact-box">
                       <p className="impact-title">Key Impact</p>
@@ -120,7 +156,7 @@ const FeaturedProjects = () => {
                       className="featured-project-btn"
                       onClick={() => setSelectedProject(project)}
                     >
-                      View Project
+                      View Case Study
                     </button>
 
                     {project.github && (

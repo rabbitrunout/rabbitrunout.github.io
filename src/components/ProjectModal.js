@@ -11,6 +11,7 @@ const ProjectModal = ({ project, onClose }) => {
   useEffect(() => {
     setActiveMediaIndex(0);
     setIsGalleryOpen(false);
+
     const t = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(t);
   }, [project]);
@@ -23,6 +24,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   const goPrevMedia = useCallback(() => {
     if (!mediaItems.length) return;
+
     setActiveMediaIndex((prev) =>
       prev === 0 ? mediaItems.length - 1 : prev - 1
     );
@@ -30,6 +32,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   const goNextMedia = useCallback(() => {
     if (!mediaItems.length) return;
+
     setActiveMediaIndex((prev) =>
       prev === mediaItems.length - 1 ? 0 : prev + 1
     );
@@ -128,6 +131,10 @@ const ProjectModal = ({ project, onClose }) => {
             <p className="section-label">Case Study</p>
             <h3>{project.title}</h3>
 
+            {project.status && (
+              <p className="project-modal__status">{project.status}</p>
+            )}
+
             <p className="project-modal__lead">{project.shortDesc}</p>
 
             {project.problem && (
@@ -144,9 +151,9 @@ const ProjectModal = ({ project, onClose }) => {
               </div>
             )}
 
-            {project.engineering && (
+            {Array.isArray(project.engineering) && (
               <div className="project-block">
-                <h4>Engineering</h4>
+                <h4>Engineering Highlights</h4>
                 <ul>
                   {project.engineering.map((item, i) => (
                     <li key={i}>{item}</li>
@@ -155,18 +162,36 @@ const ProjectModal = ({ project, onClose }) => {
               </div>
             )}
 
-            {project.impact && (
+            {Array.isArray(project.aiFeatures) && (
               <div className="project-block">
-                <h4>Impact</h4>
-                {Array.isArray(project.impact) ? (
-                  <ul>
-                    {project.impact.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p>{project.impact}</p>
-                )}
+                <h4>AI-Assisted Features</h4>
+                <ul>
+                  {project.aiFeatures.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {Array.isArray(project.impact) && (
+              <div className="project-block">
+                <h4>Key Impact</h4>
+                <ul>
+                  {project.impact.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {Array.isArray(project.future) && (
+              <div className="project-block">
+                <h4>Future Expansion</h4>
+                <ul>
+                  {project.future.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </div>
             )}
 

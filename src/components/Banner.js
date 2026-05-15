@@ -30,15 +30,17 @@ const Banner = () => {
                   </h1>
 
                   <p className="editorial-hero__subtitle">
-                    Building modern mobile and web applications using AI-assisted workflows and product-focused engineering.
-                  </p>
+  I build production-focused mobile and web applications with scalable UI architecture,
+  real-world product thinking, and AI-assisted development workflows.
+</p>
 
-                  <div className="editorial-hero__meta">
-                    <span>SwiftUI</span>
-                    <span>React / Next.js</span>
-                    <span>REST APIs</span>
-                    <span>UI / UX</span>
-                  </div>
+<div className="editorial-hero__meta">
+  <span>SwiftUI</span>
+  <span>React / Next.js</span>
+  <span>TypeScript</span>
+  <span>REST APIs</span>
+  <span>AI-assisted workflows</span>
+</div>
 
                   <div className="editorial-hero__actions">
                     <button
@@ -60,8 +62,8 @@ const Banner = () => {
                   </div>
 
                   <p className="editorial-hero__proof">
-                    Software Developer Intern @ R-A-Ones · AI-assisted workflows · Real product development
-                  </p>
+  Software Developer Intern @ R-A-Ones · Frontend + iOS · AI-assisted engineering workflows
+</p>
 
                 </div>
               )}

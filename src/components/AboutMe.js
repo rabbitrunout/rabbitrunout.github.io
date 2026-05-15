@@ -28,8 +28,8 @@ const AboutMe = () => {
           </p>
 
           <p className="editorial-about__highlight">
-             Building real products · Internship experience · API-driven development
-          </p>
+  Building real products · API-driven development · AI-assisted workflows
+</p>
         </div>
 
         {/* RIGHT */}

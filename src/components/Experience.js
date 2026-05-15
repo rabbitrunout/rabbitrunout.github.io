@@ -7,7 +7,7 @@ const Experience = () => {
         <p className="section-label">Experience</p>
         <h2>Building real product features through hands-on development.</h2>
         <p className="experience-note">
-          Real-world product development in a production environment
+          Production-focused frontend development within real-world Agile workflows
         </p>
       </div>
 
@@ -29,27 +29,38 @@ const Experience = () => {
         <div className="editorial-experience__right">
           <ul className="experience-list">
             <li>
-              Developed and shipped 5+ production-ready frontend features using React, Next.js, TypeScript, and REST APIs.
+              Developed and shipped 5+ production-ready frontend features using
+              React, Next.js, TypeScript, and REST APIs.
             </li>
             <li>
-              Built 10+ reusable UI components, improving development consistency and scalability.
+              Built 10+ reusable UI components, improving development consistency
+              and scalability.
             </li>
             <li>
-              Integrated APIs with authentication, validation, and error-handling workflows.
+              Integrated REST APIs with authentication, validation, loading, and
+              error-handling workflows.
             </li>
             <li>
-              Improved booking workflows by optimizing user flows and reducing manual steps by ~20%.
+              Improved booking workflows by optimizing user flows and reducing
+              manual steps by ~20%.
             </li>
             <li>
-              Reduced UI bugs by ~30% through debugging, testing, and edge-case handling.
+              Reduced UI bugs by ~30% through debugging, testing, and edge-case
+              handling.
             </li>
             <li>
-              Collaborated in an Agile team using Git workflows, pull requests, and structured releases.
+              Collaborated in an Agile team using Git workflows, pull requests,
+              and structured releases.
+            </li>
+            <li>
+              Applied AI-assisted workflows for rapid prototyping, debugging,
+              feature planning, and development productivity.
             </li>
           </ul>
 
           <p className="experience-architecture">
-            Built with React, Next.js, TypeScript · API-driven architecture · production workflows
+            Built with React, Next.js, TypeScript · API-driven architecture ·
+            scalable UI systems · production workflows
           </p>
 
           <div className="experience-impact">
@@ -74,9 +85,11 @@ const Experience = () => {
             <span>Next.js</span>
             <span>TypeScript</span>
             <span>REST APIs</span>
+            <span>Authentication</span>
             <span>Git Workflow</span>
             <span>Agile</span>
             <span>UI States</span>
+            <span>AI Workflows</span>
           </div>
         </div>
       </div>

@@ -9,16 +9,21 @@ const AISection = () => {
         <h2>
           Modern development workflows powered by AI-assisted engineering.
         </h2>
+
+        <p>
+          I use AI-assisted workflows to accelerate prototyping, debug frontend
+          and API issues, improve feature planning, and iterate faster on
+          production-style applications.
+        </p>
       </div>
 
       <div className="editorial-ai__grid">
-
         <div className="editorial-ai__card">
           <span>AI-Assisted Workflows</span>
 
           <p>
-            Using GPT/Claude-based workflows for rapid prototyping,
-            debugging, architecture exploration, and development productivity.
+            Applied GPT/Claude-based workflows for rapid prototyping,
+            debugging, architecture exploration, and productivity optimization.
           </p>
         </div>
 
@@ -26,8 +31,8 @@ const AISection = () => {
           <span>Product-Focused Development</span>
 
           <p>
-            Combining frontend engineering, product thinking, and AI-assisted
-            iteration to improve user experience and feature development.
+            Used AI-assisted iteration to explore user flows, improve feature
+            planning, and identify edge cases before implementation.
           </p>
         </div>
 
@@ -35,11 +40,10 @@ const AISection = () => {
           <span>Automation & Intelligent Systems</span>
 
           <p>
-            Exploring AI-enhanced product systems, predictive logic,
-            workflow optimization, and smart user interactions.
+            Explored AI-enhanced product systems, workflow automation,
+            predictive logic, and smarter user interactions.
           </p>
         </div>
-
       </div>
 
       <div className="editorial-ai__footer">
