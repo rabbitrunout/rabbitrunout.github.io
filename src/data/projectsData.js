@@ -358,6 +358,11 @@ role:
     "iOS (SwiftUI) — parent-facing mobile experience",
     "Web (Angular + PHP + MySQL) — dashboard and management workflows"
   ],
+  challenges: [
+  "Designing scalable role-based workflows",
+  "Managing reusable dashboard UI systems",
+  "Handling complex responsive layouts",
+  "Structuring maintainable multi-platform architecture"],
 
   engineering: [
     "MVVM architecture with separation of UI, business logic, and data layers",
@@ -434,6 +439,13 @@ github: "https://github.com/rabbitrunout/Glowi_mobile",
 
   built:
     "Designed and developed a SwiftUI vehicle maintenance system with predictive reminder workflows, structured dashboard UX, and intelligent service tracking logic.",
+
+    challenges: [
+  "Designing scalable MVVM architecture",
+  "Managing Core Data persistence flows",
+  "Building smart reminder workflows",
+  "Handling multi-screen state-driven UI"
+],
 
   engineering: [
     "MVVM architecture with clear separation of UI and business logic",

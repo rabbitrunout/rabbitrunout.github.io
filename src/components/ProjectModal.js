@@ -152,15 +152,40 @@ const ProjectModal = ({ project, onClose }) => {
             )}
 
             {Array.isArray(project.engineering) && (
-              <div className="project-block">
-                <h4>Engineering Highlights</h4>
-                <ul>
-                  {project.engineering.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+  <div className="project-block">
+    <h4>Engineering Highlights</h4>
+
+    <ul>
+      {project.engineering.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{project.challenges && (
+  <div className="project-block">
+    <h4>Technical Challenges</h4>
+
+    <ul>
+      {project.challenges.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{Array.isArray(project.aiFeatures) && (
+  <div className="project-block">
+    <h4>AI-Assisted Features</h4>
+
+    <ul>
+      {project.aiFeatures.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+)}
 
             {Array.isArray(project.aiFeatures) && (
               <div className="project-block">
@@ -206,7 +231,11 @@ const ProjectModal = ({ project, onClose }) => {
               {project.tech && (
                 <div>
                   <span>Tech Stack</span>
-                  <p>{project.tech}</p>
+                  <div className="project-tech-tags">
+  {project.tech.split("•").map((item, i) => (
+    <span key={i}>{item.trim()}</span>
+  ))}
+</div>
                 </div>
               )}
 

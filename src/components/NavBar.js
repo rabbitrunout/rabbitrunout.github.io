@@ -66,14 +66,14 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
 
-              <Nav.Link
-                onClick={() => scrollToSection("about", "about")}
-                className={`editorial-navbar__link ${
-                  activeLink === "about" ? "active" : ""
-                }`}
-              >
-                About
-              </Nav.Link>
+             <Nav.Link
+  onClick={() => scrollToSection("experience", "experience")}
+  className={`editorial-navbar__link ${
+    activeLink === "experience" ? "active" : ""
+  }`}
+>
+  Experience
+</Nav.Link>
 
               <Nav.Link
                 onClick={() => scrollToSection("featured", "featured")}
@@ -81,7 +81,7 @@ export const NavBar = () => {
                   activeLink === "featured" ? "active" : ""
                 }`}
               >
-                Selected Work
+               Projects
               </Nav.Link>
 
               <Nav.Link
@@ -150,7 +150,7 @@ export const NavBar = () => {
                   onClick={() => scrollToSection("connect", "connect")}
                   className="editorial-navbar__btn editorial-navbar__btn--primary"
                 >
-                  <span>Let&apos;s Connect</span>
+                  <span>Contact</span>
                 </button>
               </div>
             </div>

@@ -103,31 +103,7 @@ const FeaturedProjects = () => {
                       <span>Engineering Highlights</span>
 
                       <ul className="featured-engineering-list">
-                        {project.engineering.slice(0, 5).map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {Array.isArray(project.aiFeatures) && (
-                    <div className="featured-detail">
-                      <span>AI-Assisted Features</span>
-
-                      <ul className="featured-engineering-list">
-                        {project.aiFeatures.slice(0, 4).map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {Array.isArray(project.future) && (
-                    <div className="featured-detail">
-                      <span>Future Expansion</span>
-
-                      <ul className="featured-engineering-list">
-                        {project.future.slice(0, 4).map((item, i) => (
+                        {project.engineering.slice(0, 3).map((item, i) => (
                           <li key={i}>{item}</li>
                         ))}
                       </ul>
@@ -138,7 +114,7 @@ const FeaturedProjects = () => {
                     <div className="featured-impact-box">
                       <p className="impact-title">Key Impact</p>
                       <ul>
-                        {project.impact.slice(0, 3).map((item, i) => (
+                        {project.impact.slice(0, 2).map((item, i) => (
                           <li key={i}>{item}</li>
                         ))}
                       </ul>
@@ -147,7 +123,11 @@ const FeaturedProjects = () => {
 
                   <div className="featured-detail">
                     <span>Stack</span>
-                    <p>{project.tech}</p>
+                    <div className="project-tech-tags">
+  {project.tech.split("•").map((item, i) => (
+    <span key={i}>{item.trim()}</span>
+  ))}
+</div>
                   </div>
 
                   <div className="featured-editorial-card__actions">
