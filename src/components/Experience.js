@@ -6,41 +6,77 @@ const Experience = () => {
       <div className="section-heading">
         <p className="section-label">Experience</p>
         <h2>Building real product features through hands-on development.</h2>
+        <p className="experience-note">
+          Real-world product development in a production environment
+        </p>
       </div>
 
       <div className="editorial-experience__grid">
         <div className="editorial-experience__left">
-          <p className="experience-role">Software Development Intern</p>
-          <h3> R-A-Ones Corporation · PHD Parking</h3>
-          <p className="experience-period">Toronto · Internship</p>
+          <p className="experience-role">Software Developer Intern</p>
+
+          <h3>R-A-Ones Corporation</h3>
+
+          <p className="experience-product">
+            PHD Parking Platform · Admin System
+          </p>
+
+          <p className="experience-period">
+            Brampton, ON · Jan 2026 – May 2026
+          </p>
         </div>
 
         <div className="editorial-experience__right">
-          <ul>
+          <ul className="experience-list">
             <li>
-              Developed and refined admin dashboard interfaces using React and modern frontend patterns.
+              Developed and shipped 5+ production-ready frontend features using React, Next.js, TypeScript, and REST APIs.
             </li>
             <li>
-              Worked with real product requirements, contributing to booking flows and data-driven UI.
+              Built 10+ reusable UI components, improving development consistency and scalability.
             </li>
             <li>
-              Collaborated in a structured Git workflow with feature branches and pull requests.
+              Integrated APIs with authentication, validation, and error-handling workflows.
             </li>
             <li>
-              Integrated frontend with backend APIs and improved component architecture.
+              Improved booking workflows by optimizing user flows and reducing manual steps by ~20%.
             </li>
             <li>
-              Focused on usability, clean UI structure, and scalable frontend logic.
+              Reduced UI bugs by ~30% through debugging, testing, and edge-case handling.
+            </li>
+            <li>
+              Collaborated in an Agile team using Git workflows, pull requests, and structured releases.
             </li>
           </ul>
+
+          <p className="experience-architecture">
+            Built with React, Next.js, TypeScript · API-driven architecture · production workflows
+          </p>
+
+          <div className="experience-impact">
+            <div className="impact-badge">
+              <span>↓</span>
+              <p>Reduced UI bugs by ~30%</p>
+            </div>
+
+            <div className="impact-badge">
+              <span>⚡</span>
+              <p>Improved workflow efficiency by ~20%</p>
+            </div>
+
+            <div className="impact-badge">
+              <span>🚀</span>
+              <p>Shipped 5+ production features</p>
+            </div>
+          </div>
 
           <div className="editorial-tags">
             <span>React</span>
             <span>Next.js</span>
-            <span>JavaScript</span>
-            <span>API Integration</span>
+            <span>TypeScript</span>
+            <span>REST APIs</span>
             <span>Git Workflow</span>
-            <span>UI/UX</span>
+            <span>Agile</span>
+            <span>UI States</span>
           </div>
         </div>
       </div>

@@ -3,21 +3,22 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 const ProjectModal = ({ project, onClose }) => {
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   const mediaItems = useMemo(() => project?.media || [], [project]);
   const activeMedia = mediaItems[activeMediaIndex];
 
   useEffect(() => {
     setActiveMediaIndex(0);
+    setIsGalleryOpen(false);
     const t = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(t);
   }, [project]);
 
   const handleClose = useCallback(() => {
     setIsVisible(false);
-    setTimeout(() => {
-      onClose?.();
-    }, 180);
+    setIsGalleryOpen(false);
+    setTimeout(() => onClose?.(), 180);
   }, [onClose]);
 
   const goPrevMedia = useCallback(() => {
@@ -38,14 +39,21 @@ const ProjectModal = ({ project, onClose }) => {
     if (!project) return;
 
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") handleClose();
+      if (e.key === "Escape") {
+        if (isGalleryOpen) {
+          setIsGalleryOpen(false);
+        } else {
+          handleClose();
+        }
+      }
+
       if (e.key === "ArrowLeft") goPrevMedia();
       if (e.key === "ArrowRight") goNextMedia();
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [project, handleClose, goPrevMedia, goNextMedia]);
+  }, [project, handleClose, goPrevMedia, goNextMedia, isGalleryOpen]);
 
   if (!project) return null;
 
@@ -73,8 +81,9 @@ const ProjectModal = ({ project, onClose }) => {
               {activeMedia?.type === "image" && (
                 <img
                   src={activeMedia.src}
-                  alt={`${project.title} preview ${activeMediaIndex + 1}`}
+                  alt={`${project.title} preview`}
                   className="project-modal__main-image"
+                  onClick={() => setIsGalleryOpen(true)}
                 />
               )}
 
@@ -106,52 +115,72 @@ const ProjectModal = ({ project, onClose }) => {
                   >
                     ›
                   </button>
+
+                  <div className="project-modal__counter">
+                    {activeMediaIndex + 1} / {mediaItems.length}
+                  </div>
                 </>
               )}
-
-              {mediaItems.length > 0 && (
-                <div className="project-modal__counter">
-                  {activeMediaIndex + 1} / {mediaItems.length}
-                </div>
-              )}
             </div>
-
-            {mediaItems.length > 1 && (
-              <div className="project-modal__thumbs">
-                {mediaItems.map((item, index) => (
-                  <button
-                    type="button"
-                    key={`${item.src}-${index}`}
-                    className={`project-modal__thumb ${
-                      activeMediaIndex === index ? "is-active" : ""
-                    }`}
-                    onClick={() => setActiveMediaIndex(index)}
-                    aria-label={`Open media ${index + 1}`}
-                  >
-                    {item.type === "image" ? (
-                      <img src={item.src} alt="" />
-                    ) : (
-                      <div className="project-modal__video-thumb">
-                        <video src={item.src} muted playsInline />
-                        <span>Video</span>
-                      </div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           <div className="project-modal__content">
-            <p className="section-label">Project</p>
+            <p className="section-label">Case Study</p>
             <h3>{project.title}</h3>
+
             <p className="project-modal__lead">{project.shortDesc}</p>
-            <p className="project-modal__text">{project.fullDesc}</p>
+
+            {project.problem && (
+              <div className="project-block">
+                <h4>Problem</h4>
+                <p>{project.problem}</p>
+              </div>
+            )}
+
+            {project.built && (
+              <div className="project-block">
+                <h4>What I Built</h4>
+                <p>{project.built}</p>
+              </div>
+            )}
+
+            {project.engineering && (
+              <div className="project-block">
+                <h4>Engineering</h4>
+                <ul>
+                  {project.engineering.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {project.impact && (
+              <div className="project-block">
+                <h4>Impact</h4>
+                {Array.isArray(project.impact) ? (
+                  <ul>
+                    {project.impact.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{project.impact}</p>
+                )}
+              </div>
+            )}
 
             <div className="project-modal__meta">
+              {project.role && (
+                <div>
+                  <span>Role</span>
+                  <p>{project.role}</p>
+                </div>
+              )}
+
               {project.tech && (
                 <div>
-                  <span>Tech</span>
+                  <span>Tech Stack</span>
                   <p>{project.tech}</p>
                 </div>
               )}
@@ -160,14 +189,14 @@ const ProjectModal = ({ project, onClose }) => {
                 <div>
                   <span>GitHub</span>
                   <a href={project.github} target="_blank" rel="noreferrer">
-                    Open Repository
+                    View Repository
                   </a>
                 </div>
               )}
 
               {project.link && (
                 <div>
-                  <span>Live Link</span>
+                  <span>Live Demo</span>
                   <a href={project.link} target="_blank" rel="noreferrer">
                     Open Project
                   </a>
@@ -177,6 +206,61 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
         </div>
       </div>
+
+      {isGalleryOpen && activeMedia?.type === "image" && (
+        <div
+          className="iphone-gallery-overlay"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsGalleryOpen(false);
+          }}
+        >
+          <button
+            type="button"
+            className="iphone-gallery-close"
+            onClick={() => setIsGalleryOpen(false)}
+          >
+            ×
+          </button>
+
+          {mediaItems.length > 1 && (
+            <button
+              type="button"
+              className="iphone-gallery-nav iphone-gallery-nav--prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                goPrevMedia();
+              }}
+            >
+              ‹
+            </button>
+          )}
+
+          <img
+            src={activeMedia.src}
+            alt={`${project.title} fullscreen preview`}
+            className="iphone-gallery-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {mediaItems.length > 1 && (
+            <button
+              type="button"
+              className="iphone-gallery-nav iphone-gallery-nav--next"
+              onClick={(e) => {
+                e.stopPropagation();
+                goNextMedia();
+              }}
+            >
+              ›
+            </button>
+          )}
+
+          <div className="iphone-gallery-counter">
+            {activeMediaIndex + 1} / {mediaItems.length}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

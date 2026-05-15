@@ -189,8 +189,20 @@ export const projectsByCategory = {
     "Parents often manage schedules, payments, and event information across disconnected tools, which creates friction and confusion in everyday use.",
   built:
     "Designed and developed a dashboard-style web experience with scheduling flows, payments overview, calendar structure, and parent-focused navigation.",
-  impact:
-    "Designed a structured dashboard experience that simplifies scheduling, payments, and event management for parents.",
+  engineering: [
+  "Dashboard-style information architecture",
+  "Role-based user flows for parent interaction",
+  "PHP + MySQL backend data structure",
+  "CRUD operations for schedules, payments, and events",
+  "Authentication flows (login / registration)",
+  "UI states: loading, empty, and content states",
+  "Reusable dashboard components and layout system"
+],
+  impact: [
+  "Improved clarity of scheduling and payments through dashboard structure",
+  "Reduced user friction by consolidating multiple flows into one interface",
+  "Designed reusable UI patterns for scalable product features"
+],
   role:
     "Frontend Developer · UI Structure · Product Thinking",
   tech: "PHP • MySQL • JavaScript • Bootstrap",
@@ -223,9 +235,21 @@ export const projectsByCategory = {
 
 built:
   "Built a React-based reservation interface with role-based access, CRUD flows, and API-connected dynamic views.",
+engineering: [
+  "React component-based architecture",
+  "Role-based access control for users and admins",
+  "REST API integration with dynamic data rendering",
+  "CRUD operations connected to backend",
+  "Modal-based UI for detailed views",
+  "State management for user flows",
+  "MySQL-backed data structure"
+],  
 
-impact:
-  "Built a scalable booking interface with role-based flows and dynamic UI connected to a backend system.",
+impact: [
+  "Implemented role-based UI logic for user and admin workflows",
+  "Built dynamic UI connected to backend data",
+  "Improved usability through structured booking flows"
+],
 
 role:
   "Frontend Developer · React · API Integration",
@@ -251,6 +275,16 @@ role:
   fullDesc:
     "Students Directory System is a PHP/MySQL web application for managing student records, attendance, and admin-facing data in a structured interface.\n\nKey features:\n- Add, edit, delete, and view students\n- Individual student profiles with extra details\n- Attendance tracking with logs and status updates\n- Session-based authentication\n- Summary statistics for student records\n\nWhat this project demonstrates:\n- PHP and MySQL integration\n- CRUD operations with relational data\n- Session-based authentication flows\n- Building practical database-driven interfaces",
   tech: "PHP • MySQL • HTML • CSS",
+  problem:
+  "Managing student data manually or across multiple tools leads to inconsistencies and inefficient workflows.",
+  engineering: [
+  "CRUD operations with relational database (MySQL)",
+  "Session-based authentication",
+  "Server-side rendering with PHP",
+  "Form handling and validation",
+  "Data relationships between entities",
+  "Admin workflow interface"
+],
   github: "https://github.com/rabbitrunout/PHPAssignment1",
   media: [
     { type: "image", src: "/projects/WebApp/student/1.png" },
@@ -274,9 +308,20 @@ role:
 
 built:
   "Developed an Angular + PHP + MySQL booking platform with authentication, reservation management, and structured admin/user flows.",
-
-impact:
-  "Developed a full-stack booking system with authentication, CRUD operations, and structured user flows.",
+engineering: [
+  "Angular component-based architecture",
+  "REST API communication with PHP backend",
+  "Authentication and validation flows",
+  "CRUD operations for reservation management",
+  "Relational database structure (MySQL)",
+  "Form handling and UI state management",
+  "Responsive UI across devices"
+],
+impact: [
+  "Built full-stack booking flows with authentication and CRUD operations",
+  "Connected frontend, backend, and database into a working system",
+  "Designed structured user and admin interaction flows"
+],
 
 role:
   "Full-Stack Developer · Angular · PHP · MySQL",
@@ -296,8 +341,82 @@ role:
 "Mobile Apps": [
 
   {
+  title: "Glowi — Product System",
+
+  badge: "iOS · Web · Product System",
+
+  shortDesc:
+    "Multi-platform product system for managing gymnastics training, events, and payments with real-world role-based logic and scalable architecture.",
+
+  problem:
+    "Parents of rhythmic gymnasts often manage training schedules, competitions, and payments across fragmented tools, leading to missed deadlines, poor visibility, and inefficient coordination.",
+
+  built:
+    "Designed and developed a multi-platform product system that centralizes event management, payments, and athlete tracking into a structured dashboard experience across mobile and web.",
+
+  platforms: [
+    "iOS (SwiftUI) — parent-facing mobile experience",
+    "Web (Angular + PHP + MySQL) — dashboard and management workflows"
+  ],
+
+  engineering: [
+    "MVVM architecture with separation of UI, business logic, and data layers",
+    "State-driven UI using SwiftUI and ObservableObject (Combine)",
+    "Role-based UX logic (parent vs coach/admin responsibilities)",
+    "Multi-entity data modeling (children, events, payments)",
+    "Payment lifecycle system (Paid / Pending / Overdue / Due Soon)",
+    "Platform-specific UI design (mobile vs dashboard experience)",
+    "Reusable UI component system (cards, badges, layout blocks)",
+    "Dynamic UI states: loading, empty, active, and error handling",
+    "Local persistence using structured JSON mock data",
+    "REST-ready architecture for backend integration"
+  ],
+
+  impact: [
+    "Centralized fragmented workflows into a single product experience",
+    "Improved visibility of schedules, payments, and events",
+    "Simulated production-level architecture and real-world product logic",
+    "Established scalable foundation for backend and SaaS expansion"
+  ],
+
+  role: "iOS Developer · Frontend Developer · Product Design · UI/UX",
+
+  tech:
+    "SwiftUI · MVVM · Combine · Angular · PHP · MySQL · REST APIs · JSON",
+
+  status:
+    "In active development — expanding into multi-role system with admin and coach functionality",
+
+  future: [
+    "Admin/Coach dashboard for managing athletes and assigning levels",
+    "Backend integration with authentication and role-based access",
+    "Real-time data synchronization between mobile and web",
+    "Stripe payment integration",
+    "Push notifications and reminders",
+    "AI-based training insights and analytics"
+  ],
+
+  fullDesc:
+    "Glowi is a multi-platform product system designed for rhythmic gymnastics families, combining mobile and web experiences into a unified platform. The project focuses on real-world product logic, role-based access, and scalable architecture, simulating a production-ready environment.",
+
+  media: [
+    { type: "image", src: "/projects/mobile/glowi_mobile/1.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/2.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/3.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/4.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/5.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/6.png" },
+    { type: "image", src: "/projects/mobile/glowi_mobile/7.png" },
+  ]
+},
+
+  {
   title: "FluiDex Drive",
   badge: "iOS App",
+  product: [
+  "Parent App — current implementation",
+  "Admin/Coach System — in progress"
+],
   shortDesc:
     "Vehicle maintenance tracking app with smart reminders and structured dashboard.",
   fullDesc:
@@ -307,7 +426,15 @@ role:
 
   built:
     "Designed and developed a SwiftUI application with structured flows for tracking services, managing vehicles, and handling reminder logic based on mileage and time.",
-
+  engineering: [
+  "MVVM architecture with separation of UI and business logic",
+  "Core Data persistence for structured data storage",
+  "Mileage-based and time-based reminder logic",
+  "State-driven SwiftUI interface updates",
+  "CRUD flows for vehicles and service records",
+  "Data modeling with relationships",
+  "Scalable mobile UI architecture"
+],
   impact: [
     "Reduced friction in tracking vehicle maintenance through a clear dashboard",
     "Designed logic for overdue and upcoming service prioritization",

@@ -1,59 +1,26 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRightCircle } from "react-bootstrap-icons";
+import { ArrowUpRightCircle, Github } from "react-bootstrap-icons";
 import { projectsByCategory } from "../data/projectsData";
-import { ProjectModal } from "./ProjectModal";
+import ProjectModal from "./ProjectModal";
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
 
-  const featuredProjects = [
-    ...(projectsByCategory["Mobile Apps"] || []).slice(0, 1),
-    ...(projectsByCategory["Web Apps"] || []).slice(0, 1),
-    ...(projectsByCategory["UI/UX & Design"] || []).slice(0, 1),
-  ];
+  const featuredProjects = useMemo(() => {
+    const mobileApps = projectsByCategory["Mobile Apps"] || [];
+    const webApps = projectsByCategory["Web Apps"] || [];
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setSelectedMediaIndex(0);
-  };
+    const glowi =
+      mobileApps.find((project) => project.title.includes("Glowi")) ||
+      webApps.find((project) => project.title.includes("Glowi"));
 
-  const closeModal = () => {
-    setSelectedProject(null);
-    setSelectedMediaIndex(0);
-  };
-
-  const nextMedia = useCallback(() => {
-    if (!selectedProject || !selectedProject.media?.length) return;
-
-    setSelectedMediaIndex(
-      (prev) => (prev + 1) % selectedProject.media.length
+    const fluidex = mobileApps.find(
+      (project) => project.title === "FluiDex Drive"
     );
-  }, [selectedProject]);
 
-  const prevMedia = useCallback(() => {
-    if (!selectedProject || !selectedProject.media?.length) return;
-
-    setSelectedMediaIndex(
-      (prev) =>
-        (prev - 1 + selectedProject.media.length) %
-        selectedProject.media.length
-    );
-  }, [selectedProject]);
-
-  useEffect(() => {
-    if (!selectedProject) return;
-
-    const onKey = (e) => {
-      if (e.key === "ArrowRight") nextMedia();
-      if (e.key === "ArrowLeft") prevMedia();
-      if (e.key === "Escape") closeModal();
-    };
-
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [selectedProject, nextMedia, prevMedia]);
+    return [glowi, fluidex].filter(Boolean);
+  }, []);
 
   return (
     <section className="projects premium-projects" id="projects">
@@ -68,72 +35,94 @@ export const Projects = () => {
           <span className="section-badge">Selected Work</span>
           <h2>Featured Projects</h2>
           <p>
-            Selected projects demonstrating real-world development, clean
-            architecture, API integration, and user-focused design.
+            Selected projects demonstrating product thinking, mobile
+            architecture, API integration, and real-world engineering workflows.
           </p>
         </motion.div>
 
         <div className="projects-container premium-projects-container">
-          {featuredProjects.length === 0 ? (
-            <p className="no-projects">No featured projects yet.</p>
-          ) : (
-            <div className="projects-grid">
-              {featuredProjects.map((proj, index) => (
-                <motion.article
-                  key={`${proj.title}-${index}`}
-                  className={`project-card premium-project-card ${
-                    index === 0 ? "project-card--featured" : ""
-                  }`}
-                  onClick={() => openModal(proj)}
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="project-media-wrap">
-                    {proj.media?.[0]?.type === "image" ? (
-                      <img
-                        src={proj.media[0].src}
-                        alt={proj.title}
-                        className="project-img"
-                      />
-                    ) : (
-                      <div className="project-img placeholder">
-                        Preview unavailable
-                      </div>
-                    )}
+          <div className="projects-grid">
+            {featuredProjects.map((proj, index) => (
+              <motion.article
+                key={`${proj.title}-${index}`}
+                className={`project-card premium-project-card ${
+                  index === 0 ? "project-card--featured" : ""
+                }`}
+                onClick={() => setSelectedProject(proj)}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="project-media-wrap">
+                  {proj.media?.[0]?.type === "image" ? (
+                    <img
+                      src={proj.media[0].src}
+                      alt={proj.title}
+                      className="project-img"
+                    />
+                  ) : (
+                    <div className="project-img placeholder">
+                      Preview unavailable
+                    </div>
+                  )}
 
-                    {proj.badge && (
-                      <span className="project-badge">{proj.badge}</span>
-                    )}
-                  </div>
+                  {proj.badge && (
+                    <span className="project-badge">{proj.badge}</span>
+                  )}
+                </div>
 
-                  <div className="project-info">
-                    <div className="project-header-row">
+                <div className="project-info">
+                  <div className="project-header-row">
+                    <div>
+                      {proj.role && <p className="project-role">{proj.role}</p>}
                       <h3>{proj.title}</h3>
-                      <span className="project-open-icon">
-                        <ArrowUpRightCircle size={17} />
-                      </span>
                     </div>
 
-                    <p className="short-desc">{proj.shortDesc}</p>
-
-                    <span className="project-tech">{proj.tech}</span>
+                    <span className="project-open-icon">
+                      <ArrowUpRightCircle size={17} />
+                    </span>
                   </div>
-                </motion.article>
-              ))}
-            </div>
-          )}
+
+                  <p className="short-desc">{proj.shortDesc}</p>
+
+                  {proj.engineering && (
+                    <ul className="project-engineering-preview">
+                      {proj.engineering.slice(0, 3).map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="project-card-footer">
+                    <span className="project-tech">{proj.tech}</span>
+
+                    {proj.github && (
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-github-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github size={16} />
+                        GitHub
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </div>
 
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
-          selectedMediaIndex={selectedMediaIndex}
-          onClose={closeModal}
-          nextMedia={nextMedia}
-          prevMedia={prevMedia}
+          onClose={() => setSelectedProject(null)}
         />
       )}
     </section>
   );
 };
+
+export default Projects;

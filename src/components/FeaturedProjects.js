@@ -3,27 +3,51 @@ import { projectsByCategory } from "../data/projectsData";
 import ProjectModal from "./ProjectModal";
 
 const FeaturedProjects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const featuredProjects = useMemo(() => {
     const mobileApps = projectsByCategory["Mobile Apps"] || [];
-    const webApps = projectsByCategory["Web Apps"] || [];
 
-    const fluidex =
-      mobileApps.find((project) => project.title === "FluiDex Drive") ||
-      mobileApps.find((project) => project.title === "FluiX Drive");
+    const glowi = mobileApps.find((project) =>
+      project.title.includes("Glowi")
+    );
 
-    const glowi = webApps.find((project) => project.title === "Glowi");
+    const fluidex = mobileApps.find(
+      (project) => project.title === "FluiDex Drive"
+    );
 
-    return [fluidex, glowi].filter(Boolean);
+    return [glowi, fluidex].filter(Boolean);
   }, []);
 
-  const [selectedProject, setSelectedProject] = useState(null);
+  const handleTilt = (e) => {
+    const frame = e.currentTarget.querySelector(".iphone-frame");
+    if (!frame) return;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = (x / rect.width - 0.5) * 10;
+    const rotateX = (y / rect.height - 0.5) * -10;
+
+    frame.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+  };
+
+  const resetTilt = (e) => {
+    const frame = e.currentTarget.querySelector(".iphone-frame");
+    if (!frame) return;
+
+    frame.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
+  };
 
   return (
     <>
       <section className="editorial-section editorial-featured" id="featured">
         <div className="section-heading">
           <p className="section-label">Selected Work</p>
-          <h2>Projects shaped by product thinking and real development work.</h2>
+          <h2>
+            Projects shaped by product thinking and real development work.
+          </h2>
         </div>
 
         <div className="featured-editorial-grid">
@@ -44,8 +68,19 @@ const FeaturedProjects = () => {
                     {String(index + 1).padStart(2, "0")}
                   </p>
 
+                  {index === 0 && (
+                    <span className="featured-badge">Main Project</span>
+                  )}
+
                   <h3>{project.title}</h3>
-                  <p className="featured-role">{project.role}</p>
+
+                  {project.status && (
+                    <p className="featured-status">{project.status}</p>
+                  )}
+
+                  {project.role && (
+                    <p className="featured-role">{project.role}</p>
+                  )}
 
                   <p className="featured-lead">{project.shortDesc}</p>
 
@@ -65,14 +100,13 @@ const FeaturedProjects = () => {
 
                   {Array.isArray(project.impact) && (
                     <div className="featured-impact-box">
-  <p className="impact-title">Key Impact</p>
-
-  <ul>
-    {project.impact.map((item, i) => (
-      <li key={i}>{item}</li>
-    ))}
-  </ul>
-</div>
+                      <p className="impact-title">Key Impact</p>
+                      <ul>
+                        {project.impact.slice(0, 3).map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
 
                   <div className="featured-detail">
@@ -102,8 +136,15 @@ const FeaturedProjects = () => {
                   </div>
                 </div>
 
-                <div className="featured-editorial-card__visual">
-                  <img src={cover} alt={project.title} />
+                <div
+                  className="featured-editorial-card__visual"
+                  onMouseMove={handleTilt}
+                  onMouseLeave={resetTilt}
+                >
+                  <div className="iphone-frame">
+                    <span className="iphone-frame__island"></span>
+                    <img src={cover} alt={project.title} />
+                  </div>
                 </div>
               </article>
             );

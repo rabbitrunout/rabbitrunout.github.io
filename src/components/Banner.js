@@ -83,14 +83,14 @@ const Banner = () => {
                     />
                     <div className="editorial-hero__avatar-meta">
                       <span>Irina S</span>
-                      <strong>iOS &amp; Frontend Developer</strong>
+                      <strong>Glowi Product System</strong>
                     </div>
                   </div>
 
                   <div className="editorial-hero__project-card">
                     <img
-                      src="/projects/mobile/FluiDex_DriveApp/7.png"
-                      alt="FluiDex Drive preview"
+                      src="/projects/mobile/glowi_mobile/1.png"
+                      alt="Glowi Product System preview"
                       className="editorial-hero__project-image"
                     />
                   </div>
