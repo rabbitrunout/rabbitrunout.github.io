@@ -3341,3 +3341,39 @@ to {
   font-size: 0.78rem;
   backdrop-filter: blur(10px);
 }
+
+
+.freelance-block {
+  margin-top: 90px;
+  padding-top: 70px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.compact-list li {
+  margin-bottom: 14px;
+}
+
+.compact-tags {
+  margin-top: 24px;
+}
+
+.experience-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.experience-links a {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 92, 92, 0.25);
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.25s ease;
+}
+
+.experience-links a:hover {
+  background: rgba(255, 92, 92, 0.08);
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anna Vorobkalo — Website Redesign Case Study</title>
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      padding:60px 32px;
+      background:#0f0f10;
+      color:white;
+      font-family:Inter,Arial,sans-serif;
+    }
+
+    h1{
+      text-align:center;
+      font-size:52px;
+      margin-bottom:18px;
+      line-height:1.1;
+      font-weight:700;
+    }
+
+    .subtitle{
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 80px;
+      color:#a5a5a5;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    .compare-section{
+      max-width:1500px;
+      margin:auto auto 100px;
+    }
+
+    .compare-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:36px;
+    }
+
+    .compare-card{
+      background:#181818;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.06);
+      transition:.35s ease;
+    }
+
+    .compare-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .compare-card img{
+      width:100%;
+      display:block;
+    }
+
+    .compare-content{
+      padding:28px;
+    }
+
+    .compare-label{
+      color:#ff7b72;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-bottom:12px;
+    }
+
+    .compare-title{
+      font-size:30px;
+      margin-bottom:16px;
+      font-weight:700;
+    }
+
+    .compare-text{
+      color:#b7b7b7;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+      line-height:1.2;
+    }
+
+    .video-section{
+      max-width:1200px;
+      margin:0 auto 100px;
+    }
+
+    .video-wrap{
+      background:#181818;
+      padding:24px;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    .video-wrap video{
+      width:100%;
+      border-radius:20px;
+      display:block;
+    }
+
+    .gallery-section{
+      max-width:1500px;
+      margin:auto;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+    }
+
+    .gallery-card{
+      background:#181818;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.06);
+      transition:.35s ease;
+    }
+
+    .gallery-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .gallery-card img{
+      width:100%;
+      display:block;
+    }
+
+    .gallery-label{
+      padding:18px 22px;
+      color:#c6c6c6;
+      font-size:14px;
+    }
+
+    @media(max-width:1100px){
+
+      .compare-row{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      body{
+        padding:40px 18px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .compare-title{
+        font-size:24px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    Anna Vorobkalo<br>
+    Website Redesign
+  </h1>
+
+  <p class="subtitle">
+    Premium cinematic website redesign focused on luxury branding,
+    responsive frontend development, modern UI/UX structure,
+    mobile optimization, and real-world client-style implementation.
+  </p>
+
+  <!-- BEFORE / AFTER -->
+
+  <section class="compare-section">
+
+    <div class="compare-row">
+
+      <div class="compare-card">
+
+        <img src="./before.png" alt="Original Website">
+
+        <div class="compare-content">
+
+          <div class="compare-label">
+            Before
+          </div>
+
+          <div class="compare-title">
+            Original Website · 2024
+          </div>
+
+          <div class="compare-text">
+            Legacy event-host website with outdated visual hierarchy,
+            limited responsiveness, and older UI structure.
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="compare-card">
+
+        <img src="./after.png" alt="Premium Redesign">
+
+        <div class="compare-content">
+
+          <div class="compare-label">
+            After
+          </div>
+
+          <div class="compare-title">
+            Premium Redesign · 2026
+          </div>
+
+          <div class="compare-text">
+            Modern cinematic landing experience with responsive layouts,
+            premium branding, floating social CTA system,
+            and improved conversion-focused UX.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO -->
+
+  <section class="video-section">
+
+    <h2 class="section-title">
+      Interactive Walkthrough
+    </h2>
+
+    <div class="video-wrap">
+
+      <video controls >
+        <source src="./demo.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </section>
+
+  <!-- UI SHOWCASE -->
+
+  <section class="gallery-section">
+
+    <h2 class="section-title">
+      UI Showcase
+    </h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="./1.png" alt="">
+        <div class="gallery-label">
+          Cinematic hero redesign
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="./2.png" alt="">
+        <div class="gallery-label">
+          Responsive premium sections
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="./3.png" alt="">
+        <div class="gallery-label">
+          Mobile-first interaction system
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
