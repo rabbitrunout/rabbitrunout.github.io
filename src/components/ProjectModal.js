@@ -128,7 +128,9 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
 
           <div className="project-modal__content">
-            <p className="section-label">Case Study</p>
+            <p className="section-label">
+  {project.modalLabel || "Case Study"}
+</p>
             <h3>{project.title}</h3>
 
             {project.status && (

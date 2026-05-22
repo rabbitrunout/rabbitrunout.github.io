@@ -69,6 +69,87 @@ export const projectsByCategory = {
   ],
 
 // ////  Landing Pages. /////////
+
+"Frontend & Client Projects": [
+  {
+    title: "Anna Vorobkalo — Premium Event Website",
+    modalLabel: "FRONTEND REDESIGN",
+
+    badge: "Website Modernization",
+
+    year: "2024 — 2026",
+
+    shortDesc:
+  "Responsive frontend redesign and modernization of a real-world event-host website with a focus on premium UI/UX, editorial-style layouts, interactive user experience, and mobile-first responsiveness.",
+
+    fullDesc:
+      "Originally created in 2024, this project was fully redesigned and modernized in 2026 with a focus on premium visual identity, responsive frontend architecture, and modern UX patterns.\n\nThe redesign transformed the website from a basic promotional landing page into a cinematic, luxury-inspired event brand experience optimized for modern users and mobile devices.\n\nKey improvements included:\n\n- Cinematic responsive hero redesign\n- Premium typography and visual hierarchy improvements\n- Floating social CTA system (WhatsApp, Telegram, VK)\n- Interactive video business-card modal\n- Mobile-first responsive optimization\n- Modernized gallery and testimonials sections\n- Improved frontend structure and reusable UI blocks\n- GitHub integration and production deployment workflow\n- Enhanced conversion-focused UX and interaction flow\n\nThis project demonstrates frontend development, responsive UI engineering, visual redesign thinking, deployment workflows, and real-world client-style implementation.",
+
+   problem:
+  "The original website had an outdated structure, inconsistent visual hierarchy, and limited mobile responsiveness, reducing the overall premium feel and user engagement.",
+
+    built:
+  "Redesigned and rebuilt the frontend experience using responsive layouts, modern UI patterns, interactive media sections, expandable review interactions, premium visual hierarchy, and mobile-first UX improvements.",
+
+    impact: [
+  "Modernized an outdated promotional website into a premium frontend experience",
+  "Improved mobile responsiveness and visual consistency",
+  "Enhanced booking and user interaction flow",
+  "Created scalable frontend structure for future content expansion",
+],
+
+    role:
+      "Frontend Developer · UI/UX Redesign · Responsive Frontend Engineering",
+
+    tech:
+      "HTML • CSS • JavaScript • Responsive Design • UI/UX",
+
+    github:
+      "https://github.com/rabbitrunout/anna-vorobkalo-website",
+
+    live:
+      "https://www.vorobkaloevent.store/",
+
+    media: [
+  {
+    type: "image",
+    src: "/projects/client/anna/before.png",
+    label: "Original Website · 2024"
+  },
+
+  {
+    type: "image",
+    src: "/projects/client/anna/after.png",
+    label: "Premium Redesign · 2026"
+  },
+
+  {
+    type: "video",
+    src: "/projects/client/anna/demo.mp4",
+    label: "Interactive Website Demo"
+  },
+
+  {
+    type: "image",
+    src: "/projects/client/anna/1.png",
+    label: "Cinematic Hero Section"
+  },
+
+  {
+    type: "image",
+    src: "/projects/client/anna/2.png",
+    label: "Responsive Mobile Experience"
+  },
+
+  {
+    type: "image",
+    src: "/projects/client/anna/3.png",
+    label: "Modern UI Components"
+  }
+],
+  }
+],
+
   "Landing Pages": [
     {
   title: "Nature & Travel Landing Page",
@@ -175,85 +256,7 @@ export const projectsByCategory = {
   ],
 
 
- "Frontend & Client Projects": [
-  {
-    title: "Anna Vorobkalo — Premium Event Website",
-
-    badge: "Website Modernization",
-
-    year: "2024 — 2026",
-
-    shortDesc:
-      "Premium cinematic redesign and frontend modernization for a professional event-host website.",
-
-    fullDesc:
-      "Originally created in 2024, this project was fully redesigned and modernized in 2026 with a focus on premium visual identity, responsive frontend architecture, and modern UX patterns.\n\nThe redesign transformed the website from a basic promotional landing page into a cinematic, luxury-inspired event brand experience optimized for modern users and mobile devices.\n\nKey improvements included:\n\n- Cinematic responsive hero redesign\n- Premium typography and visual hierarchy improvements\n- Floating social CTA system (WhatsApp, Telegram, VK)\n- Interactive video business-card modal\n- Mobile-first responsive optimization\n- Modernized gallery and testimonials sections\n- Improved frontend structure and reusable UI blocks\n- GitHub integration and production deployment workflow\n- Enhanced conversion-focused UX and interaction flow\n\nThis project demonstrates frontend development, responsive UI engineering, visual redesign thinking, deployment workflows, and real-world client-style implementation.",
-
-    problem:
-      "The original website had an outdated structure, inconsistent visual hierarchy, and limited mobile responsiveness, reducing the overall premium feel and user engagement.",
-
-    built:
-      "Redesigned and rebuilt the frontend experience with a cinematic layout system, responsive mobile-first structure, interactive media integration, and modern UI/UX improvements.",
-
-    impact: [
-      "Modernized legacy website into premium frontend experience",
-      "Improved mobile responsiveness and visual consistency",
-      "Enhanced conversion-focused user interaction flow",
-      "Created scalable frontend structure for future content expansion"
-    ],
-
-    role:
-      "Frontend Developer · UI/UX Redesign · Responsive Frontend Engineering",
-
-    tech:
-      "HTML • CSS • JavaScript • Responsive Design • UI/UX",
-
-    github:
-      "https://github.com/rabbitrunout/anna-vorobkalo-website",
-
-    live:
-      "https://www.vorobkaloevent.store/",
-
-    media: [
-  {
-    type: "image",
-    src: "/projects/client/anna/before.png",
-    label: "Original Website · 2024"
-  },
-
-  {
-    type: "image",
-    src: "/projects/client/anna/after.png",
-    label: "Premium Redesign · 2026"
-  },
-
-  {
-    type: "video",
-    src: "/projects/client/anna/demo.mp4",
-    label: "Interactive Website Demo"
-  },
-
-  {
-    type: "image",
-    src: "/projects/client/anna/1.png",
-    label: "Cinematic Hero Section"
-  },
-
-  {
-    type: "image",
-    src: "/projects/client/anna/2.png",
-    label: "Responsive Mobile Experience"
-  },
-
-  {
-    type: "image",
-    src: "/projects/client/anna/3.png",
-    label: "Modern UI Components"
-  }
-],
-  }
-],
-
+ 
   // ///// Web Apps  ////////
 
    "Web Apps": [
