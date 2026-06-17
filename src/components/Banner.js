@@ -24,14 +24,15 @@ const Banner = () => {
                   <p className="section-label">Portfolio / 2026</p>
 
                   <h1 className="editorial-hero__title">
-                    <span className="editorial-hero__title-line">iOS &amp;</span>
-                    <span className="editorial-hero__title-line">Frontend</span>
-                    <span className="editorial-hero__title-line">Developer</span>
-                  </h1>
+  <span className="editorial-hero__title-line">iOS</span>
+  <span className="editorial-hero__title-line">&amp; Frontend</span>
+  <span className="editorial-hero__title-line">Developer</span>
+</h1>
 
-                  <p className="editorial-hero__subtitle">
-  I build production-focused mobile and web applications with scalable UI architecture,
-  real-world product thinking, and AI-assisted development workflows.
+  <p className="editorial-hero__subtitle">
+  Building mobile and web products with SwiftUI, React, and AI-assisted development workflows.
+  <br />
+  Focused on scalable architecture, maintainable UI systems, and real-world product delivery.
 </p>
 
 <div className="editorial-hero__meta">
@@ -40,6 +41,30 @@ const Banner = () => {
   <span>TypeScript</span>
   <span>REST APIs</span>
   <span>AI-assisted workflows</span>
+</div>
+
+<div className="editorial-hero__marquee">
+  <div className="editorial-hero__marquee-track">
+    <span>SwiftUI</span>
+    <span>React</span>
+    <span>Next.js</span>
+    <span>TypeScript</span>
+    <span>REST APIs</span>
+    <span>MVVM</span>
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>AI-Assisted Development</span>
+
+    <span>SwiftUI</span>
+    <span>React</span>
+    <span>Next.js</span>
+    <span>TypeScript</span>
+    <span>REST APIs</span>
+    <span>MVVM</span>
+    <span>PHP</span>
+    <span>MySQL</span>
+    <span>AI-Assisted Development</span>
+  </div>
 </div>
 
                   <div className="editorial-hero__actions">
@@ -65,6 +90,23 @@ const Banner = () => {
   Software Developer Intern @ R-A-Ones · Frontend + iOS · AI-assisted engineering workflows
 </p>
 
+<div className="editorial-hero__stats">
+  <div>
+    <strong>10+</strong>
+    <span>Projects</span>
+  </div>
+
+  <div>
+    <strong>5+</strong>
+    <span>Production Features</span>
+  </div>
+
+  <div>
+    <strong>3</strong>
+    <span>Mobile Apps</span>
+  </div>
+</div>
+
                 </div>
               )}
             </TrackVisibility>
@@ -84,7 +126,7 @@ const Banner = () => {
                     />
                     <div className="editorial-hero__avatar-meta">
                       <span>Irina S</span>
-                      <strong>Glowi Product System</strong>
+                      <strong>Building Glowi Platform</strong>
                     </div>
                   </div>
 
