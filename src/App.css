@@ -315,9 +315,9 @@ button {
 .editorial-hero__title {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4rem, 9vw, 6.9rem);
-  line-height: 0.8;
-  letter-spacing: -0.055em;
+  font-size: clamp(4rem, 8.2vw, 6.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
   color: var(--text);
 }
