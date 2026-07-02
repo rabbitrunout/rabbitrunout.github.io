@@ -36,36 +36,38 @@ const Banner = () => {
 </p>
 
 <div className="editorial-hero__meta">
-  <span>AI Workflows</span>
-  <span>n8n</span>
-  <span>React / Next.js</span>
+  <span>AI-Powered Development</span>
+  <span>React</span>
+  <span>SwiftUI</span>
   <span>TypeScript</span>
   <span>REST APIs</span>
-  <span>AI Agents</span>
+  <span>Workflow Automation</span>
 </div>
 
 <div className="editorial-hero__marquee">
   <div className="editorial-hero__marquee-track">
-  <span>AI Workflow Automation</span>
-  <span>n8n</span>
-  <span>AI Agents</span>
-  <span>REST APIs</span>
-  <span>TypeScript</span>
-  <span>React</span>
-  <span>Next.js</span>
-  <span>SwiftUI</span>
-  <span>Prompt Engineering</span>
 
-  <span>AI Workflow Automation</span>
-  <span>n8n</span>
-  <span>AI Agents</span>
-  <span>REST APIs</span>
-  <span>TypeScript</span>
-  <span>React</span>
-  <span>Next.js</span>
-  <span>SwiftUI</span>
-  <span>Prompt Engineering</span>
-</div>
+    <span>React</span>
+    <span>SwiftUI</span>
+    <span>TypeScript</span>
+    <span>REST APIs</span>
+    <span>AI-Powered Products</span>
+    <span>Workflow Automation</span>
+    <span>Full-Stack Development</span>
+    <span>Clean Architecture</span>
+    <span>UI / UX</span>
+
+    <span>React</span>
+    <span>SwiftUI</span>
+    <span>TypeScript</span>
+    <span>REST APIs</span>
+    <span>AI-Powered Products</span>
+    <span>Workflow Automation</span>
+    <span>Full-Stack Development</span>
+    <span>Clean Architecture</span>
+    <span>UI / UX</span>
+
+  </div>
 </div>
 
                   <div className="editorial-hero__actions">
@@ -88,7 +90,7 @@ const Banner = () => {
                   </div>
 
                 <p className="editorial-hero__proof">
-  Software Developer • AI Workflow Automation • React • SwiftUI
+  AI & Full-Stack Developer • React • SwiftUI • REST APIs
 </p>
 
 <div className="editorial-hero__stats">
