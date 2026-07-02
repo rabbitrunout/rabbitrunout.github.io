@@ -24,47 +24,48 @@ const Banner = () => {
                   <p className="section-label">Portfolio / 2026</p>
 
                   <h1 className="editorial-hero__title">
-  <span className="editorial-hero__title-line">iOS</span>
-  <span className="editorial-hero__title-line">&amp; Frontend</span>
+  <span className="editorial-hero__title-line">AI &amp;</span>
+  <span className="editorial-hero__title-line"> Full-Stack</span>
   <span className="editorial-hero__title-line">Developer</span>
 </h1>
 
   <p className="editorial-hero__subtitle">
-  Building mobile and web products with SwiftUI, React, and AI-assisted development workflows.
+  Building AI-powered web and mobile products with React, SwiftUI, TypeScript, REST APIs and modern automation workflows.
   <br />
-  Focused on scalable architecture, maintainable UI systems, and real-world product delivery.
+  Focused on workflow automation, AI agents, scalable UI systems, and practical solutions for real-world business problems.
 </p>
 
 <div className="editorial-hero__meta">
-  <span>SwiftUI</span>
+  <span>AI Workflows</span>
+  <span>n8n</span>
   <span>React / Next.js</span>
   <span>TypeScript</span>
   <span>REST APIs</span>
-  <span>AI-assisted workflows</span>
+  <span>AI Agents</span>
 </div>
 
 <div className="editorial-hero__marquee">
   <div className="editorial-hero__marquee-track">
-    <span>SwiftUI</span>
-    <span>React</span>
-    <span>Next.js</span>
-    <span>TypeScript</span>
-    <span>REST APIs</span>
-    <span>MVVM</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>AI-Assisted Development</span>
+  <span>AI Workflow Automation</span>
+  <span>n8n</span>
+  <span>AI Agents</span>
+  <span>REST APIs</span>
+  <span>TypeScript</span>
+  <span>React</span>
+  <span>Next.js</span>
+  <span>SwiftUI</span>
+  <span>Prompt Engineering</span>
 
-    <span>SwiftUI</span>
-    <span>React</span>
-    <span>Next.js</span>
-    <span>TypeScript</span>
-    <span>REST APIs</span>
-    <span>MVVM</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>AI-Assisted Development</span>
-  </div>
+  <span>AI Workflow Automation</span>
+  <span>n8n</span>
+  <span>AI Agents</span>
+  <span>REST APIs</span>
+  <span>TypeScript</span>
+  <span>React</span>
+  <span>Next.js</span>
+  <span>SwiftUI</span>
+  <span>Prompt Engineering</span>
+</div>
 </div>
 
                   <div className="editorial-hero__actions">
@@ -86,8 +87,8 @@ const Banner = () => {
                     </button>
                   </div>
 
-                  <p className="editorial-hero__proof">
-  Software Developer Intern @ R-A-Ones · Frontend + iOS · AI-assisted engineering workflows
+                <p className="editorial-hero__proof">
+  Software Developer • AI Workflow Automation • React • SwiftUI
 </p>
 
 <div className="editorial-hero__stats">
@@ -102,8 +103,8 @@ const Banner = () => {
   </div>
 
   <div>
-    <strong>3</strong>
-    <span>Mobile Apps</span>
+    <strong>AI</strong>
+    <span>Workflow Focus</span>
   </div>
 </div>
 
@@ -125,9 +126,9 @@ const Banner = () => {
                       className="editorial-hero__avatar"
                     />
                     <div className="editorial-hero__avatar-meta">
-                      <span>Irina S</span>
-                      <strong>Building Glowi Platform</strong>
-                    </div>
+  <span>Irina S</span>
+  <strong>Building AI-powered product systems</strong>
+</div>
                   </div>
 
                   <div className="editorial-hero__project-card">

@@ -5,34 +5,33 @@ const AboutMe = () => {
     <section className="editorial-section editorial-about" id="about">
       <div className="section-heading">
         <p className="section-label">About</p>
-        <h2>Design clarity. Build with purpose.</h2>
+        <h2>Design clarity. 
+          Build with purpose.</h2>
       </div>
 
       <div className="editorial-about__grid">
 
-        {/* LEFT */}
         <div className="editorial-about__text">
           <p>
-            I’m an iOS & Frontend Developer focused on building structured,
-            user-centered applications across mobile and web platforms.
+            I'm an AI & Full-Stack Developer passionate about building intelligent products,
+workflow automation, and modern web & mobile applications.
           </p>
 
           <p>
-            I specialize in SwiftUI and modern frontend frameworks like React and Next.js, 
-            creating clean, scalable interfaces with strong attention to user experience.
+            My work combines clean UI, scalable architecture, REST API
+            integrations, and practical product thinking.
           </p>
 
           <p>
-            Through internship and academic projects, I’ve worked across full product flows — 
-            from UI design and reusable components to API integration and real-world features.
+            I'm currently expanding my focus into AI workflow automation,
+            n8n, AI Agents, RAG, MCP, and LLM-powered business solutions.
           </p>
 
           <p className="editorial-about__highlight">
-  Building real products · API-driven development · AI-assisted workflows
-</p>
+            Building real products · API-driven development · AI workflow automation
+          </p>
         </div>
 
-        {/* RIGHT */}
         <div className="editorial-about__facts">
 
           <div className="fact-card">
@@ -46,13 +45,18 @@ const AboutMe = () => {
           </div>
 
           <div className="fact-card">
-            <span className="fact-card__label">Core Stack</span>
-            <strong>SwiftUI · React · Next.js · PHP · MySQL</strong>
+            <span className="fact-card__label">Education</span>
+            <strong>triOS College · Honours Graduate · 98% GPA</strong>
           </div>
 
           <div className="fact-card">
-            <span className="fact-card__label">Focus</span>
-            <strong>UI/UX · Clean Architecture · API Integration</strong>
+            <span className="fact-card__label">Core Stack</span>
+            <strong>React · SwiftUI · TypeScript · PHP · MySQL · REST APIs</strong>
+          </div>
+
+          <div className="fact-card">
+            <span className="fact-card__label">Current Focus</span>
+            <strong>n8n · AI Agents · Claude API · RAG · MCP</strong>
           </div>
 
         </div>

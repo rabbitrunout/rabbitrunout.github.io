@@ -1,11 +1,10 @@
 import React from "react";
 
 const Experience = () => {
-return ( <section className="editorial-section editorial-experience" id="experience"> <div className="section-heading"> <p className="section-label">Selected Experience</p> <h2>Building real product features through hands-on development.</h2> <p className="experience-note">
+return ( <section className="editorial-section editorial-experience" id="experience"> <div className="section-heading"> <p className="section-label">Selected Experience</p> <h2>Building real product features through hands-on development</h2> <p className="experience-note">
 Production-focused frontend development, real-world workflows, and
 client-facing redesign work. </p> </div>
 
-```
   <div className="editorial-experience__grid">
     <div className="editorial-experience__left">
       <p className="experience-role">Software Developer Intern</p>

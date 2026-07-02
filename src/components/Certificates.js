@@ -30,19 +30,62 @@ const certificates = [
 
 const Certificates = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [showDiploma, setShowDiploma] = useState(false);
 
   const closeModal = () => setSelectedIndex(null);
+
   const prevCert = () =>
     setSelectedIndex((prev) => (prev - 1 + certificates.length) % certificates.length);
+
   const nextCert = () =>
     setSelectedIndex((prev) => (prev + 1) % certificates.length);
 
   return (
     <section className="editorial-section editorial-certificates" id="certificates">
       <div className="section-heading">
-        <p className="section-label">Certificates</p>
-        <h2>Selected credentials supporting my technical path.</h2>
+        <p className="section-label">Credentials</p>
+
+<h2>VERIFIED CREDENTIALS</h2>
       </div>
+
+      <div className="verified-education-card">
+
+  <div>
+
+    <p className="section-label">
+      Verified Education
+    </p>
+
+    <h3>🎓 Honours Diploma</h3>
+
+    <p className="verified-school">
+      triOS College
+    </p>
+
+    <p className="verified-program">
+      Mobile Application Development using AI
+    </p>
+
+    <p className="education-meta">
+      Honours Graduate • 98% GPA • 2026
+    </p>
+
+  </div>
+
+  <button
+    className="editorial-btn editorial-btn--ghost"
+    onClick={() => setShowDiploma(true)}
+  >
+    View Diploma →
+  </button>
+
+</div>
+
+<div className="credentials-divider">
+
+    <span>Professional Certificates</span>
+
+</div>
 
       <div className="editorial-certificates__grid">
         {certificates.map((cert, i) => (
@@ -72,6 +115,41 @@ const Certificates = () => {
           </article>
         ))}
       </div>
+
+      {showDiploma && (
+        <div
+          className="editorial-modal-overlay"
+          onClick={() => setShowDiploma(false)}
+        >
+          <div
+            className="editorial-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="editorial-modal-close"
+              onClick={() => setShowDiploma(false)}
+            >
+              ×
+            </button>
+
+            <div className="editorial-modal-body">
+              <div className="editorial-modal-image-wrap">
+                <img
+                  src="/diploma-full.png"
+                  alt="Irina Safronova triOS College Honours Diploma"
+                  className="editorial-modal-img"
+                />
+              </div>
+
+              <div className="editorial-modal-info">
+                <p className="section-label">Verified Education</p>
+                <h3>Honours Diploma</h3>
+                <p>triOS College • Honours Graduate • 98% GPA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {selectedIndex !== null && (
         <div className="editorial-modal-overlay" onClick={closeModal}>

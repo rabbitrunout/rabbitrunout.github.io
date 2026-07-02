@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap");
 
 /* =========================
-   APP.CSS â€” CLEANED / MERGED
+   APP.CSS Ã¢â‚¬â€ CLEANED / MERGED
    Portfolio editorial system
 ========================= */
 
@@ -69,7 +69,7 @@ button {
 
 .editorial-section:nth-child(even) {
   background: #f8f4ee;
-  padding: 110px 0;
+  padding: 80px 0;
 }
 
 .editorial-kicker,
@@ -595,7 +595,7 @@ button {
 }
 
 .featured-impact-list li::before {
-  content: "â€¢";
+  content: "Ã¢â‚¬Â¢";
   color: var(--accent);
   margin-right: 8px;
 }
@@ -3133,14 +3133,15 @@ to {
 .featured-device-frame img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
-  object-position: center top !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   transform: none !important;
   filter: none !important;
+  background: #fff8f5;
 }
 
 .featured-device-frame--glowi img {
-  transform: scale(1.06) !important;
+  transform: none !important;
   transform-origin: center top;
 }
 
@@ -3212,9 +3213,10 @@ to {
   width: 100% !important;
   height: 100% !important;
   border-radius: 32px;
-  object-fit: cover !important;
-  object-position: center top !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   display: block;
+  background: #fff8f5;
 }
 
 @media (max-width: 991px) {
@@ -3439,7 +3441,7 @@ to {
   box-shadow: 0 12px 30px rgba(40, 20, 20, 0.04);
 }
 
-.editorial-hero__stats strong {
+strong {
   display: block;
   font-size: 2rem;
   line-height: 1;
@@ -3452,4 +3454,498 @@ to {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(25, 20, 20, 0.6);
+}
+
+@media (max-width: 768px) {
+
+  .editorial-section,
+  .editorial-hero {
+    width: calc(100% - 32px);
+  }
+
+  .editorial-hero {
+  padding-top: 70px;
+}
+
+  .editorial-hero__title {
+    font-size: 2.8rem;
+    line-height: 0.9;
+  }
+
+  .editorial-hero__subtitle {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .editorial-hero__visual {
+    order: -1;
+    margin-bottom: 24px;
+  }
+
+  .editorial-hero__avatar-top {
+    display: none;
+  }
+
+  .editorial-hero__project-card {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+
+  .featured-editorial-card,
+  .project-card,
+  .editorial-experience__grid {
+    border-radius: 20px;
+  }
+
+  .editorial-certificates__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+
+  .certificate-card {
+    flex: 0 0 220px;
+  }
+}
+
+/* =========================
+   MOBILE FIX â€” FINAL CLEAN
+========================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.editorial-app,
+.editorial-hero,
+.editorial-hero__row {
+  overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+  .editorial-section,
+  .editorial-section:nth-child(even),
+  .editorial-hero {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .editorial-section,
+  .editorial-section:nth-child(even) {
+    padding: 52px 0 !important;
+  }
+
+  .editorial-hero {
+    padding: 92px 0 38px !important;
+  }
+
+  .editorial-hero__row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  min-height: auto !important;
+}
+.editorial-hero__visual {
+  order: 2 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  min-height: auto !important;
+}
+
+.editorial-hero__content {
+  order: 1 !important;
+}
+
+  .editorial-hero__content {
+    margin-top: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .editorial-hero__title {
+    font-size: 3rem !important;
+    line-height: 0.88 !important;
+  }
+
+  .editorial-hero__subtitle {
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .editorial-hero__visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-top: 18px !important;
+    overflow: hidden !important;
+    order: initial !important;
+  }
+
+  .editorial-hero__visual::after {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .editorial-hero__avatar-top {
+    display: none !important;
+  }
+
+  .editorial-hero__project-card {
+    width: 220px !important;
+    max-width: 220px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .editorial-hero__project-image {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+
+  .editorial-hero__stats {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .editorial-hero__stats div {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0.65rem 0.35rem !important;
+    text-align: center !important;
+  }
+
+  .editorial-hero__stats strong {
+    display: block !important;
+    font-size: 1.15rem !important;
+    color: #ff4b4f !important;
+    opacity: 1 !important;
+  }
+
+  .editorial-hero__stats span {
+    display: block !important;
+    font-size: 0.5rem !important;
+    color: rgba(25, 20, 20, 0.65) !important;
+    letter-spacing: 0.06em !important;
+    opacity: 1 !important;
+  }
+
+  .editorial-about__grid,
+  .editorial-experience__grid,
+  .editorial-skills__grid,
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card--featured {
+    grid-column: span 1 !important;
+    min-height: auto !important;
+  }
+
+  .project-media-wrap,
+  .project-card--featured .project-media-wrap {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+
+  .project-info {
+    padding: 20px !important;
+  }
+
+  .horizontal-project-card {
+    flex: 0 0 min(320px, 88vw) !important;
+  }
+
+  .editorial-featured {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  .featured-editorial-card,
+  .featured-editorial-card--reverse {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .featured-editorial-card__content {
+    padding: 24px !important;
+  }
+
+  .featured-editorial-card__visual {
+    min-height: 360px !important;
+    padding: 28px !important;
+  }
+
+  .iphone-frame {
+    width: 170px !important;
+    height: 368px !important;
+  }
+
+  .editorial-certificates__grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 12px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .certificate-card {
+    flex: 0 0 220px !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .editorial-hero__stats {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    overflow: visible !important;
+  }
+
+  .editorial-hero__stats div {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 0.55rem 0.2rem !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+  }
+
+  .editorial-hero__stats strong {
+    font-size: 1rem !important;
+    line-height: 1 !important;
+  }
+
+  .editorial-hero__stats span {
+    font-size: 0.42rem !important;
+    letter-spacing: 0.03em !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ---------- CREDENTIALS / VERIFIED EDUCATION ---------- */
+
+.verified-education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 42px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0,0,0,.05);
+  margin-bottom: 70px;
+}
+
+.verified-education-card h3 {
+  margin: 0 0 10px;
+}
+
+.verified-education-card p {
+  margin: 0;
+}
+
+.education-meta {
+  margin-top: 12px !important;
+  color: #666;
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+.verified-school {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.verified-program {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.credentials-divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .78rem;
+}
+
+.credentials-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ececec;
+  margin-left: 22px;
+}
+
+.contact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 28px;
+}
+
+.contact-tags span {
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: #faf7f5;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ---------- FEATURED PROJECT PHONE FIX ---------- */
+
+.featured-editorial-card__visual {
+  min-height: 620px !important;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 74, 74, 0.12), transparent 64%),
+    linear-gradient(180deg, #fbf2ee, #efe5dc) !important;
+  border-left: 1px solid var(--line);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 44px !important;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.iphone-frame {
+  position: relative !important;
+  width: 250px !important;
+  height: 540px !important;
+  padding: 10px !important;
+  border-radius: 42px !important;
+  background: linear-gradient(145deg, #111, #2a2a2a) !important;
+  box-shadow:
+    0 42px 100px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+  overflow: hidden !important;
+  transform-style: preserve-3d;
+  transition: transform 0.18s ease, box-shadow 0.3s ease;
+}
+
+.iphone-frame::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 37px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.iphone-frame__island {
+  position: absolute !important;
+  top: 18px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 82px !important;
+  height: 26px !important;
+  border-radius: 999px !important;
+  background: #050505 !important;
+  z-index: 3;
+}
+
+.iphone-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: block !important;
+  border-radius: 32px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.featured-editorial-card__visual > img {
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.featured-editorial-card__visual:hover .iphone-frame {
+  box-shadow:
+    0 60px 120px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14) !important;
+}
+
+/* второй телефон чуть меньше */
+.featured-editorial-card:nth-child(2) .iphone-frame {
+  transform: scale(0.94);
+}
+
+/* если JS tilt работает — не применяем scale к wrapper через img */
+.featured-editorial-card:nth-child(2) .featured-editorial-card__visual img {
+  transform: none !important;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 991px) {
+  .featured-editorial-card__visual {
+    min-height: 460px !important;
+    padding: 34px !important;
+  }
+
+  .iphone-frame {
+    width: 210px !important;
+    height: 454px !important;
+    border-radius: 36px !important;
+    padding: 9px !important;
+  }
+
+  .iphone-frame img {
+    border-radius: 28px !important;
+  }
+
+  .iphone-frame__island {
+    width: 68px !important;
+    height: 21px !important;
+    top: 15px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-editorial-card__visual {
+    min-height: 340px !important;
+    padding: 28px !important;
+  }
+
+  .iphone-frame {
+    width: 165px !important;
+    height: 356px !important;
+    border-radius: 30px !important;
+    padding: 7px !important;
+  }
+
+  .iphone-frame img {
+    border-radius: 24px !important;
+  }
+
+  .iphone-frame__island {
+    width: 54px !important;
+    height: 17px !important;
+    top: 12px !important;
+  }
 }

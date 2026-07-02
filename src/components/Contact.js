@@ -7,22 +7,23 @@ const Contact = () => {
         <p className="section-label">Contact</p>
 
         <h2>
-          Let’s build something meaningful  
+          Let&apos;s build
+          <br />
+          software people love to use
         </h2>
 
         <p className="editorial-contact__text">
-          I’m open to junior and entry-level opportunities in frontend, mobile, or full-stack development.  
-
+          AI & Full-Stack Developer building intelligent products, workflow automation,
+and modern web & mobile applications.
         </p>
 
-        <p className="editorial-contact__availability">
-          Open to <strong>Junior Mobile / Frontend Developer roles</strong> and
-          product-focused teams.
-        </p>
-
-        <p className="editorial-contact__extra">
-          Feel free to reach out — I’d be happy to connect.
-        </p>
+        <div className="contact-tags">
+          <span>AI Engineering</span>
+          <span>Full-Stack</span>
+          <span>Frontend</span>
+          <span>Mobile iOS</span>
+          <span>React</span>
+        </div>
 
         <div className="editorial-contact__links">
           <a href="mailto:irina.safronova0801@gmail.com">Email</a>

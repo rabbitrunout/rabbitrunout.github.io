@@ -46,7 +46,7 @@ const FeaturedProjects = () => {
         <div className="section-heading">
           <p className="section-label">Selected Work</p>
           <h2>
-            Projects shaped by product thinking and real development work.
+            Projects shaped by product thinking and real development work
           </h2>
         </div>
 

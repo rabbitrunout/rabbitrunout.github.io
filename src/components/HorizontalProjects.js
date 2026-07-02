@@ -163,7 +163,7 @@ const HorizontalProjects = () => {
       >
         <div className="section-heading horizontal-projects__heading">
           <p className="section-label">Project Strip</p>
-          <h2>Swipe through selected work.</h2>
+          <h2>Swipe through selected work</h2>
         </div>
 
         <div className="horizontal-projects__intro">

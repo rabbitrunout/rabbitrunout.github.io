@@ -7,7 +7,7 @@ const Skills = () => {
         <p className="section-label">Capabilities</p>
 
         <h2>
-          Technical range with a strong product and engineering mindset.
+          Technical Expertise
         </h2>
       </div>
 
