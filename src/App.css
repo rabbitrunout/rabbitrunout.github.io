@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap");
 
 /* =========================
-   APP.CSS Ã¢â‚¬â€ CLEANED / MERGED
+   APP.CSS ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â CLEANED / MERGED
    Portfolio editorial system
 ========================= */
 
@@ -595,7 +595,7 @@ button {
 }
 
 .featured-impact-list li::before {
-  content: "Ã¢â‚¬Â¢";
+  content: "ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢";
   color: var(--accent);
   margin-right: 8px;
 }
@@ -3511,7 +3511,7 @@ strong {
 }
 
 /* =========================
-   MOBILE FIX â€” FINAL CLEAN
+   MOBILE FIX Ã¢â‚¬â€ FINAL CLEAN
 ========================= */
 
 html,
@@ -3890,12 +3890,12 @@ body {
     inset 0 0 0 1px rgba(255, 255, 255, 0.14) !important;
 }
 
-/* второй телефон чуть меньше */
+/* Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½ Ñ‡ÑƒÑ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ */
 .featured-editorial-card:nth-child(2) .iphone-frame {
   transform: scale(0.94);
 }
 
-/* если JS tilt работает — не применяем scale к wrapper через img */
+/* ÐµÑÐ»Ð¸ JS tilt Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ â€” Ð½Ðµ Ð¿Ñ€Ð¸Ð¼ÐµÐ½ÑÐµÐ¼ scale Ðº wrapper Ñ‡ÐµÑ€ÐµÐ· img */
 .featured-editorial-card:nth-child(2) .featured-editorial-card__visual img {
   transform: none !important;
 }
@@ -3947,5 +3947,313 @@ body {
     width: 54px !important;
     height: 17px !important;
     top: 12px !important;
+  }
+}
+
+/* ---------- DESKTOP 100% ZOOM FIX ---------- */
+
+@media (min-width: 992px) {
+  .editorial-hero {
+    padding: 118px 0 52px !important;
+  }
+
+  .editorial-hero__row {
+    min-height: 70vh !important;
+  }
+
+  .editorial-hero__content {
+    max-width: 620px !important;
+    margin-top: -25px !important;
+  }
+
+  .editorial-hero__title {
+    font-size: clamp(3.6rem, 5.8vw, 5.4rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.018em !important;
+  }
+
+  .editorial-hero__subtitle {
+    max-width: 520px !important;
+    margin-top: 20px !important;
+    font-size: 0.94rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .editorial-hero__meta {
+    margin-top: 18px !important;
+    gap: 8px !important;
+  }
+
+  .editorial-hero__meta span {
+    padding: 7px 12px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .editorial-hero__marquee {
+    margin: 1rem 0 1.2rem !important;
+    padding: 0.55rem 0 !important;
+  }
+
+  .editorial-hero__actions {
+    margin-top: 20px !important;
+  }
+
+  .editorial-btn {
+    padding: 12px 20px !important;
+  }
+
+  .editorial-hero__stats {
+    margin-top: 24px !important;
+    gap: 12px !important;
+  }
+
+  .editorial-hero__stats div {
+    padding: 0.8rem 0.9rem !important;
+  }
+
+  .editorial-hero__project-card {
+    max-width: 250px !important;
+  }
+
+  .editorial-hero__visual {
+    transform: scale(0.92);
+    transform-origin: center;
+  }
+}
+/* =========================================================
+   FINAL HERO STABLE LAYOUT â€” 100% BROWSER ZOOM
+   Paste at the very end of App.css.
+   This forces the hero to use a fixed editorial grid instead
+   of Bootstrap's responsive column math on desktop.
+========================================================= */
+
+@media (min-width: 992px) {
+  .editorial-hero {
+    width: min(1120px, calc(100% - 64px)) !important;
+    padding: 112px 0 58px !important;
+  }
+
+  .editorial-hero .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .editorial-hero__row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 560px) 330px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 72px !important;
+    min-height: 72vh !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .editorial-hero__row > [class*="col-"] {
+    width: auto !important;
+    max-width: none !important;
+    flex: initial !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .editorial-hero__left {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .editorial-hero__content {
+    max-width: 560px !important;
+    width: 100% !important;
+    margin-top: -12px !important;
+  }
+
+  .editorial-hero__title {
+    font-size: clamp(4rem, 5.7vw, 5.6rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.018em !important;
+  }
+
+  .editorial-hero__subtitle {
+    max-width: 520px !important;
+    margin-top: 20px !important;
+    font-size: 0.96rem !important;
+    line-height: 1.72 !important;
+  }
+
+  .editorial-hero__meta {
+    margin-top: 18px !important;
+    gap: 8px !important;
+  }
+
+  .editorial-hero__meta span {
+    padding: 7px 12px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .editorial-hero__marquee {
+    margin: 1rem 0 1.2rem !important;
+    padding: 0.55rem 0 !important;
+  }
+
+  .editorial-hero__actions {
+    margin-top: 20px !important;
+  }
+
+  .editorial-btn {
+    padding: 12px 20px !important;
+  }
+
+  .editorial-hero__proof {
+    margin-top: 16px !important;
+  }
+
+  .editorial-hero__stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+
+  .editorial-hero__stats div {
+    min-width: 0 !important;
+    padding: 0.8rem 0.9rem !important;
+  }
+
+  .editorial-hero__visual {
+    position: relative !important;
+    min-height: 470px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transform-origin: center !important;
+  }
+
+  .editorial-hero__project-card {
+    width: 245px !important;
+    max-width: 245px !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .editorial-hero__project-card:hover {
+    transform: translateY(-4px) scale(1.015) !important;
+  }
+
+  .editorial-hero__project-image {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+
+  .editorial-hero__avatar-top {
+    top: 92px !important;
+    left: -70px !important;
+  }
+}
+
+/* Slightly tighter desktop for smaller laptops */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .editorial-hero {
+    width: min(1040px, calc(100% - 48px)) !important;
+  }
+
+  .editorial-hero__row {
+    grid-template-columns: minmax(0, 520px) 300px !important;
+    gap: 56px !important;
+  }
+
+  .editorial-hero__title {
+    font-size: clamp(3.7rem, 5.5vw, 5.1rem) !important;
+  }
+
+  .editorial-hero__project-card {
+    width: 225px !important;
+    max-width: 225px !important;
+  }
+
+  .editorial-hero__avatar-top {
+    left: -55px !important;
+  }
+}
+
+/* ---------- FINAL HERO DESKTOP FIX ---------- */
+
+@media (min-width: 992px) {
+  .editorial-hero {
+    width: min(1080px, calc(100% - 80px)) !important;
+    padding: 120px 0 56px !important;
+  }
+
+  .editorial-hero .container {
+    max-width: 1080px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .editorial-hero__row {
+    display: grid !important;
+    grid-template-columns: 560px 360px !important;
+    column-gap: 70px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 72vh !important;
+  }
+
+  .editorial-hero__left,
+  .editorial-hero__visual {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .editorial-hero__content {
+    max-width: 560px !important;
+    margin-top: 0 !important;
+  }
+
+  .editorial-hero__title {
+    font-size: clamp(4rem, 5.7vw, 5.8rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.018em !important;
+  }
+
+  .editorial-hero__subtitle {
+    max-width: 520px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-top: 22px !important;
+  }
+
+  .editorial-hero__visual {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+    transform: scale(0.88) !important;
+    transform-origin: center center !important;
+  }
+
+  .editorial-hero__project-card {
+    width: 310px !important;
+    max-width: 310px !important;
+    margin: 0 auto !important;
+  }
+
+  .editorial-hero__avatar-top {
+    left: -115px !important;
+    right: auto !important;
+    top: 130px !important;
+    max-width: 300px !important;
+    z-index: 5 !important;
+  }
+
+  .editorial-hero__stats {
+    max-width: 560px !important;
   }
 }
