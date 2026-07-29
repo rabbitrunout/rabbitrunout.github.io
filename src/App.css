@@ -444,6 +444,30 @@ button {
   animation-delay: 0.18s;
 }
 
+.editorial-hero__avatar-top {
+  position: absolute;
+  top: 70px;
+  left: -80px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 10px 14px;
+
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+
+  border: 1px solid var(--line);
+  border-radius: 18px;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+
+  z-index: 5;
+
+  animation: heroAvatarFloat 6s ease-in-out infinite;
+}
+
 .editorial-hero__avatar {
   width: 44px;
   height: 44px;
@@ -4255,5 +4279,113 @@ body {
 
   .editorial-hero__stats {
     max-width: 560px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL FLOATING PROFILE CARD FIX
+   Authoritative override — keep this block at the end.
+========================================================= */
+
+@keyframes heroAvatarFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (min-width: 992px) {
+  .editorial-hero__visual {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .editorial-hero__project-card {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .editorial-hero__avatar-top {
+    position: absolute !important;
+    top: 48px !important;
+    left: -135px !important;
+    right: auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    width: max-content !important;
+    max-width: 280px !important;
+    margin: 0 !important;
+    padding: 10px 14px !important;
+
+    background: rgba(255, 255, 255, 0.94) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    backdrop-filter: blur(14px) !important;
+
+    border: 1px solid var(--line) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08) !important;
+
+    z-index: 5 !important;
+    animation: heroAvatarFloat 5s ease-in-out infinite !important;
+    will-change: transform;
+  }
+
+  .editorial-hero__avatar {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+  }
+
+  .editorial-hero__avatar-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+
+  .editorial-hero__avatar-meta span {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+  }
+
+  .editorial-hero__avatar-meta strong {
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+    color: var(--text) !important;
+    font-weight: 600 !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .editorial-hero__avatar-top {
+    top: 42px !important;
+    left: -105px !important;
+    max-width: 250px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .editorial-hero__avatar-top {
+    display: none !important;
+    position: static !important;
+    animation: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-hero__avatar-top {
+    animation: none !important;
   }
 }
