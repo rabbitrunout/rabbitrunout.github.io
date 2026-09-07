@@ -4398,8 +4398,11 @@ body {
     padding-inline: 0;
   }
 
-  .editorial-hero__row {
-    margin-inline: 0;
+  .editorial-hero .editorial-hero__row {
+    --bs-gutter-x: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     overflow: visible;
   }
 
