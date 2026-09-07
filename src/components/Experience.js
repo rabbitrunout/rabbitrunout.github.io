@@ -2,12 +2,12 @@ import React from "react";
 
 const Experience = () => {
 return ( <section className="editorial-section editorial-experience" id="experience"> <div className="section-heading"> <p className="section-label">Selected Experience</p> <h2>Building real product features through hands-on development</h2> <p className="experience-note">
-Production-focused frontend development, real-world workflows, and
-client-facing redesign work. </p> </div>
+Canadian practicum experience, shipped product features, and
+client-facing frontend work. </p> </div>
 
   <div className="editorial-experience__grid">
     <div className="editorial-experience__left">
-      <p className="experience-role">Software Developer Intern</p>
+      <p className="experience-role">Software Developer Intern · Frontend</p>
       <h3>R-A-Ones Corporation</h3>
 
       <p className="experience-product">
@@ -22,8 +22,8 @@ client-facing redesign work. </p> </div>
     <div className="editorial-experience__right">
       <ul className="experience-list">
         <li>
-          Shipped 5+ production-ready frontend features using React,
-          Next.js, TypeScript, and REST APIs.
+          Shipped 5+ frontend features using React, Next.js, TypeScript,
+          and REST APIs.
         </li>
 
         <li>
@@ -32,8 +32,8 @@ client-facing redesign work. </p> </div>
         </li>
 
         <li>
-          Integrated API-driven workflows with authentication, validation,
-          loading states, and error handling.
+          Delivered the Admin Login, Create/Edit User form, and Booking
+          Details page for the PHD Parking platform.
         </li>
 
         <li>
@@ -77,7 +77,6 @@ client-facing redesign work. </p> </div>
         <span>Git Workflow</span>
         <span>Agile</span>
         <span>UI States</span>
-        <span>AI Workflows</span>
       </div>
 
       <div className="experience-links">
@@ -89,7 +88,7 @@ client-facing redesign work. </p> </div>
   <div className="editorial-experience__grid freelance-block">
     <div className="editorial-experience__left">
       <p className="experience-role">
-        Frontend Developer · Website Redesign Project
+        Freelance Frontend Developer
       </p>
 
       <h3>Anna Vorobkalo — Premium Event Website</h3>
@@ -136,7 +135,7 @@ client-facing redesign work. </p> </div>
 
       <div className="experience-links">
         <a
-          href="https://vorobkaloevent.ru/"
+          href="https://vorobkaloevent.store/"
           target="_blank"
           rel="noopener noreferrer"
         >

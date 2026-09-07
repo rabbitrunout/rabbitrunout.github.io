@@ -21,51 +21,43 @@ const Banner = () => {
               {({ isVisible }) => (
                 <div className={`editorial-hero__content ${isVisible ? "is-visible" : ""}`}>
 
-                  <p className="section-label">Portfolio / 2026</p>
+                  <p className="section-label">Frontend Developer · Mississauga, ON</p>
 
                   <h1 className="editorial-hero__title">
-  <span className="editorial-hero__title-line">AI &amp;</span>
-  <span className="editorial-hero__title-line"> Full-Stack</span>
+  <span className="editorial-hero__title-line">Frontend</span>
   <span className="editorial-hero__title-line">Developer</span>
 </h1>
 
   <p className="editorial-hero__subtitle">
-  Building AI-powered web and mobile products with React, SwiftUI, TypeScript, REST APIs and modern automation workflows.
-  <br />
-  Focused on workflow automation, AI agents, scalable UI systems, and practical solutions for real-world business problems.
+  I build responsive, accessible web products with React, TypeScript and Next.js,
+  using AI where it makes the product more useful.
 </p>
 
 <div className="editorial-hero__meta">
-  <span>AI-Powered Development</span>
   <span>React</span>
-  <span>SwiftUI</span>
   <span>TypeScript</span>
+  <span>Next.js</span>
   <span>REST APIs</span>
-  <span>Workflow Automation</span>
+  <span>Accessibility</span>
+  <span>AI Integration</span>
 </div>
 
 <div className="editorial-hero__marquee">
   <div className="editorial-hero__marquee-track">
 
     <span>React</span>
-    <span>SwiftUI</span>
     <span>TypeScript</span>
+    <span>Next.js</span>
     <span>REST APIs</span>
-    <span>AI-Powered Products</span>
-    <span>Workflow Automation</span>
-    <span>Full-Stack Development</span>
-    <span>Clean Architecture</span>
-    <span>UI / UX</span>
+    <span>Accessible UI</span>
+    <span>AI Integration</span>
 
     <span>React</span>
-    <span>SwiftUI</span>
     <span>TypeScript</span>
+    <span>Next.js</span>
     <span>REST APIs</span>
-    <span>AI-Powered Products</span>
-    <span>Workflow Automation</span>
-    <span>Full-Stack Development</span>
-    <span>Clean Architecture</span>
-    <span>UI / UX</span>
+    <span>Accessible UI</span>
+    <span>AI Integration</span>
 
   </div>
 </div>
@@ -87,16 +79,25 @@ const Banner = () => {
                     >
                       <span>Let&apos;s Connect</span>
                     </button>
+
+                    <a
+                      href="/Irina_Safronova_Resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="editorial-btn editorial-btn--ghost"
+                    >
+                      <span>View Resume</span>
+                    </a>
                   </div>
 
                 <p className="editorial-hero__proof">
-  AI & Full-Stack Developer • React • SwiftUI • REST APIs
+  Canadian permanent resident · Open to frontend and software opportunities
 </p>
 
 <div className="editorial-hero__stats">
   <div>
     <strong>10+</strong>
-    <span>Projects</span>
+    <span>Reusable Components</span>
   </div>
 
   <div>
@@ -105,8 +106,8 @@ const Banner = () => {
   </div>
 
   <div>
-    <strong>AI</strong>
-    <span>Workflow Focus</span>
+    <strong>98%</strong>
+    <span>Honours GPA · triOS</span>
   </div>
 </div>
 
@@ -124,12 +125,12 @@ const Banner = () => {
                   <div className="editorial-hero__avatar-top">
                     <img
                       src={mainPhoto}
-                      alt="Irina S"
+                      alt="Irina Safronova"
                       className="editorial-hero__avatar"
                     />
                     <div className="editorial-hero__avatar-meta">
-  <span>Irina S</span>
-  <strong>Building AI-powered product systems</strong>
+  <span>Irina Safronova</span>
+  <strong>React · TypeScript · Next.js</strong>
 </div>
                   </div>
 

@@ -4,50 +4,49 @@ const AISection = () => {
   return (
     <section className="editorial-section editorial-ai" id="ai">
       <div className="section-heading">
-        <p className="section-label">AI-Assisted Development</p>
+        <p className="section-label">Frontend + AI</p>
 
         <h2>
-          Modern development workflows powered by AI-assisted engineering.
+          Practical AI integration, not AI for its own sake.
         </h2>
 
         <p>
-          I use AI-assisted workflows to accelerate prototyping, debug frontend
-          and API issues, improve feature planning, and iterate faster on
-          production-style applications.
+          I use AI where it improves a real workflow: structured product outputs,
+          faster iteration, clearer edge-case analysis, and more useful interfaces.
         </p>
       </div>
 
       <div className="editorial-ai__grid">
         <div className="editorial-ai__card">
-          <span>AI-Assisted Workflows</span>
+          <span>Structured AI Features</span>
 
           <p>
-            Applied GPT/Claude-based workflows for rapid prototyping,
-            debugging, architecture exploration, and productivity optimization.
+            Building Glowi&apos;s read-only club-management agent with structured
+            Urgent, Soon and FYI outputs.
           </p>
         </div>
 
         <div className="editorial-ai__card">
-          <span>Product-Focused Development</span>
+          <span>Validated Data Flows</span>
 
           <p>
-            Used AI-assisted iteration to explore user flows, improve feature
-            planning, and identify edge cases before implementation.
+            Using AI SDK, Groq, Zod and tool calling to keep application outputs
+            predictable and useful.
           </p>
         </div>
 
         <div className="editorial-ai__card">
-          <span>Automation & Intelligent Systems</span>
+          <span>AI-Assisted Engineering</span>
 
           <p>
-            Explored AI-enhanced product systems, workflow automation,
-            predictive logic, and smarter user interactions.
+            Applying Claude and ChatGPT to planning, debugging, documentation
+            and systematic review while keeping implementation decisions human-led.
           </p>
         </div>
       </div>
 
       <div className="editorial-ai__footer">
-        AI-assisted workflows • Product-focused engineering • Real-world development experience
+        AI SDK • Groq • Zod • Tool calling • Product-focused frontend engineering
       </div>
     </section>
   );

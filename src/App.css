@@ -4389,3 +4389,57 @@ body {
     animation: none !important;
   }
 }
+
+/* Keep mobile hero flex children within the viewport, including visibility wrappers. */
+@media (max-width: 991px) {
+  .editorial-hero .container {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 0;
+  }
+
+  .editorial-hero .editorial-hero__row {
+    --bs-gutter-x: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: visible;
+  }
+
+  .editorial-hero__row > [class*="col-"],
+  .editorial-hero__row > [class*="col-"] > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-inline: 0;
+  }
+
+  .editorial-hero__content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .editorial-hero__actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .editorial-hero__actions .editorial-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    white-space: normal;
+    font-size: 1rem;
+  }
+
+  .editorial-hero__subtitle {
+    font-size: 1rem !important;
+  }
+
+  .editorial-hero__stats span {
+    font-size: 0.75rem !important;
+    line-height: 1.4;
+    white-space: normal !important;
+    letter-spacing: 0 !important;
+  }
+}
