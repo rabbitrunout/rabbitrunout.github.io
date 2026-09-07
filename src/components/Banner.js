@@ -106,8 +106,8 @@ const Banner = () => {
   </div>
 
   <div>
-    <strong>100</strong>
-    <span>Lighthouse Accessibility</span>
+    <strong>98%</strong>
+    <span>Honours GPA · triOS</span>
   </div>
 </div>
 
