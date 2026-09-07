@@ -106,7 +106,7 @@ export const NavBar = () => {
             <div className="editorial-navbar__right">
               <div className="editorial-navbar__socials">
                 <a
-                  href="https://www.linkedin.com/in/irina-safronova-688130243/"
+                  href="https://www.linkedin.com/in/irina-safronova-dev/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"

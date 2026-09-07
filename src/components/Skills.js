@@ -18,7 +18,7 @@ const Skills = () => {
           <h3>Frontend Engineering</h3>
 
           <p>
-            React • Next.js • Angular • TypeScript • JavaScript •
+            React • TypeScript • Next.js • JavaScript • HTML • CSS •
             Responsive UI • Component Systems
           </p>
         </article>
@@ -26,22 +26,22 @@ const Skills = () => {
         <article className="skill-block">
           <p className="skill-block__index">02</p>
 
-          <h3>Mobile Development</h3>
+          <h3>API Integration</h3>
 
           <p>
-            SwiftUI • MVVM • Core Data • iOS Architecture •
-            State-Driven UI
+            REST APIs • HTTP/JSON • Authentication • Validation •
+            Loading and Error States
           </p>
         </article>
 
         <article className="skill-block">
           <p className="skill-block__index">03</p>
 
-          <h3>Backend & Data</h3>
+          <h3>Quality & Accessibility</h3>
 
           <p>
-            PHP • MySQL • PostgreSQL • REST APIs • CRUD Operations •
-            Authentication Flows
+            Responsive Testing • Keyboard Navigation • Semantic HTML •
+            Lighthouse • WAVE • Debugging
           </p>
         </article>
 
@@ -70,11 +70,11 @@ const Skills = () => {
         <article className="skill-block">
           <p className="skill-block__index">06</p>
 
-          <h3>AI & Modern Development</h3>
+          <h3>AI Integration</h3>
 
           <p>
-            AI-assisted workflows • Rapid Prototyping •
-            Productivity Optimization • Workflow Automation
+            AI SDK • Groq • Zod • Tool Calling • Structured Outputs •
+            AI-assisted Development
           </p>
         </article>
       </div>

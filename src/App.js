@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import FeaturedProjects from "./components/FeaturedProjects";
 import HorizontalProjects from "./components/HorizontalProjects";
 import Skills from "./components/Skills";
+import Education from "./components/Education";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -42,12 +43,13 @@ function App() {
     <div className="app editorial-app">
       <NavBar />
       <Banner />
-      <AISection />
       <AboutMe />
       <Experience />
       <FeaturedProjects />
+      <AISection />
       <HorizontalProjects />
       <Skills />
+      <Education />
       <Certificates />
       <Contact />
       <Footer />

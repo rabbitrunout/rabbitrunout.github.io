@@ -17,8 +17,22 @@ const HorizontalProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const allProjects = useMemo(() => {
+    const selectedTitles = [
+      "Anna Vorobkalo — Premium Event Website",
+      "Booking System",
+      "Glowi — Product System",
+      "FluiDex Drive",
+      "SuperPodcast",
+      "Weekly Task Planner",
+    ];
+
     return Object.values(projectsByCategory)
       .flat()
+      .filter((project) => selectedTitles.includes(project.title))
+      .sort(
+        (a, b) =>
+          selectedTitles.indexOf(a.title) - selectedTitles.indexOf(b.title)
+      )
       .map((project) => ({
         ...project,
         category: project.badge || project.tech || "Project",
@@ -162,14 +176,13 @@ const HorizontalProjects = () => {
         id="project-strip"
       >
         <div className="section-heading horizontal-projects__heading">
-          <p className="section-label">Project Strip</p>
-          <h2>Swipe through selected work</h2>
+          <p className="section-label">More Work</p>
+          <h2>Six focused projects across web and mobile</h2>
         </div>
 
         <div className="horizontal-projects__intro">
           <p>
-            A quick visual pass through product-focused work across mobile, web,
-            and interface design.
+            A concise selection of client, web, iOS and Android work.
           </p>
         </div>
 
@@ -190,6 +203,7 @@ const HorizontalProjects = () => {
               type="button"
               className="horizontal-projects__control"
               onClick={goPrev}
+              aria-label="Previous project"
             >
               ‹
             </button>
@@ -197,6 +211,7 @@ const HorizontalProjects = () => {
               type="button"
               className="horizontal-projects__control"
               onClick={goNext}
+              aria-label="Next project"
             >
               ›
             </button>
@@ -215,8 +230,15 @@ const HorizontalProjects = () => {
                 activeIndex === index ? "is-active" : ""
               }`}
               onClick={() => handleCardClick(index)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  handleCardClick(index);
+                }
+              }}
               role="button"
               tabIndex={0}
+              aria-label={`Open ${project.title} case study`}
             >
               <div className="horizontal-project-card__image-wrap">
                 <img
